@@ -1,4 +1,4 @@
-package com.loggar.test;
+package com.loggar.string;
 
 import org.junit.Test;
 

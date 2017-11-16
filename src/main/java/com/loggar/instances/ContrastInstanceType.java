@@ -1,4 +1,4 @@
-package com.loggar.test;
+package com.loggar.instances;
 
 public class ContrastInstanceType {
 	public static void main(String [] args) {

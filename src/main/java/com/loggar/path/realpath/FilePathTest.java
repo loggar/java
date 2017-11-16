@@ -1,4 +1,4 @@
-package com.loggar.test;
+package com.loggar.path.realpath;
 
 import org.junit.Test;
 
