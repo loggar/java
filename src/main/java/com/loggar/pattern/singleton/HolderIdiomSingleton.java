@@ -19,16 +19,4 @@ public class HolderIdiomSingleton {
 	public static HolderIdiomSingleton getInstance() {
 		return LazyHolder.INSTANCE;
 	}
-	
-	private String a = null;
-
-	public String getA() {
-		return a;
-	}
-
-	public void setA(String a) {
-		this.a = a;
-	}
-	
-	
 }

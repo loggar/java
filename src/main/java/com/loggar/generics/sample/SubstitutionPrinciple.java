@@ -1,4 +1,4 @@
-package com.loggar.generics;
+package com.loggar.generics.sample;
 
 import java.math.BigDecimal;
 import java.math.BigInteger;

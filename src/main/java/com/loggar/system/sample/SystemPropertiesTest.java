@@ -1,4 +1,4 @@
-package com.loggar.system;
+package com.loggar.system.sample;
 
 import java.util.Enumeration;
 

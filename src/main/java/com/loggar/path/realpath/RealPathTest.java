@@ -8,7 +8,7 @@ import org.junit.Test;
 public class RealPathTest {
 	@Test
 	public void test1() {
-		URL path1 = this.getClass().getResource("./RealPathTestFile.class");
+		URL path1 = this.getClass().getResource("./RealPathTestFile.bin");
 		System.out.println(path1);
 
 		File file = null;

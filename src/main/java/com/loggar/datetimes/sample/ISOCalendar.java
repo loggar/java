@@ -1,4 +1,4 @@
-package com.loggar.datetimes;
+package com.loggar.datetimes.sample;
 
 import java.time.Year;
 import java.time.temporal.ChronoUnit;

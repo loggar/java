@@ -1,4 +1,4 @@
-package com.loggar.datetimes;
+package com.loggar.datetimes.sample;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;

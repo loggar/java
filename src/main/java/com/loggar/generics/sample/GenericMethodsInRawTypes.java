@@ -1,4 +1,4 @@
-package com.loggar.generics;
+package com.loggar.generics.sample;
 
 public class GenericMethodsInRawTypes {
 	public static <E> boolean add(E e) { return true;}

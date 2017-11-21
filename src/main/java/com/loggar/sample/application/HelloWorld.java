@@ -1,4 +1,4 @@
-package com.loggar.application.sample;
+package com.loggar.sample.application;
 
 public class HelloWorld {
 	public static void main(String [] args) {

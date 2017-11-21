@@ -1,4 +1,4 @@
-package com.loggar.generics;
+package com.loggar.generics.sample;
 
 /**
  * Constructors of generic classes do not require generic type parameters as

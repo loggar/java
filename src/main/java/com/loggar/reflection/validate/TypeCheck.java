@@ -1,4 +1,4 @@
-package com.loggar.reflection.type;
+package com.loggar.reflection.validate;
 
 import java.util.HashMap;
 import java.util.Map;

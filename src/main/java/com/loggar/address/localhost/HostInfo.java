@@ -1,4 +1,4 @@
-package com.loggar.system;
+package com.loggar.address.localhost;
 
 import java.net.UnknownHostException;
 
