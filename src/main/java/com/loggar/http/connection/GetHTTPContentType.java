@@ -1,4 +1,4 @@
-package com.loggar.http.entity;
+package com.loggar.http.connection;
 
 import java.io.IOException;
 import java.nio.charset.Charset;
