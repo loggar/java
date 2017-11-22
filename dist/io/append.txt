@@ -1,0 +1,4 @@
+This is my 1st message - BufferedWriter Approach 
+This is my 2nd message - Apache Common IO Approach 
+This is my 1st message - BufferedWriter Approach 
+This is my 2nd message - Apache Common IO Approach 
