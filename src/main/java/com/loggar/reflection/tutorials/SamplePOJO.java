@@ -1,15 +1,15 @@
 package com.loggar.reflection.tutorials;
 
-public class CrunchifyPOJO {
+public class SamplePOJO {
 	public String name;
 	protected String webAddress;
 	public String email;
 	protected int zip;
 
-	public CrunchifyPOJO() {
-		name = "Crunchify.com";
-		webAddress = "http://crunchify.com";
-		email = "test@crunchify.com";
+	public SamplePOJO() {
+		name = "Sample.com";
+		webAddress = "http://sample.com";
+		email = "test@sample.com";
 	}
 
 	// ==========================================================
@@ -48,12 +48,12 @@ public class CrunchifyPOJO {
 		this.zip = zip;
 	}
 
-	public void thisIsCrunchifyReflection() {
-		System.out.println("- Hey This is Crunchify's Refection API tutorials. More than 400 Tutorials on Crunchify.com");
+	public void thisIsSampleReflection() {
+		System.out.println("- Hey This is Sample's Refection API tutorials. More than 400 Tutorials on Sample.com");
 	}
 
 	// ==========================================================
-	// Create a String description of a Crunchify credentials
+	// Create a String description of a Sample credentials
 	// ==========================================================
 
 	public String toString() {
@@ -66,12 +66,12 @@ public class CrunchifyPOJO {
 
 	public static void main(String[] args) {
 
-		// Create and print a CrunchifyPOJO object ...
-		CrunchifyPOJO crunchify = new CrunchifyPOJO();
-		crunchify.setName("Crunchify.com");
-		crunchify.setWebAddress("http://crunchify.com");
-		crunchify.setEmail("test@crunchify.com");
-		crunchify.setZip(95124);
-		System.out.println(crunchify);
+		// Create and print a SamplePOJO object ...
+		SamplePOJO sample = new SamplePOJO();
+		sample.setName("Sample.com");
+		sample.setWebAddress("http://sample.com");
+		sample.setEmail("test@sample.com");
+		sample.setZip(95124);
+		System.out.println(sample);
 	}
 }

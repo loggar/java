@@ -4,9 +4,9 @@ import java.util.Arrays;
 
 public class CompareArrays {
 	public static void main(String[] args) {
-		String[] str1 = { "Crunchify", "dot", "com" };
+		String[] str1 = { "XXX", "dot", "com" };
 		String[] str2 = { "google", "dot", "com" };
-		String[] str3 = { "Crunchify", "dot", "com" };
+		String[] str3 = { "XXX", "dot", "com" };
 
 		// Returns true if the two specified arrays of Objects are equal to one
 		// another. The two arrays are considered equal if both arrays contain

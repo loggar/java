@@ -9,51 +9,45 @@ import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-/**
- * http://crunchify.com/how-to-read-a-file-line-by-line-using-java-8-stream-files-lines-and-files-newbufferedreader-utils/
- * 
- * @author loggar.lee
- *
- */
-public class CrunchifyJava8StreamReadFile {
+public class Java8StreamReadFile {
 	public static void main(String args[]) {
 
-		String crunchifyFile = "./dist/io/append.txt";
+		String file = "./dist/io/append.txt";
 
 		// lines() and Stream Approach
-		CrunchifyReadFile1(crunchifyFile);
+		ReadFile1(file);
 
 		// newBufferedReader and Stream Approach
-		CrunchifyReadFile2(crunchifyFile);
+		ReadFile2(file);
 	}
 
 	// Read file using lines() and Stream Approach
-	private static void CrunchifyReadFile1(String crunchifyFile) {
+	private static void ReadFile1(String file) {
 
-		Stream<String> crunchifyStream = null;
+		Stream<String> stream = null;
 		try {
 
 			// Read all lines from a file as a Stream. Bytes from the file are decoded into
 			// characters using the UTF-8 charset
-			crunchifyStream = Files.lines(Paths.get(crunchifyFile));
+			stream = Files.lines(Paths.get(file));
 
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
 
 		log("============= Result from lines() and Stream Approach =============");
-		crunchifyStream.forEach(System.out::println);
+		stream.forEach(System.out::println);
 	}
 
 	// Read file using newBufferedReader and Stream Approach
-	private static void CrunchifyReadFile2(String crunchifyFile) {
-		List<String> crunchifyList = new ArrayList<>();
+	private static void ReadFile2(String file) {
+		List<String> list = new ArrayList<>();
 
-		BufferedReader crunchifyBufferReader = null;
+		BufferedReader bufferReader = null;
 		try {
 
 			// newBufferedReader opens a file for reading
-			crunchifyBufferReader = Files.newBufferedReader(Paths.get(crunchifyFile));
+			bufferReader = Files.newBufferedReader(Paths.get(file));
 
 		} catch (IOException e) {
 			e.printStackTrace();
@@ -63,14 +57,14 @@ public class CrunchifyJava8StreamReadFile {
 		// List
 		// lines(): returns a Stream, the elements of which are lines read from this
 		// BufferedReader
-		crunchifyList = crunchifyBufferReader.lines().collect(Collectors.toList());
+		list = bufferReader.lines().collect(Collectors.toList());
 
 		log("\n============= Result from newBufferedReader and Stream Approach =============");
 
 		// forEach: performs the given action for each element of the Iterable until all
 		// elements have been processed or the
 		// action throws an exception.
-		crunchifyList.forEach(System.out::println);
+		list.forEach(System.out::println);
 
 	}
 

@@ -4,19 +4,13 @@ import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 
-/**
- * http://crunchify.com/create-simple-pojo-and-multiple-java-reflection-examples/
- * 
- * @author loggar.lee
- *
- */
-public class CrunchifyReflectionTutorial {
+public class ReflectionTutorial {
 	public static void main(String[] args) {
-		CrunchifyPOJO crunchify = new CrunchifyPOJO();
-		System.out.println("Crunchify Object: ====================\n" + crunchify);
+		SamplePOJO sample = new SamplePOJO();
+		System.out.println("Sample Object: ====================\n" + sample);
 
 		// How to find out the Object belongs to which class?
-		Class<?> clazz = crunchify.getClass();
+		Class<?> clazz = sample.getClass();
 
 		// Example 1: ==================== How to get the Class's Name,
 		// CanonicalName and SimpleName?
@@ -30,8 +24,8 @@ public class CrunchifyReflectionTutorial {
 
 		// Example 2: ==================== Let's find out if class object
 		// represents an Array class
-		int[][] crunchifyArr = { { 1, 1 }, { 2, 1 } };
-		Class<? extends int[][]> arrClazz = crunchifyArr.getClass();
+		int[][] sampleArr = { { 1, 1 }, { 2, 1 } };
+		Class<? extends int[][]> arrClazz = sampleArr.getClass();
 		System.out.println("Let's find out if class object represents an Array class ==================== Example 2");
 		if (arrClazz.isArray()) {
 			System.out.println("- " + arrClazz.getSimpleName() + " is an array class.\n");
@@ -40,14 +34,14 @@ public class CrunchifyReflectionTutorial {
 		}
 
 		// Example 3: ==================== Let's find out Object's Type
-		Double crunchifyDouble = 11.1;
+		Double sampleDouble = 11.1;
 		System.out.println("Let's find out Object's Type ==================== Example 3");
-		System.out.println("- 11.1 is of Type: " + crunchifyDouble.getClass().getName() + "\n");
+		System.out.println("- 11.1 is of Type: " + sampleDouble.getClass().getName() + "\n");
 
 		// Example 4: ==================== How to get SuperClass
 		System.out.println("How to get SuperClass ==================== Example 4");
-		System.out.println("1. Superclass of crunchify: " + crunchify.getClass().getSuperclass()
-				+ "\n2. Superclass of crunchifyDouble: " + crunchifyDouble.getClass().getSuperclass() + "\n");
+		System.out.println("1. Superclass of sample: " + sample.getClass().getSuperclass()
+				+ "\n2. Superclass of sampleDouble: " + sampleDouble.getClass().getSuperclass() + "\n");
 
 		// Example 5: ==================== How to check if class is Primitive
 		// Type of not?
@@ -78,7 +72,7 @@ public class CrunchifyReflectionTutorial {
 		// object?
 		System.out.println("\nHow to get constructors of a class object ==================== Example 7");
 		try {
-			Constructor<? extends CrunchifyPOJO> constructor = crunchify.getClass().getConstructor();
+			Constructor<? extends SamplePOJO> constructor = sample.getClass().getConstructor();
 			System.out.println("- Constructor = " + constructor.getName());
 		} catch (NoSuchMethodException e) {
 			e.printStackTrace();
@@ -100,9 +94,9 @@ public class CrunchifyReflectionTutorial {
 		// class?
 		try {
 			System.out.println("\nHow to invoke a method using Method class ==================== Example 9");
-			Class<?> c = Class.forName("com.loggar.reflection.tutorials.CrunchifyPOJO");
+			Class<?> c = Class.forName("com.loggar.reflection.tutorials.SamplePOJO");
 			Object obj = c.newInstance();
-			Method method = c.getDeclaredMethod("thisIsCrunchifyReflection");
+			Method method = c.getDeclaredMethod("thisIsSampleReflection");
 			method.invoke(obj);
 		} catch (Exception e) {
 
@@ -110,9 +104,9 @@ public class CrunchifyReflectionTutorial {
 		}
 
 		// Example 10: ==================== get all Declared Class Fields
-		Field[] crunchifyFields = CrunchifyPOJO.class.getDeclaredFields();
+		Field[] sampleFields = SamplePOJO.class.getDeclaredFields();
 		System.out.println("\nget all Declared Class Fields ==================== Example 10");
-		for (Field field : crunchifyFields) {
+		for (Field field : sampleFields) {
 			Class<?> type = field.getType();
 			System.out.println("field name : " + field.getName() + " , type : " + type);
 		}

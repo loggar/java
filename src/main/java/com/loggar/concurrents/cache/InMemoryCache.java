@@ -5,31 +5,31 @@ import java.util.ArrayList;
 import org.apache.commons.collections.MapIterator;
 import org.apache.commons.collections.map.LRUMap;
 
-public class CrunchifyInMemoryCache<K, T> {
+public class InMemoryCache<K, T> {
 	private long timeToLive;
-	private LRUMap crunchifyCacheMap;
+	private LRUMap cacheMap;
 
-	protected class CrunchifyCacheObject {
+	protected class CacheObject {
 		public long lastAccessed = System.currentTimeMillis();
 		public T value;
 
-		protected CrunchifyCacheObject(T value) {
+		protected CacheObject(T value) {
 			this.value = value;
 		}
 	}
 
-	public CrunchifyInMemoryCache(long crunchifyTimeToLive, final long crunchifyTimerInterval, int maxItems) {
-		this.timeToLive = crunchifyTimeToLive * 1000;
+	public InMemoryCache(long timeToLive, final long timerInterval, int maxItems) {
+		this.timeToLive = timeToLive * 1000;
 
-		crunchifyCacheMap = new LRUMap(maxItems);
+		cacheMap = new LRUMap(maxItems);
 
-		if (timeToLive > 0 && crunchifyTimerInterval > 0) {
+		if (timeToLive > 0 && timerInterval > 0) {
 
 			Thread t = new Thread(new Runnable() {
 				public void run() {
 					while (true) {
 						try {
-							Thread.sleep(crunchifyTimerInterval * 1000);
+							Thread.sleep(timerInterval * 1000);
 						} catch (InterruptedException ex) {
 						}
 						cleanup();
@@ -43,15 +43,15 @@ public class CrunchifyInMemoryCache<K, T> {
 	}
 
 	public void put(K key, T value) {
-		synchronized (crunchifyCacheMap) {
-			crunchifyCacheMap.put(key, new CrunchifyCacheObject(value));
+		synchronized (cacheMap) {
+			cacheMap.put(key, new CacheObject(value));
 		}
 	}
 
 	@SuppressWarnings("unchecked")
 	public T get(K key) {
-		synchronized (crunchifyCacheMap) {
-			CrunchifyCacheObject c = (CrunchifyCacheObject) crunchifyCacheMap.get(key);
+		synchronized (cacheMap) {
+			CacheObject c = (CacheObject) cacheMap.get(key);
 
 			if (c == null)
 				return null;
@@ -63,14 +63,14 @@ public class CrunchifyInMemoryCache<K, T> {
 	}
 
 	public void remove(K key) {
-		synchronized (crunchifyCacheMap) {
-			crunchifyCacheMap.remove(key);
+		synchronized (cacheMap) {
+			cacheMap.remove(key);
 		}
 	}
 
 	public int size() {
-		synchronized (crunchifyCacheMap) {
-			return crunchifyCacheMap.size();
+		synchronized (cacheMap) {
+			return cacheMap.size();
 		}
 	}
 
@@ -80,16 +80,16 @@ public class CrunchifyInMemoryCache<K, T> {
 		long now = System.currentTimeMillis();
 		ArrayList<K> deleteKey = null;
 
-		synchronized (crunchifyCacheMap) {
-			MapIterator itr = crunchifyCacheMap.mapIterator();
+		synchronized (cacheMap) {
+			MapIterator itr = cacheMap.mapIterator();
 
-			deleteKey = new ArrayList<K>((crunchifyCacheMap.size() / 2) + 1);
+			deleteKey = new ArrayList<K>((cacheMap.size() / 2) + 1);
 			K key = null;
-			CrunchifyCacheObject c = null;
+			CacheObject c = null;
 
 			while (itr.hasNext()) {
 				key = (K) itr.next();
-				c = (CrunchifyCacheObject) itr.getValue();
+				c = (CacheObject) itr.getValue();
 
 				if (c != null && (now > (timeToLive + c.lastAccessed))) {
 					deleteKey.add(key);
@@ -98,8 +98,8 @@ public class CrunchifyInMemoryCache<K, T> {
 		}
 
 		for (K key : deleteKey) {
-			synchronized (crunchifyCacheMap) {
-				crunchifyCacheMap.remove(key);
+			synchronized (cacheMap) {
+				cacheMap.remove(key);
 			}
 
 			Thread.yield();

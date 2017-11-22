@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.StringJoiner;
 import java.util.stream.Collectors;
 
-public class CrunchifyJava8StringJoinerTutorial {
+public class Java8StringJoinerTutorial {
 	public static void main(String[] args) {
 
 		// StringJoiner is used to construct a sequence of characters separated by a
@@ -13,23 +13,23 @@ public class CrunchifyJava8StringJoinerTutorial {
 		// supplied prefix and ending with a supplied suffix.
 
 		// Simple Delimiter Join
-		crunchifyJava8JoinDelimiter();
+		java8JoinDelimiter();
 
 		// Join using Prefix and Suffix
-		crunchifyJava8StringJoinerWithPrefixSuffix();
+		java8StringJoinerWithPrefixSuffix();
 
 		// Join using String Join
-		crunchifyJava8SimpleStringJoin();
+		java8SimpleStringJoin();
 
 		// Join using ListJoiner
-		crunchifyJava8ListJoiner();
+		java8ListJoiner();
 
 		// Collection Joiner
-		crunchifyJava8CollectorJoiner();
+		java8CollectorJoiner();
 
 	}
 
-	private static void crunchifyJava8JoinDelimiter() {
+	private static void java8JoinDelimiter() {
 		StringJoiner myPhone = new StringJoiner(".");
 		myPhone.add("123");
 		myPhone.add("456");
@@ -39,7 +39,7 @@ public class CrunchifyJava8StringJoinerTutorial {
 
 	}
 
-	private static void crunchifyJava8StringJoinerWithPrefixSuffix() {
+	private static void java8StringJoinerWithPrefixSuffix() {
 
 		// Constructs a StringJoiner with no characters in it using copies of the
 		// supplied prefix, delimiter and suffix.
@@ -52,31 +52,31 @@ public class CrunchifyJava8StringJoinerTutorial {
 
 	}
 
-	private static void crunchifyJava8SimpleStringJoin() {
+	private static void java8SimpleStringJoin() {
 
 		// Returns a new String composed of copies of the CharSequence elements joined
 		// together with a copy of the specified
 		// delimiter.
-		String crunchifyFoundDate = String.join("/", "2012", "07", "01");
-		log("3. Simple String Join: \t\t\t" + crunchifyFoundDate);
+		String foundDate = String.join("/", "2012", "07", "01");
+		log("3. Simple String Join: \t\t\t" + foundDate);
 
 	}
 
-	private static void crunchifyJava8ListJoiner() {
-		List<String> companyList = Arrays.asList("Crunchify LLC", "Google Inc", "Facebook Inc", "Amazon LLC");
+	private static void java8ListJoiner() {
+		List<String> companyList = Arrays.asList("XXX LLC", "Google Inc", "Facebook Inc", "Amazon LLC");
 
 		String companies = String.join(", ", companyList);
 		log("4. Join List with Delimiter: \t\t" + companies);
 
 	}
 
-	private static void crunchifyJava8CollectorJoiner() {
+	private static void java8CollectorJoiner() {
 		List<String> tutorialList = Arrays.asList("Spring MVC", "Java", "NodeJS", "C Sharp");
 
 		// joining: returns a Collector that concatenates the input elements, separated
 		// by the specified delimiter, in encounter
 		// order.
-		String tutorials = tutorialList.stream().map(crunchify -> crunchify).collect(Collectors.joining(" <==> "));
+		String tutorials = tutorialList.stream().map(c -> c).collect(Collectors.joining(" <==> "));
 
 		log("5. Collector Joining: \t\t\t" + tutorials);
 	}

@@ -5,82 +5,82 @@ import java.util.regex.Pattern;
 
 public class PatternMatcherTutorial {
 	public static void main(String[] args) {
-		String crunchifyData = "This is Java Regex Pattern Example. http://crunchify.com. This is the list of all Matcher Example";
-		System.out.println("This is sample data 'crunchifyData': " + crunchifyData);
-		matches(crunchifyData);
-		lookingAt(crunchifyData);
-		findStartEnd(crunchifyData);
+		String sampleData = "This is Java Regex Pattern Example. http://sample.com. This is the list of all Matcher Example";
+		System.out.println("This is sample data 'sampleData': " + sampleData);
+		matches(sampleData);
+		lookingAt(sampleData);
+		findStartEnd(sampleData);
 
-		String crunchifyData2 = "Crunchify is a Web company. Google is a Search company. Facebook is a social company.";
-		group(crunchifyData2);
-		multipleGroups(crunchifyData2);
-		replaceAll(crunchifyData2);
+		String sampleData2 = "Sample is a Web company. Google is a Search company. Facebook is a social company.";
+		group(sampleData2);
+		multipleGroups(sampleData2);
+		replaceAll(sampleData2);
 	}
 
-	// crunchifyMatcher.replaceAll()
-	private static void replaceAll(String crunchifyData2) {
-		String crunchifyPattern = "company";
-		Pattern pat = Pattern.compile(crunchifyPattern);
-		Matcher crunchifyMatcher = pat.matcher(crunchifyData2);
-		String updatedString = crunchifyMatcher.replaceAll("best company");
+	// sampleMatcher.replaceAll()
+	private static void replaceAll(String sampleData2) {
+		String samplePattern = "company";
+		Pattern pat = Pattern.compile(samplePattern);
+		Matcher sampleMatcher = pat.matcher(sampleData2);
+		String updatedString = sampleMatcher.replaceAll("best company");
 		System.out.println("replaceAll() - updated String: " + updatedString);
 	}
 
-	private static void multipleGroups(String crunchifyData2) {
-		String crunchifyPattern = "(is) (.+?) (.+?) ";
-		Pattern pat = Pattern.compile(crunchifyPattern);
-		Matcher crunchifyMatcher = pat.matcher(crunchifyData2);
-		while (crunchifyMatcher.find()) {
-			System.out.println("multipleGroup() result: " + crunchifyMatcher.group());
+	private static void multipleGroups(String sampleData2) {
+		String samplePattern = "(is) (.+?) (.+?) ";
+		Pattern pat = Pattern.compile(samplePattern);
+		Matcher sampleMatcher = pat.matcher(sampleData2);
+		while (sampleMatcher.find()) {
+			System.out.println("multipleGroup() result: " + sampleMatcher.group());
 		}
 	}
 
-	// crunchifyMatcher.group()
-	private static void group(String crunchifyData2) {
-		String crunchifyPattern = "company";
-		Pattern pat = Pattern.compile(crunchifyPattern);
-		Matcher crunchifyMatcher = pat.matcher(crunchifyData2);
-		while (crunchifyMatcher.find()) {
-			System.out.println("group() result: " + crunchifyMatcher.group());
+	// sampleMatcher.group()
+	private static void group(String sampleData2) {
+		String samplePattern = "company";
+		Pattern pat = Pattern.compile(samplePattern);
+		Matcher sampleMatcher = pat.matcher(sampleData2);
+		while (sampleMatcher.find()) {
+			System.out.println("group() result: " + sampleMatcher.group());
 		}
 	}
 
-	// crunchifyMatcher.find() - start() - end()
-	private static void findStartEnd(String crunchifyData) {
-		String crunchifyPattern = "Example";
-		Pattern pat = Pattern.compile(crunchifyPattern);
-		Matcher crunchifyMatcher = pat.matcher(crunchifyData);
+	// sampleMatcher.find() - start() - end()
+	private static void findStartEnd(String sampleData) {
+		String samplePattern = "Example";
+		Pattern pat = Pattern.compile(samplePattern);
+		Matcher sampleMatcher = pat.matcher(sampleData);
 		int totalCount = 0;
-		while (crunchifyMatcher.find()) {
+		while (sampleMatcher.find()) {
 			totalCount++;
-			System.out.println("findStartEnd result = Iteration " + totalCount + " : " + crunchifyMatcher.start()
-					+ " - " + crunchifyMatcher.end());
+			System.out.println("findStartEnd result = Iteration " + totalCount + " : " + sampleMatcher.start()
+					+ " - " + sampleMatcher.end());
 		}
 	}
 
-	// crunchifyMatcher.lookingAt()
-	private static void lookingAt(String crunchifyData) {
-		String crunchifyPattern = "This is Java";
-		Pattern pat = Pattern.compile(crunchifyPattern);
-		Matcher crunchifyMatcher = pat.matcher(crunchifyData);
-		boolean isLookingAt = crunchifyMatcher.lookingAt();
+	// sampleMatcher.lookingAt()
+	private static void lookingAt(String sampleData) {
+		String samplePattern = "This is Java";
+		Pattern pat = Pattern.compile(samplePattern);
+		Matcher sampleMatcher = pat.matcher(sampleData);
+		boolean isLookingAt = sampleMatcher.lookingAt();
 		System.out.println("lookingAt() result 1: " + isLookingAt);
 
-		crunchifyPattern = " is Java";
-		pat = Pattern.compile(crunchifyPattern);
-		crunchifyMatcher = pat.matcher(crunchifyData);
-		isLookingAt = crunchifyMatcher.lookingAt();
+		samplePattern = " is Java";
+		pat = Pattern.compile(samplePattern);
+		sampleMatcher = pat.matcher(sampleData);
+		isLookingAt = sampleMatcher.lookingAt();
 		System.out.println("lookingAt() result 2: " + isLookingAt);
 
 	}
 
-	// crunchifyMatcher.matches()
-	public static void matches(String crunchifyData) {
-		String crunchifyPattern = ".*http://.*";
+	// sampleMatcher.matches()
+	public static void matches(String sampleData) {
+		String samplePattern = ".*http://.*";
 
-		Pattern pat = Pattern.compile(crunchifyPattern);
-		Matcher crunchifyMatcher = pat.matcher(crunchifyData);
-		boolean isMatched = crunchifyMatcher.matches();
+		Pattern pat = Pattern.compile(samplePattern);
+		Matcher sampleMatcher = pat.matcher(sampleData);
+		boolean isMatched = sampleMatcher.matches();
 		System.out.println("matches() result: " + isMatched);
 	}
 }

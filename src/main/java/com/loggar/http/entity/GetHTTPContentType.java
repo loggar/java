@@ -13,13 +13,13 @@ import org.apache.http.impl.client.HttpClientBuilder;
 public class GetHTTPContentType {
 	public static void main(String[] args) {
 		GetHTTPContentType demo = new GetHTTPContentType();
-		demo.requestCrunchifyPage();
-		demo.requestCrunchifyLogo();
+		demo.requestPage();
+		demo.requestLogo();
 	}
 
-	public void requestCrunchifyPage() {
+	public void requestPage() {
 		HttpClient client = HttpClientBuilder.create().build();
-		HttpGet request = new HttpGet("http://crunchify.com");
+		HttpGet request = new HttpGet("http://google.com");
 		try {
 			HttpResponse response = client.execute(request);
 			HttpEntity entity = response.getEntity();
@@ -29,9 +29,9 @@ public class GetHTTPContentType {
 		}
 	}
 
-	public void requestCrunchifyLogo() {
+	public void requestLogo() {
 		HttpClient client = HttpClientBuilder.create().build();
-		HttpGet request = new HttpGet("http://crunchify.com/favicon.ico");
+		HttpGet request = new HttpGet("http://google.com/favicon.ico");
 		try {
 			HttpResponse response = client.execute(request);
 			HttpEntity entity = response.getEntity();

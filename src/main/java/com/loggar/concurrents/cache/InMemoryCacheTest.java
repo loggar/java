@@ -1,29 +1,24 @@
 package com.loggar.concurrents.cache;
 
-/**
- * http://crunchify.com/how-to-create-a-simple-in-memory-cache-in-java-lightweight-cache/
- * @author loggar.lee
- *
- */
-public class CrunchifyInMemoryCacheTest {
+public class InMemoryCacheTest {
 	public static void main(String[] args) throws InterruptedException {
 
-		CrunchifyInMemoryCacheTest crunchifyCache = new CrunchifyInMemoryCacheTest();
+		InMemoryCacheTest cache = new InMemoryCacheTest();
 
-		System.out.println("\n\n==========Test1: crunchifyTestAddRemoveObjects ==========");
-		crunchifyCache.crunchifyTestAddRemoveObjects();
-		System.out.println("\n\n==========Test2: crunchifyTestExpiredCacheObjects ==========");
-		crunchifyCache.crunchifyTestExpiredCacheObjects();
-		System.out.println("\n\n==========Test3: crunchifyTestObjectsCleanupTime ==========");
-		crunchifyCache.crunchifyTestObjectsCleanupTime();
+		System.out.println("\n\n==========Test1: testAddRemoveObjects ==========");
+		cache.testAddRemoveObjects();
+		System.out.println("\n\n==========Test2: testExpiredCacheObjects ==========");
+		cache.testExpiredCacheObjects();
+		System.out.println("\n\n==========Test3: testObjectsCleanupTime ==========");
+		cache.testObjectsCleanupTime();
 	}
 
-	private void crunchifyTestAddRemoveObjects() {
+	private void testAddRemoveObjects() {
 
-		// Test with crunchifyTimeToLive = 200 seconds
-		// crunchifyTimerInterval = 500 seconds
+		// Test with timeToLive = 200 seconds
+		// timerInterval = 500 seconds
 		// maxItems = 6
-		CrunchifyInMemoryCache<String, String> cache = new CrunchifyInMemoryCache<String, String>(200, 500, 6);
+		InMemoryCache<String, String> cache = new InMemoryCache<String, String>(200, 500, 6);
 
 		cache.put("eBay", "eBay");
 		cache.put("Paypal", "Paypal");
@@ -42,12 +37,12 @@ public class CrunchifyInMemoryCacheTest {
 
 	}
 
-	private void crunchifyTestExpiredCacheObjects() throws InterruptedException {
+	private void testExpiredCacheObjects() throws InterruptedException {
 
-		// Test with crunchifyTimeToLive = 1 second
-		// crunchifyTimerInterval = 1 second
+		// Test with timeToLive = 1 second
+		// timerInterval = 1 second
 		// maxItems = 10
-		CrunchifyInMemoryCache<String, String> cache = new CrunchifyInMemoryCache<String, String>(1, 1, 10);
+		InMemoryCache<String, String> cache = new InMemoryCache<String, String>(1, 1, 10);
 
 		cache.put("eBay", "eBay");
 		cache.put("Paypal", "Paypal");
@@ -59,14 +54,14 @@ public class CrunchifyInMemoryCacheTest {
 
 	}
 
-	private void crunchifyTestObjectsCleanupTime() throws InterruptedException {
+	private void testObjectsCleanupTime() throws InterruptedException {
 		int size = 500000;
 
 		// Test with timeToLiveInSeconds = 100 seconds
 		// timerIntervalInSeconds = 100 seconds
 		// maxItems = 500000
 
-		CrunchifyInMemoryCache<String, String> cache = new CrunchifyInMemoryCache<String, String>(100, 100, 500000);
+		InMemoryCache<String, String> cache = new InMemoryCache<String, String>(100, 100, 500000);
 
 		for (int i = 0; i < size; i++) {
 			String value = Integer.toString(i);

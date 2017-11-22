@@ -8,7 +8,7 @@ import java.util.concurrent.Executors;
 
 public class GetProcessEnvironment {
 	public static void main(String a[]) {
-		ProcessBuilder crunchifyProcess = new ProcessBuilder();
+		ProcessBuilder process = new ProcessBuilder();
 
 		// java executor.execute Tutorial
 		// java spawn multiple threads
@@ -21,21 +21,21 @@ public class GetProcessEnvironment {
 		// environment() returns a string map view of this process builder's
 		// environment. Whenever a process builder is created, the
 		// environment is initialized to a copy of the current process environment
-		Map<String, String> crunchifyEnvironment = crunchifyProcess.environment();
+		Map<String, String> environment = process.environment();
 
-		Set<String> myKeys = crunchifyEnvironment.keySet();
+		Set<String> myKeys = environment.keySet();
 		println("\n================= Printing ProcessBuilder Environment Properties =================");
 		for (String aKey : myKeys) {
-			println(aKey + " \t==> " + crunchifyEnvironment.get(aKey));
+			println(aKey + " \t==> " + environment.get(aKey));
 		}
 
 		// Set Directory
 		File newDir = new File("~/ashah/Desktop");
-		crunchifyProcess.directory(newDir);
+		process.directory(newDir);
 
 		// Get working directory. directory() returns this process builder's working
 		// directory.
-		File directory = crunchifyProcess.directory();
+		File directory = process.directory();
 		println("\nThis is what we set as working directory: " + directory);
 	}
 
