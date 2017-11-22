@@ -22,7 +22,7 @@ public class FileToByteStream {
 				System.out.print((char) byteStream[counter]);
 			}
 
-			System.out.println("\nTask Finished");
+			System.out.println("Task Finished");
 		} catch (Exception e) {
 			logError("Exception" + e);
 		}
