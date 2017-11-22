@@ -1,4 +1,4 @@
-package com.loggar.io.commons;
+package com.loggar.io.append;
 
 import java.io.BufferedWriter;
 import java.io.File;
