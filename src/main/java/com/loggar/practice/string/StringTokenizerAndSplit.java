@@ -13,7 +13,7 @@ public class StringTokenizerAndSplit {
 			System.out.println("StringTokenizer Output: " + st.nextElement());
 		}
 
-		System.out.println("\n\nSplit Example: \n");
+		System.out.println("\nSplit Example: \n");
 		String[] tokens = splitString.split(delims);
 		int tokenCount = tokens.length;
 		for (int j = 0; j < tokenCount; j++) {
