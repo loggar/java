@@ -8,6 +8,6 @@ public class CharArrayToString {
 		System.out.println("output1 : " + output1);
 
 		String output2 = String.valueOf(myString);
-		System.out.println("\noutput2 : " + output2);
+		System.out.println("output2 : " + output2);
 	}
 }

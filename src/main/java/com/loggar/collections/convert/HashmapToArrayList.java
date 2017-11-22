@@ -28,7 +28,7 @@ public class HashmapToArrayList {
 
 		// Converting HashMap keys into ArrayList
 		List<String> keyList = new ArrayList<String>(companyDetails.keySet());
-		System.out.println("\n==> Size of Key list: " + keyList.size());
+		System.out.println("==> Size of Key list: " + keyList.size());
 
 		for (String temp : keyList) {
 			System.out.println(temp);
@@ -36,13 +36,13 @@ public class HashmapToArrayList {
 
 		// Converting HashMap Values into ArrayList
 		List<Integer> valueList = new ArrayList<Integer>(companyDetails.values());
-		System.out.println("\n==> Size of Value list: " + valueList.size());
+		System.out.println("==> Size of Value list: " + valueList.size());
 		for (Integer temp : valueList) {
 			System.out.println(temp);
 		}
 
 		List<Entry> entryList = new ArrayList<Entry>(companyDetails.entrySet());
-		System.out.println("\n==> Size of Entry list: " + entryList.size());
+		System.out.println("==> Size of Entry list: " + entryList.size());
 		for (Entry temp : entryList) {
 			System.out.println(temp);
 		}
