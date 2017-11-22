@@ -5,11 +5,11 @@ public class InMemoryCacheTest {
 
 		InMemoryCacheTest cache = new InMemoryCacheTest();
 
-		System.out.println("\n\n==========Test1: testAddRemoveObjects ==========");
+		System.out.println("\n==========Test1: testAddRemoveObjects ==========");
 		cache.testAddRemoveObjects();
-		System.out.println("\n\n==========Test2: testExpiredCacheObjects ==========");
+		System.out.println("\n==========Test2: testExpiredCacheObjects ==========");
 		cache.testExpiredCacheObjects();
-		System.out.println("\n\n==========Test3: testObjectsCleanupTime ==========");
+		System.out.println("\n==========Test3: testObjectsCleanupTime ==========");
 		cache.testObjectsCleanupTime();
 	}
 

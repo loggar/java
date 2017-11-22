@@ -17,7 +17,7 @@ public class HTTPResponseHeader {
 				System.out.println(entry.getKey() + " : " + entry.getValue());
 			}
 			
-			System.out.println("\nGet Response Header By Key ...\n");
+			System.out.println("Get Response Header By Key ...\n");
 			List<String> contentLength = map.get("Content-Length");
 			if (contentLength == null) {
 				System.out.println("'Content-Length' doesn't present in Header!");

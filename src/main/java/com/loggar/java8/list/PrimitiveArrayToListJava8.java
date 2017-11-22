@@ -35,14 +35,14 @@ public class PrimitiveArrayToListJava8 {
 
 		List<Integer> intList = new ArrayList<Integer>();
 
-		System.out.println("\nClassic way 1: Print intList Value via toString(): " + Arrays.toString(value));
+		System.out.println("Classic way 1: Print intList Value via toString(): " + Arrays.toString(value));
 
 		for (int i : value) {
 			intList.add(i);
 		}
 
 		// if you want to use Iterator to print value
-		System.out.println("\nClassic way 2: Print intList Value via Iterator: " + intList);
+		System.out.println("Classic way 2: Print intList Value via Iterator: " + intList);
 
 	}
 }

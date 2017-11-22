@@ -10,7 +10,7 @@ public class GetJVMTime {
 		long startTime = runtimeBean.getStartTime();
 		Date startDate = new Date(startTime);
 
-		System.out.println("\nStart Time in millisecond = " + startTime);
+		System.out.println("Start Time in millisecond = " + startTime);
 		System.out.println("Start Date = " + startDate);
 	}
 }

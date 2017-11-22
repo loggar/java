@@ -14,10 +14,10 @@ public class JavaThreadPriority extends Thread {
 		crunchThread1.setPriority(7);
 		crunchThread2.setPriority(9);
 
-		System.out.println("\ncrunchThread1 thread updated priority : " + crunchThread1.getPriority());
+		System.out.println("crunchThread1 thread updated priority : " + crunchThread1.getPriority());
 		System.out.println("crunchThread2 thread updated priority : " + crunchThread2.getPriority());
 
-		System.out.println("\nCurrent Thread Name: " + Thread.currentThread().getName());
+		System.out.println("Current Thread Name: " + Thread.currentThread().getName());
 		System.out.println("Main thread default priority : " + Thread.currentThread().getPriority());
 
 		Thread.currentThread().setPriority(2);
@@ -29,7 +29,7 @@ public class JavaThreadPriority extends Thread {
 
 		// More Thread Operations
 
-		System.out.println("\n================= Let's work on all Thread Operations =================");
+		System.out.println("================= Let's work on all Thread Operations =================");
 		// Returns the identifier of this Thread.
 		System.out.println("- getId() : " + crunchChildThread.getId());
 

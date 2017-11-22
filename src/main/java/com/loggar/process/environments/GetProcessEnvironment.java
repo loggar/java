@@ -24,7 +24,7 @@ public class GetProcessEnvironment {
 		Map<String, String> environment = process.environment();
 
 		Set<String> myKeys = environment.keySet();
-		println("\n================= Printing ProcessBuilder Environment Properties =================");
+		println("================= Printing ProcessBuilder Environment Properties =================");
 		for (String aKey : myKeys) {
 			println(aKey + " \t==> " + environment.get(aKey));
 		}
@@ -36,7 +36,7 @@ public class GetProcessEnvironment {
 		// Get working directory. directory() returns this process builder's working
 		// directory.
 		File directory = process.directory();
-		println("\nThis is what we set as working directory: " + directory);
+		println("This is what we set as working directory: " + directory);
 	}
 
 	public static void println(String string) {

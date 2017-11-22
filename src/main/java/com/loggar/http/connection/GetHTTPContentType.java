@@ -46,7 +46,7 @@ public class GetHTTPContentType {
 		String mimeType = contentType.getMimeType();
 		Charset charset = contentType.getCharset();
 
-		System.out.println("\nMimeType = " + mimeType);
+		System.out.println("MimeType = " + mimeType);
 		System.out.println("Charset  = " + charset);
 	}
 }

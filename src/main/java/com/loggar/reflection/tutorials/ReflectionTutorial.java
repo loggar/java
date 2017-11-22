@@ -55,7 +55,7 @@ public class ReflectionTutorial {
 		// A constructor reflection to create a string object by calling
 		// String(String) and String(StringBuilder) constructors.
 		Class<String> clazzString = String.class;
-		System.out.println("\nHow to create object using Constructor object? ==================== Example 6");
+		System.out.println("How to create object using Constructor object? ==================== Example 6");
 		try {
 			Constructor<?> constructor = clazzString.getConstructor(new Class[] { String.class });
 			String object = (String) constructor.newInstance(new Object[] { "Hello World!" });
@@ -70,7 +70,7 @@ public class ReflectionTutorial {
 
 		// Example 7: ==================== How to get constructors of a class
 		// object?
-		System.out.println("\nHow to get constructors of a class object ==================== Example 7");
+		System.out.println("How to get constructors of a class object ==================== Example 7");
 		try {
 			Constructor<? extends SamplePOJO> constructor = sample.getClass().getConstructor();
 			System.out.println("- Constructor = " + constructor.getName());
@@ -80,7 +80,7 @@ public class ReflectionTutorial {
 
 		// Example 8: ==================== How to get field of a class object
 		try {
-			System.out.println("\nHow to get field of a class object ==================== Example 8");
+			System.out.println("How to get field of a class object ==================== Example 8");
 			Field[] methods = clazz.getFields();
 			for (Field temp : methods) {
 				System.out.println("- " + temp.getName());
@@ -93,7 +93,7 @@ public class ReflectionTutorial {
 		// Example 9: ==================== How to invoke a method using Method
 		// class?
 		try {
-			System.out.println("\nHow to invoke a method using Method class ==================== Example 9");
+			System.out.println("How to invoke a method using Method class ==================== Example 9");
 			Class<?> c = Class.forName("com.loggar.reflection.tutorials.SamplePOJO");
 			Object obj = c.newInstance();
 			Method method = c.getDeclaredMethod("thisIsSampleReflection");
@@ -105,7 +105,7 @@ public class ReflectionTutorial {
 
 		// Example 10: ==================== get all Declared Class Fields
 		Field[] sampleFields = SamplePOJO.class.getDeclaredFields();
-		System.out.println("\nget all Declared Class Fields ==================== Example 10");
+		System.out.println("get all Declared Class Fields ==================== Example 10");
 		for (Field field : sampleFields) {
 			Class<?> type = field.getType();
 			System.out.println("field name : " + field.getName() + " , type : " + type);
