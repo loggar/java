@@ -1,4 +1,4 @@
-package com.loggar.http.github;
+package com.loggar.http.connection;
 
 import java.io.BufferedReader;
 import java.io.IOException;
