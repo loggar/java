@@ -5,8 +5,7 @@ import java.util.List;
 import java.util.Random;
 
 public class RandomNumber {
-	// Simple test which prints random number between min and max number (Number
-	// Range Example)
+	// Simple test which prints random number between min and max number (Number Range Example)
 	public void RandomTest1() throws InterruptedException {
 		while (true) {
 			int min = 5;
@@ -37,7 +36,6 @@ public class RandomNumber {
 	}
 
 	static public void main(String[] args) {
-
 		// Let's run both Test1 and Test2 methods in parallel..
 		Thread thread1 = new Thread() {
 			public void run() {

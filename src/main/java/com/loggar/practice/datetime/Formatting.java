@@ -1,4 +1,4 @@
-package com.loggar.practice.datetimes;
+package com.loggar.practice.datetime;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;

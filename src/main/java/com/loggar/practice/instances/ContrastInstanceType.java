@@ -1,24 +1,21 @@
-package com.loggar.instances.contrast;
+package com.loggar.practice.instances;
 
 public class ContrastInstanceType {
 	public static void main(String [] args) {
 		char[] arr_c = {'a','b','c'};
 		Object string2_01 = new String2(arr_c);
-		
 		System.out.println(string2_01.toString());
 		System.out.println(string2_01.getClass());
-		System.out.println(String2.class);
 		
 		String2 string2_02 = new String2(arr_c);
-		
 		System.out.println(string2_02.toString());
 		System.out.println(string2_02.getClass());
-		System.out.println(String2.class);
+		System.out.println(string2_02 == string2_01);
 		
 		String2 string2_03 = safeInstance(string2_02);
 		System.out.println(string2_03.toString());
 		System.out.println(string2_03.getClass());
-		System.out.println(String2.class);
+		System.out.println(string2_03 == string2_02);
 	}
 	
 	private static String2 safeInstance(String2 val) {

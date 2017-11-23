@@ -4,31 +4,20 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class CompanyListJoinerTutorial {
+public class CompanyListJoiner {
 	public static void main(String[] args) {
 		List<SampleCompany> list = Arrays.asList(new SampleCompany("ABC LLC", "NYC", 5),
 				new SampleCompany("Twitter Inc", "San Francisco", 5),
 				new SampleCompany("Facebook Inc", "Mountain View", 5));
 
 		// stream() returns a sequential Stream with this collection as its source.
-		// map() returns a stream consisting of the results of applying the given
-		// function to the elements of
-		// this stream.
+		// map() returns a stream consisting of the results of applying the given function to the elements of this stream.
 		String name = list.stream().map(company -> company.getCompanyName()).collect(Collectors.joining(" : ", "<< ", " >>"));
-		log("Company Name Joining: \t" + name);
+		System.out.println("Company Name Joining: \t" + name);
 
-		// joining() returns a Collector that concatenates the input elements, separated
-		// by the specified
-		// delimiter, with the specified prefix and suffix, in encounter order.
-		String address = list.stream().map(company -> company.getCompanyAddress())
-				.collect(Collectors.joining(", ", "{{ ", " }}"));
-		log("Address Joining: \t" + address);
-
-	}
-
-	private static void log(String data) {
-		System.out.println(data);
-
+		// joining() returns a Collector that concatenates the input elements, separated by the specified delimiter, with the specified prefix and suffix, in encounter order.
+		String address = list.stream().map(company -> company.getCompanyAddress()).collect(Collectors.joining(", ", "{{ ", " }}"));
+		System.out.println("Address Joining: \t" + address);
 	}
 }
 

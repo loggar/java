@@ -1,4 +1,4 @@
-package com.loggar.practice.datetimes;
+package com.loggar.practice.datetime;
 
 import java.time.Year;
 import java.time.temporal.ChronoUnit;

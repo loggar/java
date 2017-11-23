@@ -5,8 +5,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 public class RandomPasswordGenerator {
-	// SecureRandom() constructs a secure random number generator (RNG) implementing
-	// the default random number algorithm.
+	// SecureRandom() constructs a secure random number generator (RNG) implementing the default random number algorithm.
 	private SecureRandom randomNo = new SecureRandom();
 
 	private ArrayList<Object> valueObj;
@@ -14,7 +13,7 @@ public class RandomPasswordGenerator {
 	public static void main(String[] args) {
 		RandomPasswordGenerator passwordGenerator = new RandomPasswordGenerator();
 
-		log("Password Generator Utility: \n");
+		System.out.println("Password Generator Utility: \n");
 		StringBuilder buffer = new StringBuilder();
 
 		// Let's print total 8 passwords
@@ -24,53 +23,38 @@ public class RandomPasswordGenerator {
 				buffer.append(passwordGenerator.getRandom());
 			}
 
-			log(loop, buffer.toString());
+			System.out.println(loop + ": " + buffer.toString());
 			buffer.setLength(0);
 		}
 	}
 
 	// Just initialize ArrayList valueObj and add ASCII Decimal Values
 	public RandomPasswordGenerator() {
-	 
-			valueObj = new ArrayList<>();
-	 
-			// Adding ASCII Decimal value between 33 and 53
-			for (int i = 33; i < 53; i++) {
-				valueObj.add((char) i);
-			}
-	 
-			// Adding ASCII Decimal value between 54 and 85
-			for (int i = 54; i < 85; i++) {
-				valueObj.add((char) i);
-			}
-	 
-			// Adding ASCII Decimal value between 86 and 128
-			for (int i = 86; i < 127; i++) {
-				valueObj.add((char) i);
-			}
-			valueObj.add((char) 64);
-	 
-			// rotate() rotates the elements in the specified list by the specified distance. This will create strong password
-			Collections.rotate(valueObj, 5);
+		valueObj = new ArrayList<>();
+
+		// Adding ASCII Decimal value between 33 and 53
+		for (int i = 33; i < 53; i++) {
+			valueObj.add((char) i);
 		}
+
+		// Adding ASCII Decimal value between 54 and 85
+		for (int i = 54; i < 85; i++) {
+			valueObj.add((char) i);
+		}
+
+		// Adding ASCII Decimal value between 86 and 128
+		for (int i = 86; i < 127; i++) {
+			valueObj.add((char) i);
+		}
+		valueObj.add((char) 64);
+
+		// rotate() rotates the elements in the specified list by the specified distance. This will create strong password
+		Collections.rotate(valueObj, 5);
+	}
 
 	// Get Char value from above added Decimal values
 	// Enable Logging below if you want to debug
 	public char getRandom() {
-		char ch = (char) this.valueObj.get(randomNo.nextInt(this.valueObj.size()));
-		// log(String.valueOf(ch));
-		return ch;
-	}
-
-	// Simple log util
-	private static void log(String string) {
-		System.out.println(string);
-
-	}
-
-	// Simple log util
-	private static void log(int count, String password) {
-		System.out.println("Password sample " + count + ": " + password);
-
+		return (char) this.valueObj.get(randomNo.nextInt(this.valueObj.size()));
 	}
 }

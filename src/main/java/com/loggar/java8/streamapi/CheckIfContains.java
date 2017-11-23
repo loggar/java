@@ -17,22 +17,22 @@ public class CheckIfContains {
 			intArray[i] = randomNo;
 		}
 
-		log("Here is an array intArray[i] ==> " + Arrays.toString(intArray));
-		log("\n");
+		System.out.println("Here is an array intArray[i] ==> " + Arrays.toString(intArray));
+		System.out.println("\n");
 
 		// Now let's run loop for 10 times to see if my random value is part of int[]
 		// intArray
-		log("============= Test1: Legacy Java7 Way =============");
+		System.out.println("============= Test1: Legacy Java7 Way =============");
 		for (int j = 1; j <= 5; j++) {
 			randomNo = (7 + (int) (Math.random() * ((95 - 7))));
 
 			if (containsMethod(intArray, randomNo)) {
-				log("Matched: " + randomNo + " in array intArray[i]");
+				System.out.println("Matched: " + randomNo + " in array intArray[i]");
 			} else {
-				log("No Match for: " + randomNo);
+				System.out.println("No Match for: " + randomNo);
 			}
 		}
-		log("\n");
+		System.out.println("\n");
 
 		// this is java8 way to find if Array contains specified value.
 		java8IntStreamLongStreamExample(intArray);
@@ -62,34 +62,34 @@ public class CheckIfContains {
 		// Now let's run loop for 10 times to see if my random value is part of int[]
 		// intArray
 
-		log("============= Test2: Java8 IntStream->anyMatch() Way =============");
+		System.out.println("============= Test2: Java8 IntStream->anyMatch() Way =============");
 		for (int j = 1; j <= 5; j++) {
 			int randomNo = (7 + (int) (Math.random() * ((95 - 7))));
 			if (IntStream.of(intArray).anyMatch(myValue -> myValue == randomNo)) {
-				log("Matched " + randomNo + " in array intArray[i]");
+				System.out.println("Matched " + randomNo + " in array intArray[i]");
 			} else {
-				log("No Match for: " + randomNo);
+				System.out.println("No Match for: " + randomNo);
 			}
 		}
-		log("\n");
+		System.out.println("\n");
 
 		long[] longArray = new long[15];
 		for (int i = 1; i <= 14; i++) {
 			long randomLongNo = (7 + (long) (Math.random() * ((95 - 7))));
 			longArray[i] = randomLongNo;
 		}
-		log("Here is an array longArray[i] ==> " + Arrays.toString(longArray));
+		System.out.println("Here is an array longArray[i] ==> " + Arrays.toString(longArray));
 
-		log("\n============= Test3: Java8 LongStream->anyMatch() Way =============");
+		System.out.println("\n============= Test3: Java8 LongStream->anyMatch() Way =============");
 		for (int j = 1; j <= 5; j++) {
 			long randomNo = (7 + (long) (Math.random() * ((95 - 7))));
 			if (LongStream.of(longArray).anyMatch(myValue -> myValue == randomNo)) {
-				log("Matched " + randomNo + " in array longArray[i]");
+				System.out.println("Matched " + randomNo + " in array longArray[i]");
 			} else {
-				log("No Match for: " + randomNo);
+				System.out.println("No Match for: " + randomNo);
 			}
 		}
-		log("\n");
+		System.out.println("\n");
 
 	}
 
@@ -100,25 +100,18 @@ public class CheckIfContains {
 		// Convert String Array to List
 		List<String> list = Arrays.asList(company);
 
-		log("============= Test4: Arrays.asList() contains() and containsAll() Example =============");
+		System.out.println("============= Test4: Arrays.asList() contains() and containsAll() Example =============");
 		if (list.contains("Twitter")) {
-			log("Matched Found for Twitter");
+			System.out.println("Matched Found for Twitter");
 		}
 
 		if (list.contains("Twitter") || list.contains("Facebook")) {
-			log("Matched Found for Twitter and Facebook");
+			System.out.println("Matched Found for Twitter and Facebook");
 		}
 
 		// A and B
 		if (list.containsAll(Arrays.asList("Google", "Facebook"))) {
-			log("Matched Found for Google and Facebook");
+			System.out.println("Matched Found for Google and Facebook");
 		}
-
-	}
-
-	// Simple log utility
-	private static void log(String string) {
-		System.out.println(string);
-
 	}
 }

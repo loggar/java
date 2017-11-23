@@ -35,7 +35,7 @@ public class Java8StreamReadFile {
 			e.printStackTrace();
 		}
 
-		log("============= Result from lines() and Stream Approach =============");
+		System.out.println("============= Result from lines() and Stream Approach =============");
 		stream.forEach(System.out::println);
 	}
 
@@ -59,17 +59,11 @@ public class Java8StreamReadFile {
 		// BufferedReader
 		list = bufferReader.lines().collect(Collectors.toList());
 
-		log("\n============= Result from newBufferedReader and Stream Approach =============");
+		System.out.println("\n============= Result from newBufferedReader and Stream Approach =============");
 
 		// forEach: performs the given action for each element of the Iterable until all
 		// elements have been processed or the
 		// action throws an exception.
 		list.forEach(System.out::println);
-
-	}
-
-	private static void log(String string) {
-		System.out.println(string);
-
 	}
 }
