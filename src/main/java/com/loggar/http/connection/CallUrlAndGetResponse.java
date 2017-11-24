@@ -8,7 +8,7 @@ import java.nio.charset.Charset;
 
 public class CallUrlAndGetResponse {
 	public static void main(String[] args) {
-		System.out.println("Output: \n" + callURL("https://google.com/favicon.ico"));
+		System.out.println("Output: \n" + callURL("http://www.mocky.io/v2/5a165cd03100004f008d31ee"));
 	}
 
 	public static String callURL(String myURL) {
