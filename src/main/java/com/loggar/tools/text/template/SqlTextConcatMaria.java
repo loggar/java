@@ -3,9 +3,9 @@ package com.loggar.tools.text.template;
 import java.io.BufferedReader;
 import java.io.FileReader;
 
-public class ConcatMaria {
+public class SqlTextConcatMaria {
 	public static void main(String [] args) {
-		String path = ConcatMaria.class.getResource("").getPath() + "sql.txt";
+		String path = SqlTextConcatMaria.class.getResource("").getPath() + "sql.txt";
 		
 		StringBuilder sb = new StringBuilder();
 		sb.setLength(0);
