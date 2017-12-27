@@ -6,8 +6,6 @@ package com.loggar.pattern.singleton;
  * 아래 방법은 생성 시기를 늦추는 싱클톤 방법이다.
  * HolderIdiomSingleton 가 직접 static INSTANCE 를 가지고 있지 않기 때문에 시스템은 LazyHolder.INSTANCE 에 접근이 시도 될 떄까지 인스턴스 생성을 미룬다.
  * 
- * @author loggar.lee
- *
  */
 public class HolderIdiomSingleton {
 	private HolderIdiomSingleton() {}

@@ -1,10 +1,5 @@
 package com.loggar.io.rw;
 
-/**
- * 
- * @author loggar
- *
- */
 public class FileUtil {
 	/**
 	 * extract file extension name from file name

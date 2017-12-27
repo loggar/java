@@ -2,8 +2,6 @@ package com.loggar.practice.effective;
 
 /**
  * 필드가 많은(5개이상?) 객체의 생성에 bilder 를 고려하자.
- * @author loggar.lee
- *
  */
 public class _02_ClassBuilder {
 	public static void main(String[] args) {
@@ -18,9 +16,6 @@ public class _02_ClassBuilder {
 	
 	/**
 	 * Builder interface for all class builder.
-	 * @author loggar.lee
-	 *
-	 * @param <T>
 	 */
 	public interface Builder<T> {
 		public T build();

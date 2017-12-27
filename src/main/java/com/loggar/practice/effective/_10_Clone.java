@@ -3,8 +3,6 @@ package com.loggar.practice.effective;
 /**
  * Override clone judiciously
  * 
- * @author loggar.lee
- *
  */
 public class _10_Clone {
 	public static void main(String [] args) {

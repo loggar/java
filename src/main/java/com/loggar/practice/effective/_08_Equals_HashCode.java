@@ -7,8 +7,6 @@ import java.util.Map;
  * 08. Obey the general contract when overring equals
  * 09. Always override hashCode when you override equals
  * 
- * @author loggar.lee
- *
  */
 public class _08_Equals_HashCode {
 	public static void main(String [] args) {

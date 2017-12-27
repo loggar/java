@@ -3,8 +3,6 @@ package com.loggar.pattern.singleton;
 /**
  * Lazy Creation of Singleton ThreadSafe Instance without Using Synchronized Keyword
  * 
- * @author loggar.lee
- *
  */
 public class LazyThreadSafeSingleton {
 	private LazyThreadSafeSingleton() {

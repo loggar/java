@@ -5,12 +5,6 @@ import java.util.Collections;
 import java.util.Set;
 import java.util.TreeSet;
 
-/**
- * 
- * @author loggar.lee
- *
- * @param <T>
- */
 public class _11_Comparable {
 	public static void main(String [] args) {
 		PhoneNumber testObject1 = new PhoneNumber(123, 456, 7890);

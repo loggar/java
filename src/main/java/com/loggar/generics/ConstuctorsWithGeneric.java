@@ -4,9 +4,6 @@ package com.loggar.generics;
  * Constructors of generic classes do not require generic type parameters as
  * arguments:
  * 
- * @author loggar.lee
- *
- * @param <E>
  */
 public class ConstuctorsWithGeneric<E> {
 	public ConstuctorsWithGeneric() {

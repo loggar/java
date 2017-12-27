@@ -7,7 +7,6 @@ import java.util.List;
 /**
  * a nonzero-length array is always mutable,
  * so it is wrong for a class to have a public static final array field, or an accessor that returns such a field.
- * @author loggar.lee
  *
  */
 public class _12_Accessibility_of_field {
@@ -34,7 +33,6 @@ public class _12_Accessibility_of_field {
 	
 	/**
 	 * solution 1.
-	 * @author loggar.lee
 	 *
 	 */
 	static class SomeClass_2 {
@@ -45,7 +43,6 @@ public class _12_Accessibility_of_field {
 	
 	/**
 	 * solution 2.
-	 * @author loggar.lee
 	 *
 	 */
 	static class SomeClass_3 {

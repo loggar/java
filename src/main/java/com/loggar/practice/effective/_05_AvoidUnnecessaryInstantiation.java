@@ -6,7 +6,6 @@ import java.util.Calendar;
  * 불필요한 객체생성을 하지 말자.
  * 
  * ex) String a = new String("sdfs");  <- 이 구문은 매우 비효율적이다.
- * @author loggar.lee
  *
  */
 public class _05_AvoidUnnecessaryInstantiation {

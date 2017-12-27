@@ -3,8 +3,6 @@ package com.loggar.practice.effective;
 /**
  * 10. Always override toString
  * 
- * @author loggar.lee
- *
  */
 public class _09_Tostring {
 	public static void main(String [] args) {

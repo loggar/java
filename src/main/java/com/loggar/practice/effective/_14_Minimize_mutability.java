@@ -6,8 +6,6 @@ package com.loggar.practice.effective;
  * If a class cannot be made immutable, limit its mutability as much as possible.
  * make every field final unless there is a compelling reason to make it nonfinal.
  * 
- * @author loggar.lee
- *
  */
 public class _14_Minimize_mutability {
 	public static void main(String[] args) {
@@ -26,7 +24,6 @@ public class _14_Minimize_mutability {
 	
 	/**
 	 * every instance of this class is immutable.
-	 * @author loggar.lee
 	 *
 	 */
 	static class Complex {

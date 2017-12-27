@@ -6,7 +6,6 @@ import java.util.List;
 
 /**
  * return empty collection not null.
- * @author loggar.lee
  *
  */
 public class _15_ReturnEmptyCollection {

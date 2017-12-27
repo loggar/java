@@ -3,8 +3,6 @@ package com.loggar.practice.effective;
 /**
  * 생성자 대신 Static Factory Method 로 인스턴스를 생성하자.
  * 
- * @author loggar.lee
- *
  */
 public class _01_StaticFactoryMethod {
 	static class StaticFactoryMethodSample {
