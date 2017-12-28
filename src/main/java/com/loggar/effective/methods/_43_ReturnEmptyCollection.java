@@ -1,4 +1,4 @@
-package com.loggar.effective.practice;
+package com.loggar.effective.methods;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -8,7 +8,7 @@ import java.util.List;
  * return empty collection not null.
  *
  */
-public class _15_ReturnEmptyCollection {
+public class _43_ReturnEmptyCollection {
 	class Cheese {
 		int stock = 0;
 		

@@ -1,4 +1,4 @@
-package com.loggar.effective.practice;
+package com.loggar.effective.instantiation;
 
 import java.util.Arrays;
 import java.util.EmptyStackException;

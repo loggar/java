@@ -1,10 +1,10 @@
-package com.loggar.effective.practice;
+package com.loggar.statements.iterate;
 
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
-public class _16_General_java {
+public class IterateGoodPractice {
 	List<String> list = new ArrayList<>();
 
 	/**

@@ -1,4 +1,4 @@
-package com.loggar.effective.practice;
+package com.loggar.effective.method_common_to_all_object;
 
 import java.util.HashMap;
 import java.util.Map;
