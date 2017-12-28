@@ -4,7 +4,7 @@ package com.loggar.effective.practice;
  * Override clone judiciously
  * 
  */
-public class _10_Clone {
+public class _11_Clone {
 	public static void main(String [] args) {
 		PhoneNumber testObject1 = new PhoneNumber(123, 456, 7890);
 		PhoneNumber testObject2= testObject1.clone();

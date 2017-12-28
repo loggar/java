@@ -5,7 +5,7 @@ import java.util.Collections;
 import java.util.Set;
 import java.util.TreeSet;
 
-public class _11_Comparable {
+public class _12_Comparable {
 	public static void main(String [] args) {
 		PhoneNumber testObject1 = new PhoneNumber(123, 456, 7890);
 		PhoneNumber testObject2= new PhoneNumber(123, 457, 7890);

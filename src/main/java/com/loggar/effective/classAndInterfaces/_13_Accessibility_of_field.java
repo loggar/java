@@ -1,4 +1,4 @@
-package com.loggar.effective.practice;
+package com.loggar.effective.classAndInterfaces;
 
 import java.util.Arrays;
 import java.util.Collections;
@@ -9,7 +9,7 @@ import java.util.List;
  * so it is wrong for a class to have a public static final array field, or an accessor that returns such a field.
  *
  */
-public class _12_Accessibility_of_field {
+public class _13_Accessibility_of_field {
 	public static void main(String [] args) {
 		System.out.println(display(SomeClass_1.VALUES));
 		

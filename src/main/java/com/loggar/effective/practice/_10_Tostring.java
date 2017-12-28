@@ -4,7 +4,7 @@ package com.loggar.effective.practice;
  * 10. Always override toString
  * 
  */
-public class _09_Tostring {
+public class _10_Tostring {
 	public static void main(String [] args) {
 		PhoneNumber testObject1 = new PhoneNumber(123, 456, 7890);
 		

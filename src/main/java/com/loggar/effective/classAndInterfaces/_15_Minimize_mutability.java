@@ -1,4 +1,4 @@
-package com.loggar.effective.practice;
+package com.loggar.effective.classAndInterfaces;
 
 /**
  * Most of cases, classes should be immutable unless there is a very good reason to make them mutable.
@@ -7,7 +7,7 @@ package com.loggar.effective.practice;
  * make every field final unless there is a compelling reason to make it nonfinal.
  * 
  */
-public class _14_Minimize_mutability {
+public class _15_Minimize_mutability {
 	public static void main(String[] args) {
 		Complex c1 = Complex.valueOf(1.1, 2.2);
 		Complex c2 = Complex.valueOf(3.3, 4.4);
