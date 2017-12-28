@@ -1,23 +1,16 @@
-package com.loggar.practice.effective;
-
-import java.util.HashMap;
-import java.util.Map;
+package com.loggar.effective.practice;
 
 /**
- * 08. Obey the general contract when overring equals
- * 09. Always override hashCode when you override equals
+ * Override clone judiciously
  * 
  */
-public class _08_Equals_HashCode {
+public class _10_Clone {
 	public static void main(String [] args) {
-		Map<PhoneNumber, String> map = new HashMap<>();
+		PhoneNumber testObject1 = new PhoneNumber(123, 456, 7890);
+		PhoneNumber testObject2= testObject1.clone();
 		
-		map.put(new PhoneNumber(123, 456, 7890), "Charly");
-		
-		/*
-		 * and now with the proper hashCode, I can use PhoneNumber instance as an key of Map.
-		 */
-		System.out.println(map.get(new PhoneNumber(123, 456, 7890)));
+		System.out.println(testObject1 == testObject2);
+		System.out.println(testObject1.equals(testObject2));
 	}
 	
 	static class PhoneNumber {
@@ -76,5 +69,18 @@ public class _08_Equals_HashCode {
 			hashCode = result;
 		}
 		*/
+		
+		@Override public String toString() {
+			StringBuffer sb = new StringBuffer();
+			sb.setLength(0);
+			sb.append("PhoneNumber={").append(areaCode).append('-').append(prefixNumber).append('-').append(lineNumber).append('}');
+			
+			return sb.toString();
+		}
+		
+		@Override public PhoneNumber clone() {
+			PhoneNumber newInstance = new PhoneNumber(areaCode, prefixNumber, lineNumber);
+			return newInstance;
+		}
 	}
 }

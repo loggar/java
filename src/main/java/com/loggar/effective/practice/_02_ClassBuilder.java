@@ -1,4 +1,4 @@
-package com.loggar.practice.effective;
+package com.loggar.effective.practice;
 
 /**
  * 필드가 많은(5개이상?) 객체의 생성에 bilder 를 고려하자.

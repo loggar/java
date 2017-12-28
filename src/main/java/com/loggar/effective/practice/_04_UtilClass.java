@@ -1,4 +1,4 @@
-package com.loggar.practice.effective;
+package com.loggar.effective.practice;
 
 /**
  * public static method 조합의 util 클래스는 인스턴스를 생성하거나 상속받지 못하도록 고려하자.

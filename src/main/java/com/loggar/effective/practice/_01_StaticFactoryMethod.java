@@ -1,4 +1,4 @@
-package com.loggar.practice.effective;
+package com.loggar.effective.practice;
 
 /**
  * 생성자 대신 Static Factory Method 로 인스턴스를 생성하자.

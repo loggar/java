@@ -1,4 +1,4 @@
-package com.loggar.practice.effective;
+package com.loggar.effective.practice;
 
 import java.util.Arrays;
 import java.util.Set;

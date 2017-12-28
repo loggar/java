@@ -1,4 +1,4 @@
-package com.loggar.practice.effective;
+package com.loggar.effective.practice;
 
 /**
  * 싱글톤 객체를 만들때는 factory method 나 enum 을 고려하자.

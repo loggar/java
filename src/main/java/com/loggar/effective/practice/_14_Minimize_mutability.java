@@ -1,4 +1,4 @@
-package com.loggar.practice.effective;
+package com.loggar.effective.practice;
 
 /**
  * Most of cases, classes should be immutable unless there is a very good reason to make them mutable.

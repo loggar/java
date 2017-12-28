@@ -1,4 +1,4 @@
-package com.loggar.practice.effective;
+package com.loggar.effective.practice;
 
 /**
  * field 는 항상 private, protected 등으로 보호하자(public static final 필드 제외)
