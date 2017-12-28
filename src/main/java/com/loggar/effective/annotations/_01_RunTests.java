@@ -30,12 +30,6 @@ public class _01_RunTests {
 	}
 }
 /*
- * INVALID @Test: public void com.loggar.effective.annotations._01_Sample.m5()
- * public static void com.loggar.effective.annotations._01_Sample.m7() failed: java.lang.RuntimeException: Crash public static void
- * com.loggar.effective.annotations._01_Sample.m3() failed: java.lang.RuntimeException: Boom Passed: 1, Failed: 3
- */
-
-/*
  * The isAnnotationPresent method tells the tool which methods to run. If a test
  * method throws an exception, the reflection facility wraps it in an
  * InvocationTargetException. The tool catches this exception and prints a
