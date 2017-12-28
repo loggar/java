@@ -14,7 +14,6 @@ public interface PhysicalConstants {
 
 /**
  * Use interfaces only to define types
- * @author charly.lee
  *
  */
 //Constant utility class

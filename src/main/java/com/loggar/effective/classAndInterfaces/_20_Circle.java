@@ -4,10 +4,10 @@ package com.loggar.effective.classAndInterfaces;
  * Prefer class hierarchies to tagged classes
  *
  */
-class Circle extends Figure {
+class _20_Circle extends _20_Figure {
 	final double radius;
 
-	Circle(double radius) {
+	_20_Circle(double radius) {
 		this.radius = radius;
 	}
 
