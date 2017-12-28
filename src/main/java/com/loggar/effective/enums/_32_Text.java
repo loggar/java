@@ -21,7 +21,7 @@ public class Text {
 /**
  * Use EnumSet instead of bit fields
  */
-public class _05_Text {
+public class _32_Text {
 	public enum Style {
 		BOLD, ITALIC, UNDERLINE, STRIKETHROUGH
 	}
@@ -35,7 +35,7 @@ public class _05_Text {
 	}
 
 	public static void main(String[] args) {
-		_05_Text text = new _05_Text();
+		_32_Text text = new _32_Text();
 		text.applyStyles(EnumSet.of(Style.BOLD, Style.ITALIC));
 	}
 }

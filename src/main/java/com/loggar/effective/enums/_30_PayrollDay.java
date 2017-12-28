@@ -1,15 +1,15 @@
 package com.loggar.effective.enums;
 
 /**
- * The strategy enum pattern
+ * Use enums instead of int constants
  *
  */
-public enum _03_PayrollDay {
+public enum _30_PayrollDay {
 	MONDAY(PayType.WEEKDAY), TUESDAY(PayType.WEEKDAY), WEDNESDAY(PayType.WEEKDAY), THURSDAY(PayType.WEEKDAY), FRIDAY(
 			PayType.WEEKDAY), SATURDAY(PayType.WEEKEND), SUNDAY(PayType.WEEKEND);
 	private final PayType payType;
 
-	_03_PayrollDay(PayType payType) {
+	_30_PayrollDay(PayType payType) {
 		this.payType = payType;
 	}
 

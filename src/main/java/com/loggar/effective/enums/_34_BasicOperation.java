@@ -4,7 +4,7 @@ package com.loggar.effective.enums;
  * Emulate extensible enums with interfaces
  * 
  */
-public enum _08_BasicOperation implements _08_Operation {
+public enum _34_BasicOperation implements _34_Operation {
 	PLUS("+") {
 		public double apply(double x, double y) {
 			return x + y;
@@ -27,7 +27,7 @@ public enum _08_BasicOperation implements _08_Operation {
 	};
 	private final String symbol;
 
-	_08_BasicOperation(String symbol) {
+	_34_BasicOperation(String symbol) {
 		this.symbol = symbol;
 	}
 

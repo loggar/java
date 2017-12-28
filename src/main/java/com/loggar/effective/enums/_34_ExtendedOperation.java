@@ -1,6 +1,6 @@
 package com.loggar.effective.enums;
 
-public enum _08_ExtendedOperation implements _08_Operation {
+public enum _34_ExtendedOperation implements _34_Operation {
 	EXP("^") {
 		public double apply(double x, double y) {
 			return Math.pow(x, y);
@@ -13,7 +13,7 @@ public enum _08_ExtendedOperation implements _08_Operation {
 	};
 	private final String symbol;
 
-	_08_ExtendedOperation(String symbol) {
+	_34_ExtendedOperation(String symbol) {
 		this.symbol = symbol;
 	}
 

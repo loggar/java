@@ -25,29 +25,29 @@ public enum Phase {
  * Use EnumMap instead of ordinal indexing Using a nested EnumMap to associate
  * data with enum pairs
  */
-public enum _07_Phase {
+public enum _33_Phase {
 	SOLID, LIQUID, GAS;
 	public enum Transition {
 		MELT(SOLID, LIQUID), FREEZE(LIQUID, SOLID), BOIL(LIQUID, GAS), CONDENSE(GAS, LIQUID), SUBLIME(SOLID,
 				GAS), DEPOSIT(GAS, SOLID);
-		final _07_Phase src;
-		final _07_Phase dst;
+		final _33_Phase src;
+		final _33_Phase dst;
 
-		Transition(_07_Phase src, _07_Phase dst) {
+		Transition(_33_Phase src, _33_Phase dst) {
 			this.src = src;
 			this.dst = dst;
 		}// Initialize the phase transition map
 
-		private static final Map<_07_Phase, Map<_07_Phase, Transition>> m = new EnumMap<_07_Phase, Map<_07_Phase, Transition>>(
-				_07_Phase.class);
+		private static final Map<_33_Phase, Map<_33_Phase, Transition>> m = new EnumMap<_33_Phase, Map<_33_Phase, Transition>>(
+				_33_Phase.class);
 		static {
-			for (_07_Phase p : _07_Phase.values())
-				m.put(p, new EnumMap<_07_Phase, Transition>(_07_Phase.class));
+			for (_33_Phase p : _33_Phase.values())
+				m.put(p, new EnumMap<_33_Phase, Transition>(_33_Phase.class));
 			for (Transition trans : Transition.values())
 				m.get(trans.src).put(trans.dst, trans);
 		}
 
-		public static Transition from(_07_Phase src, _07_Phase dst) {
+		public static Transition from(_33_Phase src, _33_Phase dst) {
 			return m.get(src).get(dst);
 		}
 	}

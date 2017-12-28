@@ -3,7 +3,11 @@ package com.loggar.effective.enums;
 import java.util.HashMap;
 import java.util.Map;
 
-public enum _02_Operation {
+/**
+ * Use enums instead of int constants
+ *
+ */
+public enum _30_Operation {
 	PLUS("+") {
 		double apply(double x, double y) {
 			return x + y;
@@ -26,7 +30,7 @@ public enum _02_Operation {
 	};
 	private final String symbol;
 
-	_02_Operation(String symbol) {
+	_30_Operation(String symbol) {
 		this.symbol = symbol;
 	}
 
@@ -38,28 +42,28 @@ public enum _02_Operation {
 	abstract double apply(double x, double y);
 
 	// Implementing a fromString method on an enum type
-	private static final Map<String, _02_Operation> stringToEnum = new HashMap<String, _02_Operation>();
+	private static final Map<String, _30_Operation> stringToEnum = new HashMap<String, _30_Operation>();
 	static { // Initialize map from constant name to enum constant
-		for (_02_Operation op : values())
+		for (_30_Operation op : values())
 			stringToEnum.put(op.toString(), op);
 	}
 
 	// Returns Operation for string, or null if string is invalid
-	public static _02_Operation fromString(String symbol) {
+	public static _30_Operation fromString(String symbol) {
 		return stringToEnum.get(symbol);
 	}
 
 	// Switch on an enum to simulate a missing method
-	public static _02_Operation inverse(_02_Operation op) {
+	public static _30_Operation inverse(_30_Operation op) {
 		switch (op) {
 		case PLUS:
-			return _02_Operation.MINUS;
+			return _30_Operation.MINUS;
 		case MINUS:
-			return _02_Operation.PLUS;
+			return _30_Operation.PLUS;
 		case TIMES:
-			return _02_Operation.DIVIDE;
+			return _30_Operation.DIVIDE;
 		case DIVIDE:
-			return _02_Operation.TIMES;
+			return _30_Operation.TIMES;
 		default:
 			throw new AssertionError("Unknown op: " + op);
 		}
@@ -68,13 +72,13 @@ public enum _02_Operation {
 	public static void main(String[] args) {
 		double x = 2;
 		double y = 4;
-		for (_02_Operation op : _02_Operation.values())
+		for (_30_Operation op : _30_Operation.values())
 			System.out.printf("%f %s %f = %f%n", x, op, y, op.apply(x, y));
 
-		for (_02_Operation op : _02_Operation.values())
-			System.out.printf("fromString %s \t%s%n", op.toString(), _02_Operation.fromString(op.toString()));
+		for (_30_Operation op : _30_Operation.values())
+			System.out.printf("fromString %s \t%s%n", op.toString(), _30_Operation.fromString(op.toString()));
 		
-		for (_02_Operation op : _02_Operation.values())
-			System.out.printf("inverse %s \t%s%n", op, _02_Operation.inverse(op));
+		for (_30_Operation op : _30_Operation.values())
+			System.out.printf("inverse %s \t%s%n", op, _30_Operation.inverse(op));
 	}
 }
