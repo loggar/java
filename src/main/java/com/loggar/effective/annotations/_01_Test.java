@@ -6,6 +6,8 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 /**
+ * Prefer annotations to naming patterns
+ * 
  * Indicates that the annotated method is a test method.
  * Use only on parameterless static methods.
  * 

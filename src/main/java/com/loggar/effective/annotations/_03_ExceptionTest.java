@@ -4,7 +4,10 @@ import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
-
+/**
+ * Prefer annotations to naming patterns
+ *
+ */
 //Annotation type with an array parameter
 //Suppose we change the parameter type of the ExceptionTest annotation to be an array of Class objects:
 @Retention(RetentionPolicy.RUNTIME)
