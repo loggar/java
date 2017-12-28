@@ -8,20 +8,20 @@ import java.util.Set;
  *
  */
 // Can you spot the bug?
-public class _04_Bigram_2 {
+public class _36_Bigram_2 {
 	private final char first;
 	private final char second;
 
-	public _04_Bigram_2(char first, char second) {
+	public _36_Bigram_2(char first, char second) {
 		this.first = first;
 		this.second = second;
 	}
 
 	@Override
 	public boolean equals(Object o) {
-		if (!(o instanceof _04_Bigram_2))
+		if (!(o instanceof _36_Bigram_2))
 			return false;
-		_04_Bigram_2 b = (_04_Bigram_2) o;
+		_36_Bigram_2 b = (_36_Bigram_2) o;
 		return b.first == first && b.second == second;
 	}
 
@@ -30,10 +30,10 @@ public class _04_Bigram_2 {
 	}
 
 	public static void main(String[] args) {
-		Set<_04_Bigram_2> s = new HashSet<_04_Bigram_2>();
+		Set<_36_Bigram_2> s = new HashSet<_36_Bigram_2>();
 		for (int i = 0; i < 10; i++)
 			for (char ch = 'a'; ch <= 'z'; ch++)
-				s.add(new _04_Bigram_2(ch, ch));
+				s.add(new _36_Bigram_2(ch, ch));
 		System.out.println(s.size());
 	}
 }

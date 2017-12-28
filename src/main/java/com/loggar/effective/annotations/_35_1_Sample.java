@@ -1,14 +1,18 @@
 package com.loggar.effective.annotations;
 
-public class _01_Sample {
-	@_01_Test
+/**
+ * Prefer annotations to naming patterns
+ *
+ */
+public class _35_1_Sample {
+	@_35_1_Test
 	public static void m1() {
 	} // Test should pass
 
 	public static void m2() {
 	}
 
-	@_01_Test
+	@_35_1_Test
 	public static void m3() { // Test Should fail
 		throw new RuntimeException("Boom");
 	}
@@ -16,14 +20,14 @@ public class _01_Sample {
 	public static void m4() {
 	}
 
-	@_01_Test
+	@_35_1_Test
 	public void m5() {
 	} // INVALID USE: nonstatic method
 
 	public static void m6() {
 	}
 
-	@_01_Test
+	@_35_1_Test
 	public static void m7() { // Test should fail
 		throw new RuntimeException("Crash");
 	}

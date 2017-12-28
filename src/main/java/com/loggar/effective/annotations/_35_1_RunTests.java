@@ -3,17 +3,21 @@ package com.loggar.effective.annotations;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
+/**
+ * Prefer annotations to naming patterns
+ *
+ */
 /*
  * More generally, annotations never change the semantics of the annotated code, but enable it for special treatment by tools such as this simple test runner:
  * 
  */
-public class _01_RunTests {
+public class _35_1_RunTests {
 	public static void main(String[] args) throws Exception {
 		int tests = 0;
 		int passed = 0;
 		Class<?> testClass = Class.forName("com.loggar.effective.annotations._01_Sample");
 		for (Method m : testClass.getDeclaredMethods()) {
-			if (m.isAnnotationPresent(_01_Test.class)) {
+			if (m.isAnnotationPresent(_35_1_Test.class)) {
 				tests++;
 				try {
 					m.invoke(null);

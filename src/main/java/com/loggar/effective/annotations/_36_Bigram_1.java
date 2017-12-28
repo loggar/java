@@ -8,16 +8,16 @@ import java.util.Set;
  *
  */
 // Can you spot the bug?
-public class _04_Bigram_1 {
+public class _36_Bigram_1 {
 	private final char first;
 	private final char second;
 
-	public _04_Bigram_1(char first, char second) {
+	public _36_Bigram_1(char first, char second) {
 		this.first = first;
 		this.second = second;
 	}
 
-	public boolean equals(_04_Bigram_1 b) {
+	public boolean equals(_36_Bigram_1 b) {
 		return b.first == first && b.second == second;
 	}
 
@@ -26,10 +26,10 @@ public class _04_Bigram_1 {
 	}
 
 	public static void main(String[] args) {
-		Set<_04_Bigram_1> s = new HashSet<_04_Bigram_1>();
+		Set<_36_Bigram_1> s = new HashSet<_36_Bigram_1>();
 		for (int i = 0; i < 10; i++)
 			for (char ch = 'a'; ch <= 'z'; ch++)
-				s.add(new _04_Bigram_1(ch, ch));
+				s.add(new _36_Bigram_1(ch, ch));
 		System.out.println(s.size());
 	}
 }

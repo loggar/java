@@ -12,6 +12,6 @@ import java.lang.annotation.Target;
 //Suppose we change the parameter type of the ExceptionTest annotation to be an array of Class objects:
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.METHOD)
-public @interface _03_ExceptionTest {
+public @interface _35_3_ExceptionTest {
 	Class<? extends Exception>[] value();
 }

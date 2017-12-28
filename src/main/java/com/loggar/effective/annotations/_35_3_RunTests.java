@@ -2,20 +2,20 @@ package com.loggar.effective.annotations;
 
 import java.lang.reflect.Method;
 
-public class _03_RunTests {
+public class _35_3_RunTests {
 	public static void main(String[] args) throws Exception {
 		int tests = 0;
 		int passed = 0;
 		Class<?> testClass = Class.forName("com.loggar.effective.annotations._03_Sample");
 		for (Method m : testClass.getDeclaredMethods()) {
-			if (m.isAnnotationPresent(_03_ExceptionTest.class)) {
+			if (m.isAnnotationPresent(_35_3_ExceptionTest.class)) {
 				tests++;
 				try {
 					m.invoke(null);
 					System.out.printf("Test %s failed: no exception%n", m);
 				} catch (Throwable wrappedExc) {
 					Throwable exc = wrappedExc.getCause();
-					Class<? extends Exception>[] excTypes = m.getAnnotation(_03_ExceptionTest.class).value();
+					Class<? extends Exception>[] excTypes = m.getAnnotation(_35_3_ExceptionTest.class).value();
 					int oldPassed = passed;
 					for (Class<? extends Exception> excType : excTypes) {
 						if (excType.isInstance(exc)) {

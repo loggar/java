@@ -13,6 +13,6 @@ import java.lang.annotation.Target;
  */
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.METHOD)
-public @interface _02_ExceptionTest {
+public @interface _35_2_ExceptionTest {
 	Class<? extends Exception> value();
 }
