@@ -8,7 +8,11 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
-public class Favor_generic_methods {
+/**
+ * Favor generic methods
+ *
+ */
+public class _27_Favor_generic_methods {
 	// Generic method
 	public static <E> Set<E> union(Set<E> s1, Set<E> s2) {
 		Set<E> result = new HashSet<E>(s1);
