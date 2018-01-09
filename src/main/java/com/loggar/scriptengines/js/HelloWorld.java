@@ -1,21 +1,31 @@
 package com.loggar.scriptengines.js;
 
+import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
 import javax.script.ScriptEngine;
 import javax.script.ScriptEngineManager;
+import javax.script.ScriptException;
 
 public class HelloWorld {
-	public static void main(String[] args) throws Exception {
-		ScriptEngineManager m = new ScriptEngineManager();
-		// Sets up Nashorn JavaScript Engine
-		ScriptEngine e = m.getEngineByExtension("js");
-		// Nashorn JavaScript syntax.
-		e.eval("print ('Hello, ')");
-		// world.js contents: print('World!\n');
-		Path p1 = Paths.get("./dist/js/hello.js");
-		e.eval(new FileReader(p1.toString()));
+	public static void main(String[] args) {
+		ScriptEngineManager m = new ScriptEngineManager(); // Sets up Nashorn JavaScript Engine
+		ScriptEngine e = m.getEngineByExtension("js"); // Nashorn JavaScript syntax.
+		try {
+			e.eval("print ('Hello, ')");
+		} catch (ScriptException e1) {
+			e1.printStackTrace();
+		}
+		
+		Path p1 = Paths.get("./dist/js/world.js");
+		try {
+			e.eval(new FileReader(p1.toString()));
+		} catch (FileNotFoundException e1) {
+			e1.printStackTrace();
+		} catch (ScriptException e1) {
+			e1.printStackTrace();
+		}
 	}
 }

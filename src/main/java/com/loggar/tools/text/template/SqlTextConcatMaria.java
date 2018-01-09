@@ -2,10 +2,13 @@ package com.loggar.tools.text.template;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 
 public class SqlTextConcatMaria {
 	public static void main(String [] args) {
-		String path = SqlTextConcatMaria.class.getResource("").getPath() + "sql.txt";
+		Path p1 = Paths.get("./dist/tools/text/sql.txt");
+		String path = p1.toString();
 		
 		StringBuilder sb = new StringBuilder();
 		sb.setLength(0);
