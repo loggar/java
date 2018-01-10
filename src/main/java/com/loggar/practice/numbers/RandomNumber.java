@@ -1,4 +1,4 @@
-package com.loggar.tools.number.random;
+package com.loggar.practice.numbers;
 
 import java.util.ArrayList;
 import java.util.List;
