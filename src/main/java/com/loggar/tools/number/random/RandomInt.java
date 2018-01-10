@@ -1,4 +1,4 @@
-package com.loggar.component.number;
+package com.loggar.tools.number.random;
 
 import static org.junit.Assert.assertTrue;
 
@@ -15,7 +15,6 @@ public class RandomInt {
 
 		for (int i = 0; i < 1000; i++) {
 			x = rnd.nextInt(range);
-			System.out.println(x);
 			assertTrue(x >= 0 && x < range);
 		}
 	}

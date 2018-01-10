@@ -1,4 +1,4 @@
-package com.loggar.component.passwords;
+package com.loggar.tools.passwords;
 
 import java.security.SecureRandom;
 import java.util.ArrayList;

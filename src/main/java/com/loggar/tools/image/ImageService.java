@@ -1,4 +1,4 @@
-package com.loggar.component.image;
+package com.loggar.tools.image;
 
 import java.awt.Graphics;
 import java.awt.Image;

@@ -1,4 +1,4 @@
-package com.loggar.component.image;
+package com.loggar.tools.image;
 
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertThat;
