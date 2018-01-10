@@ -4,7 +4,7 @@ import java.math.BigDecimal;
 
 import org.junit.Test;
 
-public class BigDecimal_for_exact_numbers {
+public class _48_BigDecimal_for_exact_numbers {
 	@Test
 	public void test1() {
 		System.out.println(1.03 - .42);

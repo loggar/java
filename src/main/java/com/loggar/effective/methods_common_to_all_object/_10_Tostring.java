@@ -1,4 +1,4 @@
-package com.loggar.effective.method_common_to_all_object;
+package com.loggar.effective.methods_common_to_all_object;
 
 /**
  * 10. Always override toString
