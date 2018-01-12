@@ -11,7 +11,6 @@ import java.util.stream.Stream;
 
 public class Java8StreamReadFile {
 	public static void main(String args[]) {
-
 		String file = "./dist/io/append.txt";
 
 		// lines() and Stream Approach
