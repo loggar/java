@@ -3,9 +3,21 @@ package com.loggar.annotations.feedback;
 import org.junit.Test;
 
 public class FeedbackTest {
+	@Feedback(reportName = "report1")
+	private class FeedbackSample {
+
+	}
+
 	@Test
-	@Feedback(reportName="report1")
 	public void test1() {
-		System.out.println(Feedback.class);
+		Feedback feedback = FeedbackSample.class.getAnnotation(Feedback.class);
+		if (feedback == null) {
+			System.out.println("no FeedbackSample annotation.");
+		} else {
+			System.out.println(feedback);
+			System.out.println(feedback.comment());
+			System.out.println(feedback.reportName());
+			System.out.println(feedback.annotationType());
+		}
 	}
 }
