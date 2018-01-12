@@ -10,12 +10,10 @@ import org.junit.Test;
 public class AssertSample {
 	@Test
 	public void assertSampleTest() {
-		int i = 7;
-		
-		assert (i>4 && i< 9) : "Invalid value : " + i;
+		int i = 4;
 		
 		assert (i<5) : "Invalid value : " + i;
 		
-		System.out.println("not reached.");
+		System.out.println("not reached if assertion above failed.");
 	}
 }

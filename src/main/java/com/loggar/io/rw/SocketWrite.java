@@ -6,13 +6,11 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.net.Socket;
 
-import org.junit.Test;
-
 public class SocketWrite {
 	private final String socketHost = "127.0.0.1";
 	private final int socketPort = 64783;
 
-	@Test
+	// @Test
 	public void writeCharData() throws IOException {
 		Socket socket = new Socket(socketHost, socketPort);
 		PrintWriter pWriter = new PrintWriter(socket.getOutputStream());
@@ -22,7 +20,7 @@ public class SocketWrite {
 		socket.close();
 	}
 
-	@Test
+	// @Test
 	public void writeBinaryData() throws IOException {
 		byte positions[] = new byte[10];
 		Socket socket = new Socket(socketHost, socketPort);
@@ -33,7 +31,7 @@ public class SocketWrite {
 		socket.close();
 	}
 
-	@Test
+	// @Test
 	public void writeLargeBinaryData() throws IOException {
 		byte positions[] = new byte[10];
 		Socket socket = new Socket(socketHost, socketPort);

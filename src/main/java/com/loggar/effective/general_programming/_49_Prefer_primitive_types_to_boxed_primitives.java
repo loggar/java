@@ -29,7 +29,7 @@ public class _49_Prefer_primitive_types_to_boxed_primitives {
 		System.out.println(naturalOrder.compare(new Integer(42), new Integer(42))); // it is good.
 	}
 
-	@Test
+	// @Test
 	public void test3() {
 		Long sum = 0L; // Hideously slow program!
 		for (long i = 0; i < Integer.MAX_VALUE; i++) {

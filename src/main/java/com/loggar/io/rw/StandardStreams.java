@@ -2,10 +2,8 @@ package com.loggar.io.rw;
 
 import java.io.IOException;
 
-import org.junit.Test;
-
 public class StandardStreams {
-	@Test
+	// @Test
 	public void standardStreams() throws IOException {
 		byte teamName[] = new byte[200];
 		System.out.print("input team name");
