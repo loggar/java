@@ -1,4 +1,4 @@
-package com.loggar.reflection.typecheck;
+package com.loggar.statements;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -34,12 +34,9 @@ public class TypeCheck {
 		Object data_7 = new HashMap<String, Object>();
 		
 		System.out.println(data_3 instanceof String);
-		System.out.println(data_3 instanceof Object);
 		System.out.println(data_4 instanceof Integer);
 		System.out.println(data_5 instanceof Map);
-		System.out.println(data_5 instanceof Object);
 		System.out.println(data_6 instanceof CustomClass);
-		System.out.println(data_6 instanceof Object);
 		System.out.println(data_7 instanceof Map);
 		System.out.println(data_7 instanceof Object);
 		

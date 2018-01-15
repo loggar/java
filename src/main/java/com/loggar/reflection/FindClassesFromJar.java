@@ -1,4 +1,4 @@
-package com.loggar.reflection.jar;
+package com.loggar.reflection;
 
 import java.io.FileInputStream;
 import java.util.jar.JarEntry;

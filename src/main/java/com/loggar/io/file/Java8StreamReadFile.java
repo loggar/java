@@ -1,4 +1,4 @@
-package com.loggar.io.lines;
+package com.loggar.io.file;
 
 import java.io.BufferedReader;
 import java.io.IOException;

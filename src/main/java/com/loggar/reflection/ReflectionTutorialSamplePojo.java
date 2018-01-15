@@ -1,12 +1,12 @@
-package com.loggar.reflection.tutorials;
+package com.loggar.reflection;
 
-public class SamplePOJO {
+public class ReflectionTutorialSamplePojo {
 	public String name;
 	protected String webAddress;
 	public String email;
 	protected int zip;
 
-	public SamplePOJO() {
+	public ReflectionTutorialSamplePojo() {
 		name = "Sample.com";
 		webAddress = "http://sample.com";
 		email = "test@sample.com";
@@ -67,7 +67,7 @@ public class SamplePOJO {
 	public static void main(String[] args) {
 
 		// Create and print a SamplePOJO object ...
-		SamplePOJO sample = new SamplePOJO();
+		ReflectionTutorialSamplePojo sample = new ReflectionTutorialSamplePojo();
 		sample.setName("Sample.com");
 		sample.setWebAddress("http://sample.com");
 		sample.setEmail("test@sample.com");

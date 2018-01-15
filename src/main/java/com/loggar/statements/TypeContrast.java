@@ -1,6 +1,6 @@
 package com.loggar.statements;
 
-public class ContrastInstanceType {
+public class TypeContrast {
 	public static void main(String [] args) {
 		char[] arr_c = {'a','b','c'};
 		Object string2_01 = new String2(arr_c);

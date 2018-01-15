@@ -1,4 +1,4 @@
-package com.loggar.reflection.tutorials;
+package com.loggar.reflection;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
@@ -6,7 +6,7 @@ import java.lang.reflect.Method;
 
 public class ReflectionTutorial {
 	public static void main(String[] args) {
-		SamplePOJO sample = new SamplePOJO();
+		ReflectionTutorialSamplePojo sample = new ReflectionTutorialSamplePojo();
 		System.out.println("Sample Object: ====================\n" + sample);
 
 		// How to find out the Object belongs to which class?
@@ -72,7 +72,7 @@ public class ReflectionTutorial {
 		// object?
 		System.out.println("How to get constructors of a class object ==================== Example 7");
 		try {
-			Constructor<? extends SamplePOJO> constructor = sample.getClass().getConstructor();
+			Constructor<? extends ReflectionTutorialSamplePojo> constructor = sample.getClass().getConstructor();
 			System.out.println("- Constructor = " + constructor.getName());
 		} catch (NoSuchMethodException e) {
 			e.printStackTrace();
@@ -104,7 +104,7 @@ public class ReflectionTutorial {
 		}
 
 		// Example 10: ==================== get all Declared Class Fields
-		Field[] sampleFields = SamplePOJO.class.getDeclaredFields();
+		Field[] sampleFields = ReflectionTutorialSamplePojo.class.getDeclaredFields();
 		System.out.println("get all Declared Class Fields ==================== Example 10");
 		for (Field field : sampleFields) {
 			Class<?> type = field.getType();
