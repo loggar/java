@@ -56,14 +56,14 @@ public class StringUtil {
 	}
 
 	public static boolean isEmpty(Object t) {
+		if (t == null)
+			return true;
 		String target;
 		try {
 			target = (String) t;
 		} catch (Exception e) {
 			return true;
 		}
-		if (target == null)
-			return true;
 		if (target.trim().length() == 0)
 			return true;
 		return false;
