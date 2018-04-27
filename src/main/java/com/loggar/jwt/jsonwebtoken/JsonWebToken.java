@@ -25,7 +25,7 @@ public class JsonWebToken {
 	private static final String API_KEY = "lkj3ivlkddj239@$@Gwe19193fjck";
 
 	// Sample method to construct a JWT
-	public String generate(String id, String issuer, String subject, long howlong_ttlMillis) {
+	public String create(String id, String issuer, String subject, long howlong_ttlMillis) {
 
 		// The JWT signature algorithm we will be using to sign the token
 		SignatureAlgorithm signatureAlgorithm = SignatureAlgorithm.HS256;
@@ -52,7 +52,7 @@ public class JsonWebToken {
 		return builder.compact();
 	}
 
-	public Claims decode(String jwt) {
+	public Claims verify(String jwt) {
 		// This line will throw an exception if it is not a signed JWS (as expected)
 		Claims claims = Jwts.parser().setSigningKey(DatatypeConverter.parseBase64Binary(API_KEY)).parseClaimsJws(jwt)
 				.getBody();
