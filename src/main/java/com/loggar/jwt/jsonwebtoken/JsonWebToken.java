@@ -25,7 +25,7 @@ public class JsonWebToken {
 	private static final String API_KEY = "lkj3ivlkddj239@$@Gwe19193fjck";
 
 	// Sample method to construct a JWT
-	public String create(String id, String issuer, String subject, long howlong_ttlMillis) {
+	public String sign(String id, String issuer, String subject, long howlong_ttlMillis) {
 
 		// The JWT signature algorithm we will be using to sign the token
 		SignatureAlgorithm signatureAlgorithm = SignatureAlgorithm.HS256;
