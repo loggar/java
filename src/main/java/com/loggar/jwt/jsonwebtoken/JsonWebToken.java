@@ -11,6 +11,16 @@ import io.jsonwebtoken.JwtBuilder;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 
+/**
+ * 
+ * @author charly.lee
+ * 
+ *         <pre>
+ * https://jwt.io/
+ * http://mvnrepository.com/artifact/io.jsonwebtoken/jjwt/0.9.0
+ * https://stormpath.com/blog/jwt-java-create-verify
+ *         </pre>
+ */
 public class JsonWebToken {
 	private static final String API_KEY = "lkj3ivlkddj239@$@Gwe19193fjck";
 
