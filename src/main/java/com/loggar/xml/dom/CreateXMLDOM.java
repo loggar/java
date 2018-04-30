@@ -1,4 +1,4 @@
-package com.loggar.tools.xml;
+package com.loggar.xml.dom;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
