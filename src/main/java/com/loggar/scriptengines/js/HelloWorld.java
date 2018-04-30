@@ -19,7 +19,7 @@ public class HelloWorld {
 			e1.printStackTrace();
 		}
 		
-		Path p1 = Paths.get("./dist/js/world.js");
+		Path p1 = Paths.get("./dist/scriptengines-js/world.js");
 		try {
 			e.eval(new FileReader(p1.toString()));
 		} catch (FileNotFoundException e1) {
