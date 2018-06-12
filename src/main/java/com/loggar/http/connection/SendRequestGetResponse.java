@@ -8,11 +8,13 @@ import java.nio.charset.Charset;
 
 public class SendRequestGetResponse {
 	public static void main(String[] args) {
-		System.out.println("Output: \n" + callURL("http://www.mocky.io/v2/5a165cd03100004f008d31ee"));
+		String url = "http://www.mocky.io/v2/5a165cd03100004f008d31ee";
+		System.out.println("Requeted URL:" + url);
+		System.out.println("Output: \n" + sendRequest(url));
 	}
 
-	public static String callURL(String myURL) {
-		System.out.println("Requeted URL:" + myURL);
+	public static String sendRequest(String myURL) {
+
 		StringBuilder sb = new StringBuilder();
 		URLConnection urlConn = null;
 		InputStreamReader in = null;
