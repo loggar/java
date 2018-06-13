@@ -6,7 +6,7 @@ import java.net.URL;
 import java.net.URLConnection;
 import java.nio.charset.Charset;
 
-public class SendRequestGetResponse {
+public class HttpClienSendRequest {
 	public static void main(String[] args) {
 		String url = "http://www.mocky.io/v2/5a165cd03100004f008d31ee";
 		System.out.println("Requeted URL:" + url);
@@ -18,7 +18,6 @@ public class SendRequestGetResponse {
 	}
 
 	public static String sendRequest(String myURL, int timeout) {
-
 		StringBuilder sb = new StringBuilder();
 		URLConnection urlConn = null;
 		InputStreamReader in = null;
