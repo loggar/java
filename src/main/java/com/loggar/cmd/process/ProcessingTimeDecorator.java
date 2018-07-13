@@ -1,4 +1,4 @@
-package com.loggar.cmd;
+package com.loggar.cmd.process;
 
 import java.util.Date;
 import java.util.List;
