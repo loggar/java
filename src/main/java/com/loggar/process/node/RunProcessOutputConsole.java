@@ -4,7 +4,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class RunNodeProcessWithOutputConsole {
+public class RunProcessOutputConsole {
 	public static void main(String[] args) {
 		ProcessBuilder builder = new ProcessBuilder("node", "./dist/cmd-process/node-script/node-sample.1.js");
 		builder.redirectErrorStream(true);

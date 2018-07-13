@@ -15,6 +15,6 @@ public class RunNodeApp {
 	}
 
 	public static void main(String[] args) {
-		ProceedCommandTimeDecorator.run(new ProceedCommandNoOut(), getCommandList());
+		ProceedCommandsTimeDecorator.run(new ProceedCommandsNoOut(), getCommandList());
 	}
 }

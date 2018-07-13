@@ -4,7 +4,7 @@ import java.io.BufferedWriter;
 import java.io.OutputStreamWriter;
 import java.util.List;
 
-public class ProceedCommandNoOut implements ProceedCommand {
+public class ProceedCommandsNoOut implements ProceedCommands {
 	@Override
 	public boolean run(List<String> commands) {
 		if (commands == null || commands.size() < 1)

@@ -29,6 +29,6 @@ public class RunMavenBuild {
 	}
 
 	public static void main(String[] args) {
-		ProceedCommandTimeDecorator.run(new ProceedCommandConsoleOut(), getCommandList());
+		ProceedCommandsTimeDecorator.run(new ProceedCommandsConsoleOut(), getCommandList());
 	}
 }

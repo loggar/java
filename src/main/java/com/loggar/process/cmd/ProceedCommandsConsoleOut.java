@@ -7,7 +7,7 @@ import java.io.OutputStreamWriter;
 import java.util.List;
 import java.util.regex.Pattern;
 
-public class ProceedCommandConsoleOut implements ProceedCommand {
+public class ProceedCommandsConsoleOut implements ProceedCommands {
 	@Override
 	public boolean run(List<String> commands) {
 		if (commands == null || commands.size() < 1)

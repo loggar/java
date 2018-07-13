@@ -6,14 +6,14 @@ import java.util.List;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public class ProceedCommandTimeDecorator {
-	private static final Logger logger = LoggerFactory.getLogger(ProceedCommandTimeDecorator.class);
+public class ProceedCommandsTimeDecorator {
+	private static final Logger logger = LoggerFactory.getLogger(ProceedCommandsTimeDecorator.class);
 
-	private ProceedCommandTimeDecorator() {
+	private ProceedCommandsTimeDecorator() {
 		throw new AssertionError();
 	}
 
-	public static void run(ProceedCommand runable, List<String> commands) {
+	public static void run(ProceedCommands runable, List<String> commands) {
 		long startTime = System.currentTimeMillis();
 		logger.debug("Processing Start = {}", new Date(startTime));
 		boolean resultRunable = runable.run(commands);
