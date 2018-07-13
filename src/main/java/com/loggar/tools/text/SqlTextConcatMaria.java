@@ -7,6 +7,7 @@ import java.nio.file.Paths;
 
 /**
  * Convert String concatination from SQL-server style to Mysql style.
+ * @Caution It works just for single-line
  * <pre> 
  * add pre-str "CONCAT(", post-str ")"
  * replace "+" with ","
