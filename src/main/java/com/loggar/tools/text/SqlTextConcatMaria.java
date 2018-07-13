@@ -5,6 +5,15 @@ import java.io.FileReader;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
+/**
+ * Convert String concatination from SQL-server style to Mysql style.
+ * <pre> 
+ * add pre-str "CONCAT(", post-str ")"
+ * replace "+" with ","
+ * </pre>
+ * @author charly.lee
+ *
+ */
 public class SqlTextConcatMaria {
 	public static void main(String [] args) {
 		Path p1 = Paths.get("./dist/tools/text/sql.txt");
