@@ -1,4 +1,4 @@
-package com.loggar.regexp;
+package com.loggar.regex;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
