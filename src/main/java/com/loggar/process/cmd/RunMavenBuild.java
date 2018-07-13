@@ -1,4 +1,4 @@
-package com.loggar.cmd.process;
+package com.loggar.process.cmd;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -29,6 +29,6 @@ public class RunMavenBuild {
 	}
 
 	public static void main(String[] args) {
-		ProcessingTimeDecorator.run(new RunCommandsConsole(), getCommandList());
+		ProceedCommandTimeDecorator.run(new ProceedCommandConsoleOut(), getCommandList());
 	}
 }

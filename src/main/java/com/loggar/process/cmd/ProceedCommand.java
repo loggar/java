@@ -1,7 +1,7 @@
-package com.loggar.cmd.process;
+package com.loggar.process.cmd;
 
 import java.util.List;
 
-public interface RunCommands {
+public interface ProceedCommand {
 	boolean run(List<String> commands);
 }
