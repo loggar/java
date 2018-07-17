@@ -1,4 +1,4 @@
-package com.loggar.environments;
+package com.loggar.process.cmd;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;

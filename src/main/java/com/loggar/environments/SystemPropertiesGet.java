@@ -4,7 +4,7 @@ import java.util.Enumeration;
 
 import org.junit.Test;
 
-public class SystemPropertiesTest {
+public class SystemPropertiesGet {
 	@Test
 	public void props() {
 		java.util.Properties props = System.getProperties();

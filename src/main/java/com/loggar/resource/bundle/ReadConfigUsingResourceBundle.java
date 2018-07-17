@@ -1,4 +1,4 @@
-package com.loggar.properties.resourcebundle;
+package com.loggar.resource.bundle;
 
 import java.util.Enumeration;
 import java.util.ResourceBundle;
