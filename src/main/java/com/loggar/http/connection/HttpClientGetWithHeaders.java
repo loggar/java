@@ -24,7 +24,7 @@ public class HttpClientGetWithHeaders {
 		URL url = new URL(getUrl);
 		HttpURLConnection con = (HttpURLConnection) url.openConnection();
 		con.setRequestMethod("GET");
-		con.setRequestProperty("AUTH-KEY", "ade23e34-52fc-458e-8d83-67b6a2207ff7");
+		con.setRequestProperty("AUTH-KEY", "API-KEY-PROVIDED");
 
 		return this.read(con.getInputStream());
 	}
