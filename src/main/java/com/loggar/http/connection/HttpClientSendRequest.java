@@ -7,25 +7,35 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Set;
 
-public class HttpClientGetWithHeaders {
+public class HttpClientSendRequest {
 	public static void main(String[] args) {
 		try {
-			HttpClientGetWithHeaders hce = new HttpClientGetWithHeaders();
-			String body = hce.get();
-			System.out.println(body);
+			HttpClientSendRequest hce = new HttpClientSendRequest();
+			Map<String, String> requestPropertyMap = new HashMap<>();
+			String url = "https://digitalapi.auspost.com.au/postcode/search.json?q=SYDNEY&state=NSW";
+			String strMethod = "GET";
+			requestPropertyMap.put("AUTH-KEY", "<API-KEY-PROVIDED>");
+			String res = hce.send(url, strMethod, requestPropertyMap);
+			System.out.println(res);
 		} catch (IOException ioe) {
 			ioe.printStackTrace();
 		}
 	}
 
-	public String get() throws IOException {
-		String getUrl = "https://digitalapi.auspost.com.au/postcode/search.json?q=SYDNEY&state=NSW";
-		URL url = new URL(getUrl);
-		HttpURLConnection con = (HttpURLConnection) url.openConnection();
-		con.setRequestMethod("GET");
-		con.setRequestProperty("AUTH-KEY", "API-KEY-PROVIDED");
-
+	public String send(String url, String method, Map<String, String> props) throws IOException {
+		URL reqUrl = new URL(url);
+		HttpURLConnection con = (HttpURLConnection) reqUrl.openConnection();
+		con.setRequestMethod(method);
+		if (props != null && props.size() > 0) {
+			Set<String> keySet = props.keySet();
+			for (String key : keySet) {
+				con.setRequestProperty(key, props.get(key));
+			}
+		}
 		return this.read(con.getInputStream());
 	}
 
@@ -35,14 +45,11 @@ public class HttpClientGetWithHeaders {
 		StringBuilder body;
 		try {
 			in = new BufferedReader(new InputStreamReader(is));
-
 			body = new StringBuilder();
-
 			while ((inputLine = in.readLine()) != null) {
 				body.append(inputLine);
 			}
 			in.close();
-
 			return body.toString();
 		} catch (IOException ioe) {
 			throw ioe;
@@ -57,7 +64,6 @@ public class HttpClientGetWithHeaders {
 				closeable.close();
 			}
 		} catch (IOException ex) {
-
 		}
 	}
 }
