@@ -1,4 +1,6 @@
-##
+## foreach
+
+### foreach 1
 
 ``` xml
 // ibatis-3-mapper
@@ -19,6 +21,25 @@ public int createAttendanceList(List<Map<String, Object>> studentList, Map<Strin
 	Map<String, Object> map = new HashMap<>();
 	map.putAll(paramMap);
 	map.put("studentList", studentList);
-	return sqlSession.insert("attendance.createAttendanceList", map);
+	return sqlSession.insert("scope.foreachExample1", map);
 }
+```
+
+### foreach 2
+
+``` xml
+WHERE SBJ_IDX IN
+<foreach item="item" index="index" collection="insertRplList" open="(" separator="," close=")">
+	#{item}
+</foreach>
+```
+
+``` java
+List<Integer> insertRplList = new ArrayList<>();
+insertRplList.add(1);
+insertRplList.add(2);
+
+m.put("insertRplList", insertRplList);
+return sqlSession.insert("scope.foreachExample2", m);
+
 ```
