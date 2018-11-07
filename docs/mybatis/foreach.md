@@ -30,7 +30,7 @@ public int createAttendanceList(List<Map<String, Object>> studentList, Map<Strin
 ``` xml
 WHERE SBJ_IDX IN
 <foreach item="item" index="index" collection="insertRplList" open="(" separator="," close=")">
-	#{item}
+	${item}
 </foreach>
 ```
 
