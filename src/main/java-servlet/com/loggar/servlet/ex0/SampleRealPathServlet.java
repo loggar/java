@@ -2,6 +2,7 @@ package com.loggar.servlet.ex0;
 
 import java.io.File;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
@@ -16,13 +17,11 @@ public class SampleRealPathServlet extends HttpServlet {
 	 */
 	private static final long serialVersionUID = 8101412359817900074L;
 
-	protected void doPost(HttpServletRequest request, HttpServletResponse response)
-			throws ServletException, IOException {
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
 	}
 
-	protected void doGet(HttpServletRequest request, HttpServletResponse response)
-			throws ServletException, IOException {
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String rootPath = getServletConfig().getServletContext().getRealPath("/");
 		File file = new File(rootPath + "WEB-INF/dist/json/rateJSON.txt");
 		System.out.println(file.getAbsolutePath());
@@ -31,10 +30,14 @@ public class SampleRealPathServlet extends HttpServlet {
 		System.out.println(p);
 		System.out.println(p.toAbsolutePath());
 
-		String c = this.getClass().getProtectionDomain().getCodeSource().getLocation().getPath()
-				+ "../dist/json/sample.json";
+		String c = this.getClass().getProtectionDomain().getCodeSource().getLocation().getPath() + "../dist/json/sample.json";
 		System.out.println(c);
 		File file2 = new File(c);
 		System.out.println(file2.getAbsolutePath());
+		
+		response.setContentType("text/html; charset=utf-8");
+		PrintWriter pw = response.getWriter();
+		pw.print(file2.getAbsolutePath());
+		pw.close();
 	}
 }

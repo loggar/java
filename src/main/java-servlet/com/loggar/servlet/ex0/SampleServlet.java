@@ -31,6 +31,7 @@ public class SampleServlet extends HttpServlet {
 			e.printStackTrace();
 		}
 
+		
 		String sql = "SELECT ID, name from student";
 
 		try (Connection con = DriverManager
