@@ -12,7 +12,7 @@ public class HttpClienSendRequest {
 		System.out.println("Requeted URL:" + url);
 		System.out.println("Output: \n" + sendRequest(url, 1000 * 2));
 
-		String url2 = "https://loggar.github.io/js/docs/sample-res/sample.1.json";
+		String url2 = "https://loggar.github.io/note/docs/sample-res/sample.1.json";
 		System.out.println("Requeted URL:" + url2);
 		System.out.println("Output: \n" + sendRequest(url2, 1000 * 2));
 	}

@@ -12,7 +12,7 @@ public class HttpClientGet {
 	public static void main(String[] args) {
 		try {
 			HttpClientGet hce = new HttpClientGet();
-			String body = hce.get("https://loggar.github.io/js/docs/sample-res/sample.1.json");
+			String body = hce.get("https://loggar.github.io/note/docs/sample-res/sample.1.json");
 			System.out.println(body);
 		} catch (IOException ioe) {
 			ioe.printStackTrace();
