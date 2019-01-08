@@ -12,4 +12,13 @@ public class JavaNumberType {
 		int r = i + ((Number) gpa).intValue() + ((Number) mask).intValue();
 		System.out.println(r);
 	}
+	
+	@Test
+	public void numberType() {
+		Number n1 = 1.01;
+		Number n2 = 0.01;
+		
+		System.out.println(n1);
+		System.out.println(n2.doubleValue() <= 0);
+	}
 }
