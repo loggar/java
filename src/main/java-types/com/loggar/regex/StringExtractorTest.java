@@ -4,7 +4,7 @@ import java.util.List;
 
 import org.junit.Test;
 
-import com.loggar.util.common.StringUtil;
+import com.loggar.tools.common.StringUtil;
 
 public class StringExtractorTest {
 	@Test

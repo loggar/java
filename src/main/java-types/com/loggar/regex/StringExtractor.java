@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import com.loggar.util.common.StringUtil;
+import com.loggar.tools.common.StringUtil;
 
 public class StringExtractor {
 	public static List<String> extractNumbers(String str) {

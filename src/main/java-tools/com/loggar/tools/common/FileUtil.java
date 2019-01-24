@@ -1,4 +1,4 @@
-package com.loggar.util.common;
+package com.loggar.tools.common;
 
 import java.io.File;
 import java.io.FileInputStream;

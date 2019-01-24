@@ -1,4 +1,4 @@
-package com.loggar.util.common;
+package com.loggar.tools.common;
 
 public class StringUtil_IsNumeric {
 	public static boolean isNumeric(String str) {
