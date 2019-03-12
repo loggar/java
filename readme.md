@@ -1,3 +1,1 @@
-# Charly
-
-## Java, Servlet
+# Java
