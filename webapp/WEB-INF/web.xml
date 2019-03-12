@@ -10,16 +10,24 @@
 		<param-value>/errRequestMapping.jsp</param-value>
 	</context-param>
 	<servlet>
-		<servlet-name>sampleServlet</servlet-name>
-		<servlet-class>com.loggar.servlet.ex0.SampleServlet</servlet-class>
+		<servlet-name>sampleServletRun</servlet-name>
+		<servlet-class>com.loggar.servlet.ex0.SampleServletRun</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>sampleServletOut</servlet-name>
+		<servlet-class>com.loggar.servlet.ex0.SampleServletOut</servlet-class>
 	</servlet>
 	<servlet>
 		<servlet-name>sampleRealPathServlet</servlet-name>
 		<servlet-class>com.loggar.servlet.ex0.SampleRealPathServlet</servlet-class>
 	</servlet>
 	<servlet-mapping>
-		<servlet-name>sampleServlet</servlet-name>
+		<servlet-name>sampleServletRun</servlet-name>
 		<url-pattern>/sample.get</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>sampleServletOut</servlet-name>
+		<url-pattern>/sample.out</url-pattern>
 	</servlet-mapping>
 	<servlet-mapping>
 		<servlet-name>sampleRealPathServlet</servlet-name>
