@@ -70,9 +70,9 @@ public class ConvertJson {
 	public void jsonToList2() {
 		Gson gson = new Gson();
 		String json = "[{'1':'a_1'},{'2':'a_2'}]";
-		Map<String, Object>[] arr = gson.fromJson(json, new TypeToken<Map<String, Object>[]>() {
+		Map<String, Object>[] arrayLikeMap = gson.fromJson(json, new TypeToken<Map<String, Object>[]>() {
 		}.getType());
-		List<Map<String, Object>> list = Arrays.asList(arr);
+		List<Map<String, Object>> list = Arrays.asList(arrayLikeMap);
 		System.out.println(list);
 	}
 
@@ -91,6 +91,32 @@ public class ConvertJson {
 
 		Number strId = (Double) mapNested.get("id");
 		System.out.println(strId.intValue());
+	}
+
+	@Test
+	public void jsonToNestedList() {
+		Gson gson = new Gson();
+		String json = "{'users': [{'id': 9506, 'username': '333333'}], 'warnings': []}";
+		Map<String, Object> map = gson.fromJson(json, new TypeToken<Map<String, Object>>() {
+		}.getType());
+
+		System.out.println(map.get("users"));
+
+		@SuppressWarnings("unchecked") List<Map<String, Object>> list = (List<Map<String, Object>>) map.get("users");
+		System.out.println(list);
+	}
+
+	@Test
+	public void jsonToNestedList2() {
+		Gson gson = new Gson();
+		String json = "{'users': [], 'warnings': [{\"warn1\":\"someWarningMsg\"}]}";
+		Map<String, Object> map = gson.fromJson(json, new TypeToken<Map<String, Object>>() {
+		}.getType());
+
+		System.out.println(map.get("users"));
+
+		@SuppressWarnings("unchecked") List<Map<String, Object>> list = (List<Map<String, Object>>) map.get("users");
+		System.out.println(list);
 	}
 
 }
