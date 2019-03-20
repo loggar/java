@@ -16,7 +16,7 @@ public class JsonWebTokenTest {
 				expireMillis);
 		System.out.println(token1);
 
-		String token2 = jwt.sign("loggar", "https://domain_2.com", "forCommunicateWithSomething", expireMillis);
+		String token2 = jwt.sign("3ee9364e-8aca-4e39-8ba2-74e654c7e083", "https://domain_2.com", "forCommunicateWithSomething", expireMillis);
 		System.out.println(token2);
 
 		Claims claims1 = jwt.verify(token1);
