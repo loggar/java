@@ -7,3 +7,6 @@
 /target/
 /webapp/WEB-INF/classes
 /webapp/WEB-INF/lib
+
+# dist temporary dir
+/dist/transient
