@@ -1,4 +1,4 @@
-package com.loggar.concurrent.concept;
+package com.loggar.concurrent.ref;
 
 public class InMemoryCacheTest {
 	public static void main(String[] args) throws InterruptedException {
