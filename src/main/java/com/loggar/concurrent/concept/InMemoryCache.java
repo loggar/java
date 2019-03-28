@@ -1,4 +1,4 @@
-package com.loggar.concurrents;
+package com.loggar.concurrent.concept;
 
 import java.util.ArrayList;
 
