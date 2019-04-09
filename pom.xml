@@ -26,6 +26,7 @@
 							<include>src/main/java-patterns/**/*.java</include>
 							<include>src/main/java-effective/**/*.java</include>
 							<include>src/main/java-servlet/**/*.java</include>
+							<include>src/main/java-exercise/**/*.java</include>
 						</includes>
 					</configuration>
 				</configuration>
