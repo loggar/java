@@ -49,6 +49,47 @@ Gradle
 testCompile group: 'org.junit.jupiter', name: 'junit-jupiter-api', version: '$version'
 ```
 
+```gradle
+buildscript {
+    repositories {
+        mavenCentral()
+        // The following is only necessary if you want to use SNAPSHOT releases.
+        // maven { url 'https://oss.sonatype.org/content/repositories/snapshots' }
+    }
+    dependencies {
+        classpath 'org.junit.platform:junit-platform-gradle-plugin:1.0.0'
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'org.junit.platform.gradle.plugin'
+
+dependencies {
+    testImplementation("org.junit.jupiter:junit-jupiter-api:5.0.0")
+    testRuntime("org.junit.jupiter:junit-jupiter-engine:5.0.0")
+    // to run JUnit 3/4 tests:
+    testImplementation("junit:junit:4.12")
+    testRuntime("org.junit.vintage:junit-vintage-engine:4.12.0")
+}
+```
+
+After letting gradle set up your project can then execute your JUnit 5 tests through the terminal:
+
+```
+gradle junitPlatformTest
+```
+
+If you are using Eclipse it is best to install the Buildship tooling. Then you can start your tests via Run as  Gradle Test. The result of the test execution will be displayed in the Console view.
+
+```
+Run > Run As > Gradle Test
+```
+
 ## An anatomy of unit test
 
 ### Before methods

@@ -3,7 +3,7 @@ package com.loggar.collections;
 import java.util.Arrays;
 import java.util.List;
 
-import org.junit.Assert;
+import static org.assertj.core.api.Assertions.*;
 import org.junit.Test;
 
 public class ListEqualsTestAssertJ {
@@ -13,8 +13,8 @@ public class ListEqualsTestAssertJ {
 		List<String> list2 = Arrays.asList("1", "2", "3", "4");
 		List<String> list3 = Arrays.asList("1", "2", "4", "3");
 
-		Assert.assertEquals(list1, list2);
-		Assert.assertNotSame(list1, list2);
-		Assert.assertNotEquals(list1, list3);
+		assertThat(list1).isSameAs(list1);
+		assertThat(list1).isEqualTo(list2);
+		assertThat(list1).isNotEqualTo(list3);
 	}
 }

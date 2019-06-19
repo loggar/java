@@ -1,6 +1,7 @@
 package com.loggar.collections;
 
-import static org.assertj.core.api.Assertions.assertThat;
+import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.assertFalse;
 
 import java.util.Arrays;
 import java.util.List;
@@ -14,9 +15,7 @@ public class ListEqualsTestJUnit {
 		List<String> list2 = Arrays.asList("1", "2", "3", "4");
 		List<String> list3 = Arrays.asList("1", "2", "4", "3");
 
-		assertThat(list1).isEqualTo(list2).isNotEqualTo(list3);
-
-		assertThat(list1.equals(list2)).isTrue();
-		assertThat(list1.equals(list3)).isFalse();
+		assertTrue(list1.equals(list2));
+		assertFalse(list1.equals(list3));
 	}
 }

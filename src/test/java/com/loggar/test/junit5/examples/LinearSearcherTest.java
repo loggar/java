@@ -1,4 +1,4 @@
-package com.loggar.test.junit5;
+package com.loggar.test.junit5.examples;
 
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.Assertions;
