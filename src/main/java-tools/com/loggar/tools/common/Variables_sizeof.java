@@ -30,9 +30,14 @@ public class Variables_sizeof {
 		if (dataType == double.class || dataType == Double.class) {
 			return Double.SIZE;
 		}
-		return 8; // default for 64-bit memory pointer
+
+		if (System.getProperty("sun.arch.data.model").equals("64")) {
+			return 8; // default for 64-bit memory pointer
+		} else {
+			return 4; // default for 32-bit memory pointer
+		}
 	}
-	
+
 	public static void main(String args[]) {
 		System.out.println(" size of byte in Java is (in bytes) :  " + Variables_sizeof.sizeof(byte.class));
 		System.out.println(" size of short in Java is (in bytes) :" + Variables_sizeof.sizeof(short.class));
