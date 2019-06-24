@@ -1,0 +1,2 @@
+Hello, World!
+Int: 23, String: Test, UpperHex: 2A
