@@ -1,4 +1,4 @@
-package com.loggar.standard.out;
+package com.loggar.standard.in;
 
 /**
  * Reading binary data from standard input

@@ -1,4 +1,4 @@
-package com.loggar.standard.out;
+package com.loggar.standard.in;
 
 import java.util.Scanner;
 
