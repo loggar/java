@@ -6,7 +6,7 @@ import java.util.Scanner;
  * Reading text by line from standard input
  * 
  * <pre>
- * java -cp ./target/classes com.loggar.standard.in.ReadLinesFromStdin < ./dist/io/in.dat
+ * java -cp ./target/classes com.loggar.standard.in.ReadLinesFromStdin < ./dist/io/in.txt
  * </pre>
  */
 public class ReadLinesFromStdin {
