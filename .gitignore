@@ -1,12 +1,22 @@
+# vscode
 .vscode/
-.settings/
 
+# eclipse
+.settings/
 .project
 .classpath
+
+# netbeans
+/nbproject/private/
+
+# build
 /build/
 /target/
 /webapp/WEB-INF/classes
 /webapp/WEB-INF/lib
+/bin/
+/dist/*.jar
+/dist/README.TXT
 
 # dist temporary dir
-/dist/transient
+/dist/.tmp/

@@ -13,13 +13,13 @@ public class TransientSampleTest {
 	@Test
 	public void test1() throws FileNotFoundException, IOException, ClassNotFoundException {
 		TransientSample TransientSample = new TransientSample("Steve", "Middle", "Jobs");
-		ObjectOutputStream o = new ObjectOutputStream(new FileOutputStream("./dist/transient/TransientSample"));
+		ObjectOutputStream o = new ObjectOutputStream(new FileOutputStream("./dist/.tmp/transient/TransientSample"));
 		// writing to object
 		o.writeObject(TransientSample);
 		o.close();
 
 		// reading from object
-		ObjectInputStream in = new ObjectInputStream(new FileInputStream("./dist/transient/TransientSample"));
+		ObjectInputStream in = new ObjectInputStream(new FileInputStream("./dist/.tmp/transient/TransientSample"));
 		TransientSample TransientSample1 = (TransientSample) in.readObject();
 		System.out.println(TransientSample1);
 		in.close();

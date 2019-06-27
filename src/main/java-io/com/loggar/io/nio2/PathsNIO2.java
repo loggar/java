@@ -18,7 +18,7 @@ public class PathsNIO2 {
 		System.out.println(p.toString());
 		System.out.println(p.toUri());
 		System.out.println(p.resolve(Paths.get("./subDrectory/subFile")));
-		System.out.println(p.relativize(Paths.get("./dist/transient/TransientSample")));
-		System.out.println(p.compareTo(Paths.get("./dist/transient/TransientSample")));
+		System.out.println(p.relativize(Paths.get("./dist/.tmp/transient/TransientSample")));
+		System.out.println(p.compareTo(Paths.get("./dist/.tmp/transient/TransientSample")));
 	}
 }
