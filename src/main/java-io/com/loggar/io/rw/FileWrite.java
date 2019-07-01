@@ -8,7 +8,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 
 public class FileWrite {
 	@Test

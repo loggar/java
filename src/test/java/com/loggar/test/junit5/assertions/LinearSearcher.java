@@ -1,4 +1,4 @@
-package com.loggar.test.junit5.examples;
+package com.loggar.test.junit5.assertions;
 
 public class LinearSearcher {
 	private int[] data;

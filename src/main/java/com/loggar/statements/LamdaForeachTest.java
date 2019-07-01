@@ -3,7 +3,7 @@ package com.loggar.statements;
 import java.util.Arrays;
 import java.util.List;
 
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 
 public class LamdaForeachTest {
 	@Test

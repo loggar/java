@@ -1,6 +1,6 @@
 package com.loggar.statements;
 
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 
 interface A {
 	void show();

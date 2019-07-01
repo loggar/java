@@ -3,7 +3,7 @@ package com.loggar.io.nio2;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 
 public class PathsNIO2 {
 	@Test

@@ -15,7 +15,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.stream.Collectors;
 
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 
 public class EncodeDecodeUrl {
 	// scheme:[//[user:password@]host[:port]][/]path[?query][#fragment]

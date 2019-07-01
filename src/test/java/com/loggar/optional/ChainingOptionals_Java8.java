@@ -6,7 +6,7 @@ import java.util.Optional;
 import java.util.function.Supplier;
 import java.util.stream.Stream;
 
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 
 public class ChainingOptionals_Java8 {
 	@Test

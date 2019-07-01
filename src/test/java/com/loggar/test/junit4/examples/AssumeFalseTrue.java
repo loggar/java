@@ -1,7 +1,7 @@
 package com.loggar.test.junit4.examples;
 
 import org.junit.Assume;
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 
 public class AssumeFalseTrue {
 	// The @Ignore annotation allow to statically ignore a test.

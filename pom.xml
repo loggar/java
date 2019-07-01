@@ -96,6 +96,13 @@
 			<artifactId>logback-classic</artifactId>
 			<version>1.1.7</version>
 		</dependency>
+		<!-- junit -->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.12</version>
+			<scope>test</scope>
+		</dependency>
 		<!-- junit 5 -->
 		<dependency>
 			<groupId>org.junit.platform</groupId>
@@ -106,6 +113,7 @@
 			<groupId>org.junit.jupiter</groupId>
 			<artifactId>junit-jupiter-engine</artifactId>
 			<version>${junit.jupiter.version}</version>
+			<scope>test</scope>
 		</dependency>
 		<dependency>
 			<groupId>org.junit.jupiter</groupId>
@@ -117,6 +125,7 @@
 			<groupId>org.junit.vintage</groupId>
 			<artifactId>junit-vintage-engine</artifactId>
 			<version>${junit.vintage.version}</version>
+			<scope>test</scope>
 		</dependency>
 		<!-- assertj -->
 		<dependency>

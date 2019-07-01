@@ -1,7 +1,7 @@
 package com.loggar.test.junit4.examples;
 
 import org.junit.Assert;
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 
 public class NonStaticImportAssert {
 	@Test

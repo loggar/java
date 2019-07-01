@@ -8,7 +8,7 @@ import java.util.zip.ZipEntry;
 import java.util.zip.ZipInputStream;
 import java.util.zip.ZipOutputStream;
 
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 
 public class Zipping {
 //	@Test

@@ -1,6 +1,6 @@
 package com.loggar.interfaces.functional_interfaces;
 
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 
 public class TradeFunction_01_ImplementTest {
 	@Test

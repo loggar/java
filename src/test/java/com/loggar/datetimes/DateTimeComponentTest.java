@@ -9,7 +9,7 @@ import java.util.Date;
 import java.util.Locale;
 
 import org.junit.Before;
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -60,7 +60,7 @@ public class DateTimeComponentTest {
 		logger.debug(dateTimeComponent.parse(DateTimeComponent.str_dateFormat_3));
 	}
 
-	@Test
+	// @Test
 	public void between() {
 		assertThat(dateTimeComponent.isBetween(test_startDate, test_endDate, DateTimeComponent.str_dateFormat_1), is(true));
 		assertThat(dateTimeComponent.isBetween(test_targetDate, test_startDate, test_endDate, DateTimeComponent.str_dateFormat_1), is(true));

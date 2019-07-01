@@ -1,6 +1,6 @@
 package com.loggar.numbers;
 
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 
 public class JavaNumberType {
 	@Test

@@ -2,7 +2,7 @@ package com.loggar.interfaces.functional_interfaces;
 
 import java.util.function.Function;
 
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 
 /**
  * Usage of java.util.Function

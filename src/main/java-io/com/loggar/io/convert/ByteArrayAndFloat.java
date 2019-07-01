@@ -5,7 +5,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import java.nio.ByteBuffer;
 
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 
 public class ByteArrayAndFloat {
 	public static byte[] floatToByteArray(float value) {

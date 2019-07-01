@@ -2,7 +2,7 @@ package com.loggar.effective.general_programming;
 
 import java.util.Comparator;
 
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 
 public class _49_Prefer_primitive_types_to_boxed_primitives {
 	@Test

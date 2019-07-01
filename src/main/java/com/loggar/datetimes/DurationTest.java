@@ -8,7 +8,7 @@ import java.time.Instant;
 import java.time.LocalTime;
 import java.time.temporal.ChronoUnit;
 
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 
 public class DurationTest {
 	@Test

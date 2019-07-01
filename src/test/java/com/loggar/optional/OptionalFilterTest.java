@@ -5,7 +5,7 @@ import static org.junit.Assert.assertTrue;
 
 import java.util.Optional;
 
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 
 public class OptionalFilterTest {
 	public class Modem {

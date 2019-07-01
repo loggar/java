@@ -3,7 +3,7 @@ package com.loggar.numbers;
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertThat;
 
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 
 public class NumberStringConversion {
 	@Test

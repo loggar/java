@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.function.Function;
 
 import org.junit.Before;
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 
 public class Functions_02_TradeQuantity {
 	List<Trade> trades = null;

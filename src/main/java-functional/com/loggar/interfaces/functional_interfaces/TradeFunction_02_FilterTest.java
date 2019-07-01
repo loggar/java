@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.junit.Before;
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 
 public class TradeFunction_02_FilterTest {
 	// Method that takes in list of trades and applies the lambda behavior for each

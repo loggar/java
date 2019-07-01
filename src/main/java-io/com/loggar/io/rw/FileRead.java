@@ -7,7 +7,7 @@ import java.io.FileInputStream;
 import java.io.FileReader;
 import java.io.IOException;
 
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 
 public class FileRead {
 	@Test

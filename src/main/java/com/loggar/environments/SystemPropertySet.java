@@ -1,6 +1,6 @@
 package com.loggar.environments;
 
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 
 public class SystemPropertySet {
 	@Test

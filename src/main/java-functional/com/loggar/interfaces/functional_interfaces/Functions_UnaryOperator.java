@@ -4,7 +4,7 @@ import static org.junit.Assert.assertTrue;
 
 import java.util.function.UnaryOperator;
 
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 
 public class Functions_UnaryOperator {
 

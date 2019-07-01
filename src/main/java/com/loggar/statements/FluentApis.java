@@ -4,7 +4,7 @@ import java.time.LocalDateTime;
 import java.time.temporal.ChronoUnit;
 import java.util.Calendar;
 
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 
 public class FluentApis {
 	@Test
