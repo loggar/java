@@ -1,6 +1,6 @@
 package com.loggar.statements;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 /**
  * Assertions are Boolean expressions used to check whether code

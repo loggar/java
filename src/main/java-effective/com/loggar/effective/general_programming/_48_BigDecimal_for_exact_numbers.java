@@ -2,7 +2,7 @@ package com.loggar.effective.general_programming;
 
 import java.math.BigDecimal;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 public class _48_BigDecimal_for_exact_numbers {
 	@Test

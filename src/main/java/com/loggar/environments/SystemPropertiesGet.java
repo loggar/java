@@ -2,7 +2,7 @@ package com.loggar.environments;
 
 import java.util.Enumeration;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 public class SystemPropertiesGet {
 	@Test

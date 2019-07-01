@@ -1,6 +1,6 @@
 package com.loggar.enumerations;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 public class DisplayButtonTest {
 	enum DisplayButton {

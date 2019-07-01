@@ -1,6 +1,6 @@
 package com.loggar.strings;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 public class StringBuilderTest {
 	@Test

@@ -1,6 +1,6 @@
 package com.loggar.interfaces.default_methods;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 public class StaticMethodInInterface {
 	interface A {

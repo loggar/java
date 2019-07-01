@@ -7,7 +7,7 @@ import javax.script.ScriptEngine;
 import javax.script.ScriptEngineManager;
 import javax.script.ScriptException;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 public class TransportJavaData {
 	@Test

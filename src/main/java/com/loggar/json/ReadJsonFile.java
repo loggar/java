@@ -9,7 +9,7 @@ import java.io.Reader;
 import java.io.UnsupportedEncodingException;
 import java.util.Map;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;

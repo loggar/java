@@ -3,7 +3,7 @@ package com.loggar.effective.classAndInterfaces;
 import java.util.Arrays;
 import java.util.Comparator;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 /**
  * Use function objects to represent strategies

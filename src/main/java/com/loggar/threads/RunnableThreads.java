@@ -1,6 +1,6 @@
 package com.loggar.threads;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 public class RunnableThreads implements Runnable {
 	public void run() {

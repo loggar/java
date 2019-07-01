@@ -11,7 +11,7 @@ import java.util.function.BiPredicate;
 import java.util.function.BinaryOperator;
 
 import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 public class TwoArgFunctions {
 	List<Trade> trades = null;

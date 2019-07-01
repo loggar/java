@@ -3,7 +3,7 @@ package com.loggar.effective.enums;
 import java.util.Arrays;
 import java.util.Collection;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 public class _34_OperationTest {
 	private <T extends Enum<T> & _34_Operation> void test(Class<T> opSet, double x, double y) {

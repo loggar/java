@@ -2,7 +2,7 @@ package com.loggar.regex;
 
 import java.util.List;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import com.loggar.tools.common.StringUtil;
 

@@ -8,7 +8,7 @@ import java.nio.file.Paths;
 
 import org.junit.After;
 import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 public class FilesNIO2 {
 	Path d = Paths.get("./dist/io");
