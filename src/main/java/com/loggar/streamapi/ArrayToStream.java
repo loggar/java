@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.stream.DoubleStream;
 import java.util.stream.Stream;
 
-public class ArrayToStreamInJava8 {
+public class ArrayToStream {
 	public static void main(String[] args) {
 
 		// Try with Object Array
