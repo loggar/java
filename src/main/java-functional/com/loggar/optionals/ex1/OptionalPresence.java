@@ -1,4 +1,4 @@
-package com.loggar.optional;
+package com.loggar.optionals.ex1;
 
 import java.util.Optional;
 
