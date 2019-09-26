@@ -30,3 +30,4 @@ then add classpath entry for junit.
 </classpathentry>
 ```
 
+### or just remove scope element.
