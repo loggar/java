@@ -1,7 +1,7 @@
 package com.loggar.effective.instantiation;
 
 /**
- * 싱글톤 객체를 만들때는 factory method 나 enum 을 고려하자.
+ * Consider Factory Method or Enum class to create Singleton object.
  *
  */
 public class _03_Singleton {

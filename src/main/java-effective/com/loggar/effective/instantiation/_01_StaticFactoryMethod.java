@@ -1,7 +1,7 @@
 package com.loggar.effective.instantiation;
 
 /**
- * 생성자 대신 Static Factory Method 로 인스턴스를 생성하자.
+ * Prefer Static Factory Method than Constructor.
  * 
  */
 public class _01_StaticFactoryMethod {

@@ -1,7 +1,7 @@
 package com.loggar.effective.instantiation;
 
 /**
- * public static method 조합의 util 클래스는 인스턴스를 생성하거나 상속받지 못하도록 고려하자.
+ * Prevent Class-Instantiation of Util Classes that are only compose to public static methods.
  *
  */
 public class _04_UtilClass {

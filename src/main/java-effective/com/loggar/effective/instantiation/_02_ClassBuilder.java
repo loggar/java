@@ -1,7 +1,7 @@
 package com.loggar.effective.instantiation;
 
 /**
- * 필드가 많은(5개이상?) 객체의 생성에 bilder 를 고려하자.
+ * Consider Builer to create instance of classes that have many fields.
  */
 public class _02_ClassBuilder {
 	public static void main(String[] args) {
