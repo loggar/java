@@ -6,7 +6,7 @@ import java.net.URL;
 import java.net.URLConnection;
 import java.nio.charset.Charset;
 
-public class HttpClienSendRequest {
+public class URLConnectionSendRequest {
 	public static void main(String[] args) {
 		String url = "http://www.mocky.io/v2/5a165cd03100004f008d31ee";
 		System.out.println("Requeted URL:" + url);

@@ -12,7 +12,7 @@ import java.net.URL;
 import java.util.List;
 import java.util.Map;
 
-public class LoadGithubContent {
+public class HttpURLConnectionGithubContent {
 	public static void main(String[] args) throws Throwable {
 		String link = "https://github.com/loggar/java/blob/master/readme.md";
 		URL url = new URL(link);

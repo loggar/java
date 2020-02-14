@@ -10,9 +10,9 @@ import org.apache.http.client.methods.HttpGet;
 import org.apache.http.entity.ContentType;
 import org.apache.http.impl.client.HttpClientBuilder;
 
-public class GetHTTPContentType {
+public class HttpClientGetHTTPContentType {
 	public static void main(String[] args) {
-		GetHTTPContentType demo = new GetHTTPContentType();
+		HttpClientGetHTTPContentType demo = new HttpClientGetHTTPContentType();
 		demo.requestPage();
 		demo.requestLogo();
 	}

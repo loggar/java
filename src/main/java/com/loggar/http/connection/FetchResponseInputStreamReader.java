@@ -4,7 +4,7 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.net.URL;
 
-public class FetchResponseData {
+public class FetchResponseInputStreamReader {
 	public static void main(String[] args) {
 		try {
 			URL url = new URL("http://google.com/");

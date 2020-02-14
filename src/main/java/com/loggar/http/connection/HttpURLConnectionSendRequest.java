@@ -2,48 +2,41 @@ package com.loggar.http.connection;
 
 import java.io.BufferedReader;
 import java.io.Closeable;
-import java.io.DataOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Set;
 
-public class HttpClientPost {
+public class HttpURLConnectionSendRequest {
 	public static void main(String[] args) {
 		try {
-			HttpClientPost hce = new HttpClientPost();
-			String body = hce.post("sample url allows post method", "data=test data");
-			System.out.println(body);
+			HttpURLConnectionSendRequest hce = new HttpURLConnectionSendRequest();
+			Map<String, String> requestPropertyMap = new HashMap<>();
+			String url = "https://digitalapi.auspost.com.au/postcode/search.json?q=SYDNEY&state=NSW";
+			String strMethod = "GET";
+			requestPropertyMap.put("AUTH-KEY", "<API-KEY-PROVIDED>");
+			String res = hce.send(url, strMethod, requestPropertyMap);
+			System.out.println(res);
 		} catch (IOException ioe) {
 			ioe.printStackTrace();
 		}
 	}
 
-	public String post(String postUrl, String data) throws IOException {
-		URL url = new URL(postUrl);
-		HttpURLConnection con = (HttpURLConnection) url.openConnection();
-		con.setRequestMethod("POST");
-
-		con.setDoOutput(true);
-
-		this.sendData(con, data);
-
-		return this.read(con.getInputStream());
-	}
-
-	protected void sendData(HttpURLConnection con, String data) throws IOException {
-		DataOutputStream wr = null;
-		try {
-			wr = new DataOutputStream(con.getOutputStream());
-			wr.writeBytes(data);
-			wr.flush();
-			wr.close();
-		} catch (IOException exception) {
-			throw exception;
-		} finally {
-			this.closeQuietly(wr);
+	public String send(String url, String method, Map<String, String> props) throws IOException {
+		URL reqUrl = new URL(url);
+		HttpURLConnection con = (HttpURLConnection) reqUrl.openConnection();
+		con.setRequestMethod(method);
+		if (props != null && props.size() > 0) {
+			Set<String> keySet = props.keySet();
+			for (String key : keySet) {
+				con.setRequestProperty(key, props.get(key));
+			}
 		}
+		return this.read(con.getInputStream());
 	}
 
 	private String read(InputStream is) throws IOException {
@@ -52,14 +45,11 @@ public class HttpClientPost {
 		StringBuilder body;
 		try {
 			in = new BufferedReader(new InputStreamReader(is));
-
 			body = new StringBuilder();
-
 			while ((inputLine = in.readLine()) != null) {
 				body.append(inputLine);
 			}
 			in.close();
-
 			return body.toString();
 		} catch (IOException ioe) {
 			throw ioe;
@@ -74,7 +64,6 @@ public class HttpClientPost {
 				closeable.close();
 			}
 		} catch (IOException ex) {
-
 		}
 	}
 }

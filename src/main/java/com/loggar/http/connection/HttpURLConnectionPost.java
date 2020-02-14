@@ -2,29 +2,48 @@ package com.loggar.http.connection;
 
 import java.io.BufferedReader;
 import java.io.Closeable;
+import java.io.DataOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
-public class HttpClientGet {
+public class HttpURLConnectionPost {
 	public static void main(String[] args) {
 		try {
-			HttpClientGet hce = new HttpClientGet();
-			String body = hce.get("https://loggar.github.io/note/sample-res/sample.1.json");
+			HttpURLConnectionPost hce = new HttpURLConnectionPost();
+			String body = hce.post("sample url allows post method", "data=test data");
 			System.out.println(body);
 		} catch (IOException ioe) {
 			ioe.printStackTrace();
 		}
 	}
 
-	public String get(String getUrl) throws IOException {
-		URL url = new URL(getUrl);
+	public String post(String postUrl, String data) throws IOException {
+		URL url = new URL(postUrl);
 		HttpURLConnection con = (HttpURLConnection) url.openConnection();
-		con.setRequestMethod("GET");
+		con.setRequestMethod("POST");
+
+		con.setDoOutput(true);
+
+		this.sendData(con, data);
 
 		return this.read(con.getInputStream());
+	}
+
+	protected void sendData(HttpURLConnection con, String data) throws IOException {
+		DataOutputStream wr = null;
+		try {
+			wr = new DataOutputStream(con.getOutputStream());
+			wr.writeBytes(data);
+			wr.flush();
+			wr.close();
+		} catch (IOException exception) {
+			throw exception;
+		} finally {
+			this.closeQuietly(wr);
+		}
 	}
 
 	private String read(InputStream is) throws IOException {
