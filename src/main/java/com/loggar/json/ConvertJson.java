@@ -50,6 +50,8 @@ public class ConvertJson {
         String json = "{'a':'a_1','b':'b_1'}";
         Map<String, Object> map = gson.fromJson(json, new TypeToken<Map<String, Object>>() {
         }.getType());
+
+        System.out.println(map);
     }
 
     @Test
