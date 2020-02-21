@@ -1,4 +1,4 @@
-package com.loggar.json;
+package com.loggar.json.gson;
 
 import java.util.ArrayList;
 import java.util.Arrays;
