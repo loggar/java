@@ -17,7 +17,7 @@ public class WriteCsvFromList {
     public static void main(String[] args) {
         try {
             // create a write
-            Writer writer = Files.newBufferedWriter(Paths.get("users-objects.csv"));
+            Writer writer = Files.newBufferedWriter(Paths.get("./dist/csv/users-objects.csv"));
 
             // create a csv writer
             StatefulBeanToCsv<UserCsvColumnPositionConstructor> csvWriter = new StatefulBeanToCsvBuilder<UserCsvColumnPositionConstructor>(writer).withSeparator(CSVWriter.DEFAULT_SEPARATOR)

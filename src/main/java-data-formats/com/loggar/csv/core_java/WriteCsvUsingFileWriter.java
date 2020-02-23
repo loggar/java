@@ -14,7 +14,7 @@ public class WriteCsvUsingFileWriter {
             List<List<String>> records = Arrays.asList(Arrays.asList("1", "John Lee", "US"), Arrays.asList("2", "Jovan Roover", "DE"), Arrays.asList("3", "Emma Watson", "UK"));
 
             // create a writer
-            BufferedWriter writer = Files.newBufferedWriter(Paths.get("users-with-header.csv"));
+            BufferedWriter writer = Files.newBufferedWriter(Paths.get("./dist/csv/users-with-header.csv"));
 
             // write header record
             writer.write("ID,Name,Country");
