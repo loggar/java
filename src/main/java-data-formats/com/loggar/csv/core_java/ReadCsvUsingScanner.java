@@ -20,8 +20,6 @@ public class ReadCsvUsingScanner {
                 // convert line into tokens
                 String[] tokens = line.split(DELIMITER);
 
-                // TODO: do something here with the data
-
                 // print all tokens
                 for (String token : tokens) {
                     System.out.println(token);
