@@ -1,4 +1,4 @@
-package com.loggar.test.junit5.examples;
+package com.loggar.test.junit5.features;
 
 import org.junit.jupiter.api.*;
 
