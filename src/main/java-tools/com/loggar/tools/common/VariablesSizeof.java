@@ -1,8 +1,8 @@
 package com.loggar.tools.common;
 
-public class Variables_sizeof {
-	private Variables_sizeof() {
-		throw new AssertionError(Variables_sizeof.class.getName() + " cannot be instantiable.");
+public class VariablesSizeof {
+	private VariablesSizeof() {
+		throw new AssertionError(VariablesSizeof.class.getName() + " cannot be instantiable.");
 	}
 
 	public static int sizeof(final Class<?> dataType) {
@@ -39,12 +39,12 @@ public class Variables_sizeof {
 	}
 
 	public static void main(String args[]) {
-		System.out.println(" size of byte in Java is (in bytes) :  " + Variables_sizeof.sizeof(byte.class));
-		System.out.println(" size of short in Java is (in bytes) :" + Variables_sizeof.sizeof(short.class));
-		System.out.println(" size of char in Java is (in bytes) :" + Variables_sizeof.sizeof(char.class));
-		System.out.println(" size of int in Java is (in bytes) :" + Variables_sizeof.sizeof(int.class));
-		System.out.println(" size of long in Java is (in bytes) :" + Variables_sizeof.sizeof(long.class));
-		System.out.println(" size of float in Java is (in bytes) :" + Variables_sizeof.sizeof(float.class));
-		System.out.println(" size of double in Java is (in bytes) :" + Variables_sizeof.sizeof(double.class));
+		System.out.println(" size of byte in Java is (in bytes) :  " + VariablesSizeof.sizeof(byte.class));
+		System.out.println(" size of short in Java is (in bytes) :" + VariablesSizeof.sizeof(short.class));
+		System.out.println(" size of char in Java is (in bytes) :" + VariablesSizeof.sizeof(char.class));
+		System.out.println(" size of int in Java is (in bytes) :" + VariablesSizeof.sizeof(int.class));
+		System.out.println(" size of long in Java is (in bytes) :" + VariablesSizeof.sizeof(long.class));
+		System.out.println(" size of float in Java is (in bytes) :" + VariablesSizeof.sizeof(float.class));
+		System.out.println(" size of double in Java is (in bytes) :" + VariablesSizeof.sizeof(double.class));
 	}
 }
