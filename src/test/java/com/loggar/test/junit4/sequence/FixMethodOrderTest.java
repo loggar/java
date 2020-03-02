@@ -1,4 +1,4 @@
-package com.loggar.test.sequence;
+package com.loggar.test.junit4.sequence;
 
 import org.junit.FixMethodOrder;
 import org.junit.Rule;
