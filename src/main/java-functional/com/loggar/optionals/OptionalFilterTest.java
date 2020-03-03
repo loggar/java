@@ -1,4 +1,4 @@
-package com.loggar.optional;
+package com.loggar.optionals;
 
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
