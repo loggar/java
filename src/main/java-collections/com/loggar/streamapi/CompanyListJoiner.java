@@ -1,4 +1,4 @@
-package com.loggar.collections;
+package com.loggar.streamapi;
 
 import java.util.Arrays;
 import java.util.List;

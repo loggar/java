@@ -1,4 +1,4 @@
-package com.loggar.collections;
+package com.loggar.map;
 
 import java.util.HashMap;
 import java.util.Hashtable;

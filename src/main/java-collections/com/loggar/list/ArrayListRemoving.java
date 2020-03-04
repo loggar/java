@@ -1,4 +1,4 @@
-package com.loggar.collections;
+package com.loggar.list;
 
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.junit.Assert.assertFalse;

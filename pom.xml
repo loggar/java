@@ -19,16 +19,7 @@
 					<encoding>UTF-8</encoding>
 					<configuration>
 						<includes>
-							<include>src/main/java/**/*.java</include>
-							<include>src/main/java-concurrent/**/*.java</include>
-							<include>src/main/java-data-formats/**/*.java</include>
-							<include>src/main/java-functional/**/*.java</include>
-							<include>src/main/java-io/**/*.java</include>
-							<include>src/main/java-tools/**/*.java</include>
-							<include>src/main/java-patterns/**/*.java</include>
-							<include>src/main/java-effective/**/*.java</include>
-							<include>src/main/java-servlet/**/*.java</include>
-							<include>src/main/java-exercise/**/*.java</include>
+							<include>src/main/**/*.java</include>
 						</includes>
 					</configuration>
 				</configuration>
