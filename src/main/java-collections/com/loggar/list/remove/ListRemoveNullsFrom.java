@@ -1,4 +1,4 @@
-package com.loggar.list;
+package com.loggar.list.remove;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.hasSize;

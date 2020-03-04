@@ -5,7 +5,7 @@ import java.util.List;
 
 import org.junit.Test;
 
-public class ListFeatures {
+public class ListToArray {
 	@Test
 	public void toArray () {
 		List<String> list = new ArrayList<>();
