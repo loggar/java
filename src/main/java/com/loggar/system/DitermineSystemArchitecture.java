@@ -1,4 +1,4 @@
-package com.loggar.exercise.system;
+package com.loggar.system;
 
 public class DitermineSystemArchitecture {
 	public static void main(String[] args) {
