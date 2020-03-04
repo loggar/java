@@ -16,7 +16,7 @@ import com.google.common.base.Predicates;
 import com.google.common.collect.Iterables;
 import com.google.common.collect.Lists;
 
-public class RemoveNullsFromList {
+public class ListRemoveNullsFrom {
     // Remove Nulls From a List Using Plain Java
     @Test
     public void givenListContainsNulls_whenRemovingNullsWithPlainJava_thenCorrect() {

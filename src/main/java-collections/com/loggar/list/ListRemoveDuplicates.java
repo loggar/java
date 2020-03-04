@@ -13,7 +13,7 @@ import org.junit.jupiter.api.Test;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Sets;
 
-public class RemoveDuplicatesFromList {
+public class ListRemoveDuplicates {
     @Test
     public void givenListContainsDuplicates_whenRemovingDuplicatesWithPlainJava_thenCorrect() {
         List<Integer> listWithDuplicates = Lists.newArrayList(0, 1, 2, 3, 0, 0);
