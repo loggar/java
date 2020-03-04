@@ -1,4 +1,4 @@
-package com.loggar.exercise.pbkdf2;
+package com.loggar.security.pbkdf2;
 
 import java.io.UnsupportedEncodingException;
 import java.security.NoSuchAlgorithmException;

@@ -1,4 +1,4 @@
-package com.loggar.jwt.jsonwebtoken;
+package com.loggar.security.jwt;
 
 import java.security.Key;
 import java.util.Date;

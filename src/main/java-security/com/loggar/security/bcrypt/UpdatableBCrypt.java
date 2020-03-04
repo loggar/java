@@ -1,4 +1,4 @@
-package com.loggar.exercise.bcrypt;
+package com.loggar.security.bcrypt;
 
 import java.util.function.Function;
 

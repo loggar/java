@@ -1,4 +1,4 @@
-package com.loggar.exercise.string;
+package com.loggar.strings;
 
 import java.util.HashMap;
 import java.util.Map;
