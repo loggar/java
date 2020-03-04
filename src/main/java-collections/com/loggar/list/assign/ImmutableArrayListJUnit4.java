@@ -1,4 +1,4 @@
-package com.loggar.list;
+package com.loggar.list.assign;
 
 import java.util.ArrayList;
 import java.util.Arrays;

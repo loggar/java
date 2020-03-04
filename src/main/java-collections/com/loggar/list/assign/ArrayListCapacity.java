@@ -1,4 +1,4 @@
-package com.loggar.list;
+package com.loggar.list.assign;
 
 import java.lang.reflect.Field;
 import java.util.ArrayList;

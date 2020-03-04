@@ -1,4 +1,4 @@
-package com.loggar.list;
+package com.loggar.list.assign;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
