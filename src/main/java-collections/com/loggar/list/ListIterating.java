@@ -11,7 +11,7 @@ import java.util.stream.IntStream;
 
 import org.junit.jupiter.api.Test;
 
-public class ArrayListIterating {
+public class ListIterating {
     @Test
     public void previous() {
         List<Integer> list = new ArrayList<>(

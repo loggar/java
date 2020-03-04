@@ -13,7 +13,7 @@ import java.util.stream.LongStream;
 
 import org.junit.jupiter.api.Test;
 
-public class ArrayListAssignment {
+public class ListAssignment {
     @Test
     public void isEmpry() {
         List<String> list = new ArrayList<>();
@@ -27,9 +27,9 @@ public class ArrayListAssignment {
         System.out.println(list.size());
         assertTrue(list.size() == 0);
         assertTrue(list.isEmpty());
-        assertTrue(ArrayListUtil.getArrayListCapacity((ArrayList<String>) list) == initSize);
+        assertTrue(ArrayListCapacity.get((ArrayList<String>) list) == initSize);
     }
-
+    
     @Test
     public void initFromCollection() {
         Collection<Integer> numbers = IntStream.range(0, 10)

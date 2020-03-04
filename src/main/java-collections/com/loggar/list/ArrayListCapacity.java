@@ -3,12 +3,12 @@ package com.loggar.list;
 import java.lang.reflect.Field;
 import java.util.ArrayList;
 
-public class ArrayListUtil {
-    private ArrayListUtil() {
-        throw new AssertionError(ArrayListUtil.class.getName() + " cannot be instantiable.");
+public class ArrayListCapacity {
+    private ArrayListCapacity() {
+        throw new AssertionError(ArrayListCapacity.class.getName() + " cannot be instantiable.");
     }
 
-    public static int getArrayListCapacity(ArrayList<?> list) throws Exception {
+    public static int get(ArrayList<?> list) throws Exception {
 
         // get the elementData field from ArrayList class
         Field arrayField = ArrayList.class.getDeclaredField("elementData");

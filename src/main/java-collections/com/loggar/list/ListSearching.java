@@ -15,7 +15,7 @@ import java.util.stream.LongStream;
 
 import org.junit.jupiter.api.Test;
 
-public class ArrayListSearching {
+public class ListSearching {
     @Test
     public void searchFromArrayList() {
         List<String> list = LongStream.range(0, 16)

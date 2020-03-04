@@ -18,7 +18,7 @@ import java.util.stream.LongStream;
 
 import org.junit.jupiter.api.Test;
 
-public class ArrayListRemoving {
+public class ListRemoving {
     @Test
     public void removeIndex() {
         List<Integer> list = new ArrayList<>(
