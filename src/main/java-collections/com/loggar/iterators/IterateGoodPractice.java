@@ -1,4 +1,4 @@
-package com.loggar.statements;
+package com.loggar.iterators;
 
 import java.util.ArrayList;
 import java.util.Iterator;

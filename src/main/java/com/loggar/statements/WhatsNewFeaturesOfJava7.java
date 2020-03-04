@@ -13,7 +13,7 @@ import java.util.Map;
 
 import org.junit.Test;
 
-public class WhatsNewFeaturesOfJava7Test {
+public class WhatsNewFeaturesOfJava7 {
 
 	/*
 	 * now we can use String in switch statements.

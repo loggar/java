@@ -1,4 +1,4 @@
-package com.loggar.statements;
+package com.logger.lamda;
 
 import org.junit.Test;
 

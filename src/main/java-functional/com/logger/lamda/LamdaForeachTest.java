@@ -1,4 +1,4 @@
-package com.loggar.statements;
+package com.logger.lamda;
 
 import java.util.Arrays;
 import java.util.List;
