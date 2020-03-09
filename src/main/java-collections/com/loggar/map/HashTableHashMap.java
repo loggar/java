@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Hashtable;
 import java.util.Map;
 
-public class HashMapHashTable {
+public class HashTableHashMap {
     public static void main(String args[]) {
         Hashtable<Integer, String> ht = new Hashtable<Integer, String>();
         ht.put(101, " ajay");

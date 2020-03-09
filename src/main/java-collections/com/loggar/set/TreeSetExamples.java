@@ -10,7 +10,7 @@ import java.util.TreeSet;
 
 import org.junit.jupiter.api.Test;
 
-public class TreeSetExample {
+public class TreeSetExamples {
     // It stores unique elements
     // It doesn't preserve the insertion order of the elements
     // It sorts the elements in ascending order
