@@ -52,7 +52,7 @@ public class HashMapIterates {
 		for (Map.Entry<String, Product> entry : productsByName.entrySet()) {
 			Product product = entry.getValue();
 			String key = entry.getKey();
-			System.out.printf("%s: %s" + System.lineSeparator(), key, product);
+			System.out.printf("%s: %s%n", key, product);
 		}
 	}
 
