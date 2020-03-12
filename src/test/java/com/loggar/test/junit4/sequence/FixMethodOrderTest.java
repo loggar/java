@@ -9,8 +9,7 @@ import org.junit.runners.MethodSorters;
 @FixMethodOrder(MethodSorters.NAME_ASCENDING) // java 1.8, junit 4.11
 public class FixMethodOrderTest {
 
-	@Rule
-	public TestName testName = new TestName();
+	@Rule public TestName testName = new TestName();
 
 	@Test
 	public void cake() {

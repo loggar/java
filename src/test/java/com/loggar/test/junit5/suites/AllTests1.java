@@ -5,7 +5,7 @@ import org.junit.platform.suite.api.SelectPackages;
 import org.junit.runner.RunWith;
 
 @RunWith(JUnitPlatform.class)
-@SelectPackages("com.loggar.junit5")
+@SelectPackages("com.loggar.test.junit5")
 public class AllTests1 {
 
 }
