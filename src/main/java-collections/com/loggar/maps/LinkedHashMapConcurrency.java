@@ -2,16 +2,17 @@ package com.loggar.maps;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+import java.util.Collections;
+import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.concurrent.ConcurrentHashMap;
 
 import org.junit.jupiter.api.Test;
 
-public class ConcurrentHashMapThreadSafety {
+public class LinkedHashMapConcurrency {
 	@Test
 	public void givenConcurrentMap_whenSumParallel_thenCorrect() throws Exception {
-		Map<String, Integer> map = new ConcurrentHashMap<>();
+		Map<String, Integer> map = Collections.synchronizedMap(new LinkedHashMap<>());
 		List<Integer> sumList = ConcurrencyMapUtil.parallelSum100(map, 1000);
 
 		assertEquals(1, sumList.stream().distinct().count());
