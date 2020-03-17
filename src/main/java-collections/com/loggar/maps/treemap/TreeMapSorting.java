@@ -1,4 +1,4 @@
-package com.loggar.maps;
+package com.loggar.maps.treemap;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 

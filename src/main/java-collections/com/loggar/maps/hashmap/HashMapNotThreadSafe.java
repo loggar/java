@@ -1,4 +1,4 @@
-package com.loggar.maps;
+package com.loggar.maps.hashmap;
 
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
@@ -8,6 +8,8 @@ import java.util.List;
 import java.util.Map;
 
 import org.junit.jupiter.api.Test;
+
+import com.loggar.maps.concurrency.ConcurrencyMapUtil;
 
 public class HashMapNotThreadSafe {
 	@Test

@@ -1,4 +1,4 @@
-package com.loggar.maps;
+package com.loggar.maps.linkedhashmap;
 
 import java.util.LinkedHashMap;
 import java.util.Set;

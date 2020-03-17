@@ -1,4 +1,4 @@
-package com.loggar.maps;
+package com.loggar.maps.enummap;
 
 import static org.assertj.core.api.Assertions.assertThat;
 

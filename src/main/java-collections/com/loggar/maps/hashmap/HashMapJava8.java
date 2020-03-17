@@ -1,4 +1,4 @@
-package com.loggar.maps;
+package com.loggar.maps.hashmap;
 
 import java.util.HashMap;
 import java.util.List;

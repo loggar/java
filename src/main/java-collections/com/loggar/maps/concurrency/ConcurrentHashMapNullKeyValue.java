@@ -1,4 +1,4 @@
-package com.loggar.maps;
+package com.loggar.maps.concurrency;
 
 import static org.junit.jupiter.api.Assertions.assertNull;
 
