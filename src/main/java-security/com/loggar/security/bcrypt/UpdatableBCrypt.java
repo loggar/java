@@ -1,5 +1,6 @@
 package com.loggar.security.bcrypt;
 
+import java.lang.invoke.MethodHandles;
 import java.util.function.Function;
 
 import org.mindrot.jbcrypt.BCrypt;
@@ -7,7 +8,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class UpdatableBCrypt {
-	private static final Logger log = LoggerFactory.getLogger(UpdatableBCrypt.class);
+	private static final Logger log = LoggerFactory.getLogger(MethodHandles.lookup().lookupClass());
 
 	private final int logRounds;
 

@@ -1,11 +1,13 @@
 package com.loggar.strings;
 
+import java.lang.invoke.MethodHandles;
+
 import org.junit.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class SubstringTest {
-    Logger logger = LoggerFactory.getLogger(getClass());
+    private static final Logger logger = LoggerFactory.getLogger(MethodHandles.lookup().lookupClass());
 
     // @Test
     public void test() {

@@ -3,6 +3,7 @@ package com.loggar.pattern.singleton;
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertThat;
 
+import java.lang.invoke.MethodHandles;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
 
@@ -11,7 +12,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class DestroySingltonByReflection {
-	private static final Logger logger = LoggerFactory.getLogger(DestroySingltonByReflection.class);
+	private static final Logger logger = LoggerFactory.getLogger(MethodHandles.lookup().lookupClass());
 
 	@Test
 	public void destroySingleton() {

@@ -1,5 +1,6 @@
 package com.loggar.datetimes;
 
+import java.lang.invoke.MethodHandles;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
@@ -14,7 +15,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class DateTest {
-	private static final Logger logger = LoggerFactory.getLogger(DateTest.class);
+	private static final Logger logger = LoggerFactory.getLogger(MethodHandles.lookup().lookupClass());
 
 	Locale locale = Locale.ENGLISH;
 
@@ -91,15 +92,9 @@ public class DateTest {
 
 		boolean result = false;
 
-		LocalDateTime dt = LocalDateTime.from(
-				LocalDate.parse(str_issueDate, DateTimeFormatter.ofPattern("dd/MM/yyyy", java.util.Locale.ENGLISH))
-						.atStartOfDay());
-		LocalDateTime startDtStr = LocalDateTime.from(LocalDate
-				.parse(str_invoiceStartDate, DateTimeFormatter.ofPattern("dd/MM/yyyy", java.util.Locale.ENGLISH))
-				.atStartOfDay());
-		LocalDateTime endDtStr = LocalDateTime.from(
-				LocalDate.parse(str_invoiceEndDate, DateTimeFormatter.ofPattern("dd/MM/yyyy", java.util.Locale.ENGLISH))
-						.atStartOfDay());
+		LocalDateTime dt = LocalDateTime.from(LocalDate.parse(str_issueDate, DateTimeFormatter.ofPattern("dd/MM/yyyy", java.util.Locale.ENGLISH)).atStartOfDay());
+		LocalDateTime startDtStr = LocalDateTime.from(LocalDate.parse(str_invoiceStartDate, DateTimeFormatter.ofPattern("dd/MM/yyyy", java.util.Locale.ENGLISH)).atStartOfDay());
+		LocalDateTime endDtStr = LocalDateTime.from(LocalDate.parse(str_invoiceEndDate, DateTimeFormatter.ofPattern("dd/MM/yyyy", java.util.Locale.ENGLISH)).atStartOfDay());
 
 		if ((dt.isAfter(startDtStr) || dt.equals(startDtStr)) && (dt.isBefore(endDtStr) || dt.equals(endDtStr))) {
 			result = true;
@@ -127,8 +122,7 @@ public class DateTest {
 			startDate = formatter_01.parse(str_invoiceStartDate);
 			endDate = formatter_01.parse(str_invoiceEndDate);
 
-			if ((issueDate.after(startDate) || issueDate.equals(startDate))
-					&& (issueDate.before(endDate) || issueDate.equals(endDate))) {
+			if ((issueDate.after(startDate) || issueDate.equals(startDate)) && (issueDate.before(endDate) || issueDate.equals(endDate))) {
 				result = true;
 			}
 		} catch (ParseException e) {

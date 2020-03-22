@@ -1,5 +1,6 @@
 package com.loggar.process.cmd;
 
+import java.lang.invoke.MethodHandles;
 import java.util.Date;
 import java.util.List;
 
@@ -7,7 +8,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class ProceedCommandsTimeDecorator {
-	private static final Logger logger = LoggerFactory.getLogger(ProceedCommandsTimeDecorator.class);
+	private static final Logger logger = LoggerFactory.getLogger(MethodHandles.lookup().lookupClass());
 
 	private ProceedCommandsTimeDecorator() {
 		throw new AssertionError();

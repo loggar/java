@@ -1,5 +1,6 @@
 package com.loggar.datetimes;
 
+import java.lang.invoke.MethodHandles;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -14,7 +15,7 @@ import org.slf4j.LoggerFactory;
  *
  */
 public class DateTimeComponentImpl implements DateTimeComponent {
-	private static final Logger logger = LoggerFactory.getLogger(DateTimeComponentImpl.class);
+	private static final Logger logger = LoggerFactory.getLogger(MethodHandles.lookup().lookupClass());
 
 	Locale locale = Locale.ENGLISH;
 

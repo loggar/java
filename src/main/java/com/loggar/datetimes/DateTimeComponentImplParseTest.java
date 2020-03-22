@@ -1,11 +1,13 @@
 package com.loggar.datetimes;
 
+import java.lang.invoke.MethodHandles;
+
 import org.junit.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class DateTimeComponentImplParseTest {
-	private static final Logger logger = LoggerFactory.getLogger(DateTimeComponentImplParseTest.class);
+	private static final Logger logger = LoggerFactory.getLogger(MethodHandles.lookup().lookupClass());
 
 	DateTimeComponent datetimeComponent = new DateTimeComponentImpl();
 

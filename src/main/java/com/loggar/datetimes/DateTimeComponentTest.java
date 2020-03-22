@@ -3,6 +3,7 @@ package com.loggar.datetimes;
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertThat;
 
+import java.lang.invoke.MethodHandles;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
@@ -14,7 +15,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class DateTimeComponentTest {
-	private static final Logger logger = LoggerFactory.getLogger(DateTimeComponentTest.class);
+	private static final Logger logger = LoggerFactory.getLogger(MethodHandles.lookup().lookupClass());
 
 	DateTimeComponent dateTimeComponent = new DateTimeComponentImpl();
 
