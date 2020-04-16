@@ -1,4 +1,4 @@
-package com.loggar.servlet.sample;
+package com.loggar.servlet.concept;
 
 import java.io.IOException;
 

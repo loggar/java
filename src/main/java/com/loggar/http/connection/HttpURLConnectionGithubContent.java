@@ -40,15 +40,19 @@ public class HttpURLConnectionGithubContent {
 	private static String getStringFromStream(InputStream stream) throws IOException {
 		if (stream != null) {
 			Writer writer = new StringWriter();
-
+			Reader reader = null;
 			char[] buffer = new char[2048];
 			try {
-				Reader reader = new BufferedReader(new InputStreamReader(stream, "UTF-8"));
+				reader = new BufferedReader(new InputStreamReader(stream, "UTF-8"));
 				int counter;
 				while ((counter = reader.read(buffer)) != -1) {
 					writer.write(buffer, 0, counter);
 				}
+				reader.close();
 			} finally {
+				if (reader != null) {
+					reader.close();
+				}
 				stream.close();
 			}
 			return writer.toString();

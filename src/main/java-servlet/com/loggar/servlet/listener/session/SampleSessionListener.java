@@ -1,4 +1,4 @@
-package com.loggar.listener.session;
+package com.loggar.servlet.listener.session;
 
 import java.util.HashMap;
 import java.util.Map;
