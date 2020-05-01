@@ -26,7 +26,7 @@ import org.slf4j.LoggerFactory;
  */
 @Intercepts({ @Signature(type = Executor.class, method = "query", args = { MappedStatement.class, Object.class, RowBounds.class, ResultHandler.class }), @Signature(type = Executor.class, method = "update", args = { MappedStatement.class, Object.class }) })
 public class MybatisStatementInterceptor implements Interceptor {
-	private static final Logger logger = LoggerFactory.getLogger(MybatisStatementInterceptor.class);
+	private static final Logger logger = LoggerFactory.getLogger(MethodHandles.lookup().lookupClass());
 
 	@Override
 	public Object intercept(Invocation invocation) {
