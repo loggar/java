@@ -6,7 +6,7 @@ public enum SingletonEx2 {
 	/**
 	 * If you prefer to follow the class diagram conventions:
 	 */
-	public static SingletonEx2 getInstance() {
+	public static synchronized SingletonEx2 getInstance() {
 		return INSTANCE;
 	}
 

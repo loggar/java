@@ -9,7 +9,7 @@ public class SingletonEx1 {
 	private SingletonEx1() {
 	}
 
-	public static SingletonEx1 getInstance() {
+	public static synchronized  SingletonEx1 getInstance() {
 		return INSTANCE;
 	}
 

@@ -25,7 +25,7 @@ public class _03_Singleton {
 			data = "something";
 		}
 		
-		public static Sample_1 getInstance() {
+		public static synchronized Sample_1 getInstance() {
 			return INSTANCE;
 		}
 		

@@ -6,7 +6,7 @@ package com.loggar.pattern.singleton;
  */
 public class LazyThreadSafeSingleton {
 	private LazyThreadSafeSingleton() {
-    }
+	}
 
 	private static class HoldInstance {
 		private static final LazyThreadSafeSingleton INSTANCE = new LazyThreadSafeSingleton();

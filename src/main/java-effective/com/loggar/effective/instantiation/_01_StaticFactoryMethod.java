@@ -44,7 +44,7 @@ public class _01_StaticFactoryMethod {
 		 * @param data
 		 * @return
 		 */
-		public static StaticFactoryMethodSample getInstance(String data) {
+		public static synchronized StaticFactoryMethodSample getInstance(String data) {
 			return new StaticFactoryMethodSample(data);
 		}
 		
