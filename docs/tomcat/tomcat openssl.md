@@ -1,6 +1,8 @@
 # Tomcat SSL/TLS (openssl)
 
 ```sh
+cd /opt/certs
+
 openssl genrsa -aes256 -out rootca_private.key 2048
 
 # Enter pass phrase for rootca_private.key:
@@ -36,6 +38,7 @@ Please enter the following 'extra' attributes
 to be sent with your certificate request
 A challenge password []:
 An optional company name []:
+
 [root@84697b6b23b4 certs]# ls
 rootca.csr  rootca_private.key  rootca_public_key.pem
 ```
@@ -71,7 +74,7 @@ $ openssl genrsa -aes256 -out localhost_private.key 2048
 Create local certificate:
 
 ```
-$ req -new -key localhost_private.key -out localhost.csr
+$ openssl req -new -key localhost_private.key -out localhost.csr
 
 Enter pass phrase for localhost_private.key:
 You are about to be asked to enter information that will be incorporated
