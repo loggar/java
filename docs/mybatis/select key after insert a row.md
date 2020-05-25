@@ -3,7 +3,7 @@
 
 ``` xml
 // ibatis-3-mapper
-<insert id="insertBoard" parameterType="com.koi.domain.board.BoardDomain">
+<insert id="insertBoard" parameterType="com.loggar.domain.board.BoardDomain">
 	INSERT INTO HS_TB_CM_BOARD (
 		BRD_TITLE
 	) VALUES (

@@ -15,7 +15,7 @@
 		<setting name="lazyLoadingEnabled" value="false" />
 	</settings>
 	<plugins>
-		<plugin interceptor="com.koi.support.mybatis.MybatisStatementInterceptor" />
+		<plugin interceptor="com.loggar.support.mybatis.MybatisStatementInterceptor" />
 	</plugins>
 	<mappers />
 </configuration>

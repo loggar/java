@@ -12,14 +12,14 @@ Remove Proxy
 
 ```xml
 	<aop:config proxy-target-class="true">
-		<aop:pointcut id="serviceOperationPointcut" expression="execution(* com.koi.service..*Service.*(..))" />
+		<aop:pointcut id="serviceOperationPointcut" expression="execution(* com.loggar.service..*Service.*(..))" />
 		<aop:advisor id="transactionAdvisor" pointcut-ref="serviceOperationPointcut" advice-ref="transactionAdvice" order="2" />
 	</aop:config>
 ```
 
 ```xml
 	<aop:config>
-		<aop:pointcut id="serviceOperationPointcut" expression="execution(* com.koi.service..*Service.*(..))" />
+		<aop:pointcut id="serviceOperationPointcut" expression="execution(* com.loggar.service..*Service.*(..))" />
 		<aop:advisor id="transactionAdvisor" pointcut-ref="serviceOperationPointcut" advice-ref="transactionAdvice" order="2" />
 	</aop:config>
 ```
