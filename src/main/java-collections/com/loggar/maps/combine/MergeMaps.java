@@ -1,4 +1,4 @@
-package com.loggar.maps;
+package com.loggar.maps.combine;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -76,7 +76,7 @@ public class MergeMaps {
 		 * <dependency> <groupId>one.util</groupId> <artifactId>streamex</artifactId> </dependency>
 		 */
 	}
-	
+
 	static class Employee {
 		private Long id;
 		private String name;
@@ -85,6 +85,11 @@ public class MergeMaps {
 			super();
 			this.id = id;
 			this.name = name;
+		}
+
+		public Employee clone() {
+			Employee n = new Employee(this.id, this.name);
+			return n;
 		}
 
 		public Long getId() {
@@ -140,6 +145,5 @@ public class MergeMaps {
 			builder.append("Employee [id=").append(id).append(", name=").append(name).append("]");
 			return builder.toString();
 		}
-
 	}
 }
