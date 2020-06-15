@@ -1,4 +1,4 @@
-package com.loggar.http.connection;
+package com.loggar.net.http;
 
 import java.io.BufferedReader;
 import java.io.Closeable;
@@ -7,23 +7,35 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Set;
 
-public class HttpURLConnectionGet {
+public class HttpURLConnectionSendRequest {
 	public static void main(String[] args) {
 		try {
-			HttpURLConnectionGet hce = new HttpURLConnectionGet();
-			String body = hce.get("https://loggar.github.io/note/sample-res/sample.1.json");
-			System.out.println(body);
+			HttpURLConnectionSendRequest hce = new HttpURLConnectionSendRequest();
+			Map<String, String> requestPropertyMap = new HashMap<>();
+			String url = "https://digitalapi.auspost.com.au/postcode/search.json?q=SYDNEY&state=NSW";
+			String strMethod = "GET";
+			requestPropertyMap.put("AUTH-KEY", "<API-KEY-PROVIDED>");
+			String res = hce.send(url, strMethod, requestPropertyMap);
+			System.out.println(res);
 		} catch (IOException ioe) {
 			ioe.printStackTrace();
 		}
 	}
 
-	public String get(String getUrl) throws IOException {
-		URL url = new URL(getUrl);
-		HttpURLConnection con = (HttpURLConnection) url.openConnection();
-		con.setRequestMethod("GET");
-
+	public String send(String url, String method, Map<String, String> props) throws IOException {
+		URL reqUrl = new URL(url);
+		HttpURLConnection con = (HttpURLConnection) reqUrl.openConnection();
+		con.setRequestMethod(method);
+		if (props != null && props.size() > 0) {
+			Set<String> keySet = props.keySet();
+			for (String key : keySet) {
+				con.setRequestProperty(key, props.get(key));
+			}
+		}
 		return this.read(con.getInputStream());
 	}
 
@@ -33,14 +45,11 @@ public class HttpURLConnectionGet {
 		StringBuilder body;
 		try {
 			in = new BufferedReader(new InputStreamReader(is));
-
 			body = new StringBuilder();
-
 			while ((inputLine = in.readLine()) != null) {
 				body.append(inputLine);
 			}
 			in.close();
-
 			return body.toString();
 		} catch (IOException ioe) {
 			throw ioe;
@@ -55,7 +64,6 @@ public class HttpURLConnectionGet {
 				closeable.close();
 			}
 		} catch (IOException ex) {
-
 		}
 	}
 }

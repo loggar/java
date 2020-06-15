@@ -1,4 +1,4 @@
-package com.loggar.http.connection;
+package com.loggar.net.http;
 
 import java.net.URL;
 import java.net.URLConnection;
