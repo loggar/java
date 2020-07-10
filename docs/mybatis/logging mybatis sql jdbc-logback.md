@@ -16,7 +16,7 @@ Datasource properties
 
 ```ini
 jdbc.driverClassName=net.sf.log4jdbc.sql.jdbcapi.DriverSpy
-jdbc.url=jdbc:log4jdbc:mariadb://10.1.10.47:3306/KOI_SIMS_TEST
+jdbc.url=jdbc:log4jdbc:mariadb://10.1.10.47:3306/DB_NAME
 ```
 
 `log4jdbc.log4j2.properties`

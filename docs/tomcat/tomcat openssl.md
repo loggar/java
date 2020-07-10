@@ -29,10 +29,10 @@ If you enter '.', the field will be left blank.
 Country Name (2 letter code) [AU]:AU
 State or Province Name (full name) [Some-State]:NSW
 Locality Name (eg, city) []:Sydney
-Organization Name (eg, company) [Internet Widgits Pty Ltd]:KOI
+Organization Name (eg, company) [Internet Widgits Pty Ltd]:ORG-NM
 Organizational Unit Name (eg, section) []:IT
 Common Name (e.g. server FQDN or YOUR name) []:Charly LEE
-Email Address []:charly.lee@koi.edu.au
+Email Address []:charly.lee@your-domain
 
 Please enter the following 'extra' attributes
 to be sent with your certificate request
@@ -49,7 +49,7 @@ rootca.csr  rootca_private.key  rootca_public_key.pem
 $ openssl x509 -req -days 3650 -extensions v3_ca -set_serial 1 -in rootca.csr -signkey rootca_private.key -out rootca.crt
 
 Signature ok
-subject=C = AU, ST = NSW, L = Sydney, O = KOI, OU = IT, CN = Charly LEE, emailAddress = charly.lee@koi.edu.au
+subject=C = AU, ST = NSW, L = Sydney, O = ORG-NM, OU = IT, CN = Charly LEE, emailAddress = charly.lee@your-domain
 Getting Private key
 Enter pass phrase for rootca_private.key:
 [root@84697b6b23b4 certs]# ls
@@ -87,10 +87,10 @@ If you enter '.', the field will be left blank.
 Country Name (2 letter code) [AU]:AU
 State or Province Name (full name) [Some-State]:NSW
 Locality Name (eg, city) []:Sydney
-Organization Name (eg, company) [Internet Widgits Pty Ltd]:KOI
+Organization Name (eg, company) [Internet Widgits Pty Ltd]:ORG-NM
 Organizational Unit Name (eg, section) []:IT
 Common Name (e.g. server FQDN or YOUR name) []:Charly LEE
-Email Address []:charly.lee@koi.edu.au
+Email Address []:charly.lee@your-domain
 
 Please enter the following 'extra' attributes
 to be sent with your certificate request
