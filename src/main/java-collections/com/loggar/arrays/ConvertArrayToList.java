@@ -5,7 +5,7 @@ import java.util.List;
 
 import org.junit.jupiter.api.Test;
 
-public class ConvertingArrayAndList {
+public class ConvertArrayToList {
     @Test
     public void givenUsingCoreJava_whenListConvertedToArray_thenCorrect() {
         List<Integer> sourceList = Arrays.asList(0, 1, 2, 3, 4, 5);
