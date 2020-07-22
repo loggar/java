@@ -1,4 +1,4 @@
-package com.loggar.maps.concurrency;
+package com.loggar.concurrent.map;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
 

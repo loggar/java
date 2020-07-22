@@ -1,4 +1,4 @@
-package com.loggar.maps.concurrency;
+package com.loggar.concurrent.map;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -9,7 +9,7 @@ import java.util.Map;
 
 import org.junit.jupiter.api.Test;
 
-import com.loggar.maps.concurrency.ConcurrencyMapUtil;
+import com.loggar.concurrent.map.ConcurrencyMapUtil;
 
 public class HashMapNotThreadSafe {
 	@Test

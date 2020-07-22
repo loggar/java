@@ -1,4 +1,4 @@
-package com.loggar.cuncurrent.lock;
+package com.loggar.concurrent.lock;
 
 import java.util.concurrent.atomic.AtomicInteger;
 

@@ -1,4 +1,4 @@
-package com.loggar.list.remove;
+package com.loggar.list.manipulate;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;

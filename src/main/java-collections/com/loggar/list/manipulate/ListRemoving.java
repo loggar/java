@@ -1,4 +1,4 @@
-package com.loggar.list.remove;
+package com.loggar.list.manipulate;
 
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.junit.Assert.assertFalse;
