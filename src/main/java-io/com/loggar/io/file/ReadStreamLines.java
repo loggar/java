@@ -9,19 +9,19 @@ import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-public class Java8StreamReadFile {
+public class ReadStreamLines {
 	public static void main(String args[]) {
 		String file = "./dist/io/append.txt";
 
 		// lines() and Stream Approach
-		ReadFile1(file);
+		readStreamLine(file);
 
 		// newBufferedReader and Stream Approach
-		ReadFile2(file);
+		readBufferLines(file);
 	}
 
 	// Read file using lines() and Stream Approach
-	private static void ReadFile1(String file) {
+	private static void readStreamLine(String file) {
 
 		Stream<String> stream = null;
 		try {
@@ -39,7 +39,7 @@ public class Java8StreamReadFile {
 	}
 
 	// Read file using newBufferedReader and Stream Approach
-	private static void ReadFile2(String file) {
+	private static void readBufferLines(String file) {
 		List<String> list = new ArrayList<>();
 
 		BufferedReader bufferReader = null;
@@ -65,4 +65,5 @@ public class Java8StreamReadFile {
 		// action throws an exception.
 		list.forEach(System.out::println);
 	}
+
 }
