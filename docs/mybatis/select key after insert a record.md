@@ -1,4 +1,4 @@
-## select key after insert a row
+## select key after insert a record
 
 
 ``` xml
