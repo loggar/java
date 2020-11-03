@@ -1,6 +1,5 @@
 ## select key after insert a record
 
-
 ``` xml
 // ibatis-3-mapper
 <insert id="insertBoard" parameterType="com.loggar.domain.board.BoardDomain">
