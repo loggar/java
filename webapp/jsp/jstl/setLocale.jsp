@@ -7,7 +7,7 @@
 </head>
 <body>
     <fmt:setLocale value="en_US" />
-    <fmt:bundle basename="com.loggar.bundle.sample.Example">
+    <fmt:bundle basename="com.loggar.resource.bundle.Example">
         <fmt:message key="count.one" />
         <br />
         <fmt:message key="count.two" />
@@ -17,7 +17,7 @@
     </fmt:bundle>
     <!-- Change the Locale -->
     <fmt:setLocale value="es_ES" />
-    <fmt:bundle basename="com.loggar.bundle.sample.Example">
+    <fmt:bundle basename="com.loggar.resource.bundle.Example">
         <fmt:message key="count.one" />
         <br />
         <fmt:message key="count.two" />

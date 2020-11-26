@@ -1,4 +1,4 @@
-package com.loggar.standard.in;
+package com.loggar.io.standard_in;
 
 import java.io.Console;
 

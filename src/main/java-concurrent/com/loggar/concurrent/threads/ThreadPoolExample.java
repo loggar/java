@@ -1,4 +1,4 @@
-package com.loggar.threads;
+package com.loggar.concurrent.threads;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;

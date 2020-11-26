@@ -7,7 +7,7 @@ public class ReadConfigUsingResourceBundle {
 	public static void main(String[] args) {
 
 		try {
-			ResourceBundle resourceBundle = ResourceBundle.getBundle("com.loggar.properties.resourcebundle.sample");
+			ResourceBundle resourceBundle = ResourceBundle.getBundle("com.loggar.resource.bundle.sample");
 			Enumeration<String> keys = resourceBundle.getKeys();
 			while (keys.hasMoreElements()) {
 				String k = keys.nextElement();

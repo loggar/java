@@ -1,4 +1,4 @@
-package com.loggar.standard.out;
+package com.loggar.io.standard_out;
 
 import java.io.FileNotFoundException;
 import java.io.PrintStream;

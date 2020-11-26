@@ -1,4 +1,4 @@
-package com.loggar.bundle.sample;
+package com.loggar.resource.bundle;
 
 import java.util.ListResourceBundle;
 

@@ -1,4 +1,4 @@
-package com.loggar.threads;
+package com.loggar.concurrent.threads;
 
 import org.junit.Test;
 

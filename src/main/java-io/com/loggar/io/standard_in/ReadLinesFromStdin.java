@@ -1,22 +1,23 @@
-package com.loggar.standard.in;
+package com.loggar.io.standard_in;
 
 import java.util.Scanner;
 
 /**
- * Reading standard input line-by-line
- *
+ * Reading text by line from standard input
+ * 
+ * <pre>
+ * java -cp ./target/classes com.loggar.standard.in.ReadLinesFromStdin < ./dist/io/in.txt
+ * </pre>
  */
-public class ReadLines {
+public class ReadLinesFromStdin {
 	public static void main(String[] args) {
 		try (Scanner scanner = new Scanner(System.in)) {
-			// Read and print out each line.
 			while (scanner.hasNextLine()) {
 				String lineOfInput = scanner.nextLine();
 				System.out.println(lineOfInput);
 			}
 		} catch (Exception ex) {
-			// exception handling...do something (e.g., print the error message)
-			ex.printStackTrace();
+			System.out.println(ex);
 		}
 	}
 }
