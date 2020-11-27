@@ -2,7 +2,8 @@
 	"url": "abc.com",
 	"spec": {
 		"correlation_id": {
-			"_data-type": "string"
+			"_data-type": "string",
+			"_data-length": 128
 		},
 		"course": {
 			"_data-type": "object",

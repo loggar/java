@@ -4,7 +4,6 @@ import java.io.File;
 import java.util.Map;
 import java.util.Set;
 
-import org.apache.commons.collections4.map.HashedMap;
 import org.apache.commons.io.FileUtils;
 
 import com.google.gson.Gson;
@@ -27,7 +26,7 @@ public class ConvertToMapTree {
 			// TreeNode<Object> specTreeRoot = new TreeNode<Object>(null);
 			// treeMaker(map, specTreeRoot);
 
-			treeViewer(map);
+			treeViewer(map, null);
 
 			// TraverseTreeIterative.traversePreOrder(specTreeRoot);
 
@@ -41,18 +40,10 @@ public class ConvertToMapTree {
 	}
 
 	public static void treeMaker(Map<String, Object> e, TreeNode<Object> parent) {
+		// todo : make new tree node which values include spec key(_data-key) and options(_data-type..)
 		Set<String> keySet = e.keySet();
 
 		for (String key : keySet) {
-			String type = (String) e.get("_data-type");
-			if (isPrimative(type)) {
-				Map<String, Object> props = new HashedMap<>();
-				props.put(key, e.get(key));
-				System.out.println(key + " " + type);
-			} else {
-				// todo
-			}
-
 			TreeNode<Object> node = new TreeNode<Object>(e.get(key));
 			parent.addChild(node);
 
@@ -63,26 +54,24 @@ public class ConvertToMapTree {
 		}
 	}
 
-	public static void treeViewer(Map<String, Object> e) {
+	public static void treeViewer(Map<String, Object> e, String pk) {
 		Set<String> keySet = e.keySet();
 
+		String type = (String) e.get("_data-type");
+
+		if (pk != null && type != null) {
+			System.out.println(pk + " ");
+		}
+
 		for (String key : keySet) {
-			String type = (String) e.get("_data-type");
-			if (type != null) {
-				System.out.println(key + ": " + type);
-			}
 
-			if (isPrimative(type)) {
-				Map<String, Object> props = new HashedMap<>();
-				props.put(key, e.get(key));
-
-			} else {
-
+			if (pk != null && isPrimative(type)) {
+				System.out.println("  " + key + ":" + e.get(key));
 			}
 
 			if (e.get(key).getClass() == LinkedTreeMap.class) {
 				@SuppressWarnings("unchecked") Map<String, Object> v = (Map<String, Object>) e.get(key);
-				treeViewer((Map<String, Object>) v);
+				treeViewer((Map<String, Object>) v, key);
 			}
 		}
 	}
