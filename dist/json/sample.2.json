@@ -1,77 +1,57 @@
 {
 	"url": "abc.com",
-	"properties": {
+	"spec": {
 		"correlation_id": {
-			"type": "string"
+			"_data-type": "string"
 		},
 		"course": {
-			"type": "object",
-			"properties": {
-				"courses_of_study_uid": {
-					"type": "integer"
+			"_data-type": "object",
+			"courses_of_study_uid": {
+				"_data-type": "integer"
+			},
+			"course_code": {
+				"_data-type": "string"
+			},
+			"course_name": {
+				"_data-type": "string"
+			},
+			"course_of_study_load": {
+				"_data-type": "number"
+			},
+			"special_interest_courses": {
+				"_data-type": "list",
+				"correlation_id": {
+					"_data-type": "string"
 				},
-				"course_code": {
-					"type": "string"
+				"special_interest_course": {
+					"_data-type": "object",
+					"special_course_type": {
+						"_data-type": "string"
+					},
+					"special_interest_course_effective_from_date": {
+						"_data-type": "string"
+					},
+					"special_interest_course_effective_to_date": {
+						"_data-type": "string"
+					}
+				}
+			},
+			"course_fields_of_education": {
+				"_data-type": "list",
+				"correlation_id": {
+					"_data-type": "string"
 				},
-				"course_name": {
-					"type": "string"
-				},
-				"course_of_study_load": {
-					"type": "number"
-				},
-				"special_interest_courses": {
-					"type": "array",
-					"items": [
-						{
-							"type": "object",
-							"properties": {
-								"correlation_id": {
-									"type": "string"
-								},
-								"special_interest_course": {
-									"type": "object",
-									"properties": {
-										"special_course_type": {
-											"type": "string"
-										},
-										"special_interest_course_effective_from_date": {
-											"type": "string"
-										},
-										"special_interest_course_effective_to_date": {
-											"type": "string"
-										}
-									}
-								}
-							}
-						}
-					]
-				},
-				"course_fields_of_education": {
-					"type": "array",
-					"items": [
-						{
-							"type": "object",
-							"properties": {
-								"correlation_id": {
-									"type": "string"
-								},
-								"course_field_of_education": {
-									"type": "object",
-									"properties": {
-										"course_field_of_education_code": {
-											"type": "string"
-										},
-										"course_field_of_education_supplementary_code": {
-											"type": "string"
-										},
-										"course_field_of_education_effective_from_date": {
-											"type": "string"
-										}
-									}
-								}
-							}
-						}
-					]
+				"course_field_of_education": {
+					"_data-type": "object",
+					"course_field_of_education_code": {
+						"_data-type": "string"
+					},
+					"course_field_of_education_supplementary_code": {
+						"_data-type": "string"
+					},
+					"course_field_of_education_effective_from_date": {
+						"_data-type": "string"
+					}
 				}
 			}
 		}

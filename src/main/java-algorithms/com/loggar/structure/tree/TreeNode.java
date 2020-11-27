@@ -4,15 +4,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class TreeNode<T> {
-	private T data = null;
-
-	private List<TreeNode<T>> children;
-
+	private T value = null;
+	private List<TreeNode<T>> children = new ArrayList<>();
 	private TreeNode<T> parent = null;
 
 	public TreeNode(T data) {
-		this.data = data;
-		children = new ArrayList<>();
+		this.value = data;
 	}
 
 	public TreeNode<T> addChild(TreeNode<T> child) {
@@ -30,12 +27,12 @@ public class TreeNode<T> {
 		return children;
 	}
 
-	public T getData() {
-		return data;
+	public T getValue() {
+		return value;
 	}
 
-	public void setData(T data) {
-		this.data = data;
+	public void setData(T value) {
+		this.value = value;
 	}
 
 	private void setParent(TreeNode<T> parent) {
@@ -45,4 +42,5 @@ public class TreeNode<T> {
 	public TreeNode<T> getParent() {
 		return parent;
 	}
+
 }
