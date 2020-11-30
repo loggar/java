@@ -22,6 +22,10 @@ public class TreeNode<T> {
 		children.forEach(each -> each.setParent(this));
 		this.children.addAll(children);
 	}
+	
+	public void initParent(TreeNode<T> parent) {
+		parent.addChild(this);
+	}
 
 	public List<TreeNode<T>> getChildren() {
 		return children;

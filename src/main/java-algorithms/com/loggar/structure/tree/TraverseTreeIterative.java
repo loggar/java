@@ -17,10 +17,8 @@ public class TraverseTreeIterative<T> {
 		// We push right child in first for that left is processed first
 		while (!nodeStack.empty()) {
 			TreeNode<T> currentNode = nodeStack.pop();
-			System.out.print(currentNode.getValue() + " ");
-
+			System.out.println("[visit node] " + currentNode.getValue());
 			List<TreeNode<T>> children = currentNode.getChildren();
-
 			for (TreeNode<T> c : children) {
 				nodeStack.push(c);
 			}
