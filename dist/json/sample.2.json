@@ -1,5 +1,5 @@
 {
-	"url": "abc.com",
+	"url": "abc.com/${URL_PARAM_1}/${URL_PARAM_2}",
 	"properties": {
 		"correlation_id": {
 			"_data-type": "string",
@@ -8,6 +8,7 @@
 		},
 		"course": {
 			"_data-type": "object",
+			"_info-type": "Course",
 			"properties": {
 				"courses_of_study_uid": {
 					"_data-type": "integer",
@@ -23,6 +24,7 @@
 				},
 				"special_interest_courses": {
 					"_data-type": "list",
+					"_info-type": "Special Interest Course",
 					"properties": {
 						"special_interest_course": {
 							"_data-type": "object",
