@@ -1,39 +1,16 @@
 package com.loggar.json.tree;
 
-import java.io.File;
-import java.io.IOException;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
-import org.apache.commons.io.FileUtils;
-
-import com.google.gson.Gson;
 import com.google.gson.internal.LinkedTreeMap;
-import com.google.gson.reflect.TypeToken;
-import com.loggar.structure.tree.TraverseTreeIterative;
 import com.loggar.structure.tree.TreeNode;
 
 public class ConvertToMapTree {
-	public static void main(String[] args) throws IOException {
-		try {
-			String jsonString = FileUtils.readFileToString(new File("./dist/json/sample.2.json"), "UTF-8");
-
-			Map<String, Object> map = (new Gson()).fromJson(jsonString, new TypeToken<Map<String, Object>>() {
-			}.getType());
-
-			// System.out.println(map.getClass().toString());
-			// System.out.println(map);
-
-			System.out.println("spec-name: " + "some spec name");
-			System.out.println("url: " + map.get("url"));
-
-			TreeNode<Map<String, Object>> propsTreeRoot = treeMaker((LinkedTreeMap<String, Object>) map);
-			TraverseTreeIterative.traversePreOrder(propsTreeRoot);
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
+	public static TreeNode<Map<String, Object>> init(Map<String, Object> map) {
+		return treeMaker((LinkedTreeMap<String, Object>) map);
 	}
 
 	private static boolean isNodeTypePrimative(String t) {
