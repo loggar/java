@@ -8,12 +8,42 @@ import java.util.Set;
 import com.google.gson.internal.LinkedTreeMap;
 import com.loggar.structure.tree.TreeNode;
 
-public class ConvertToMapTree {
-	public static TreeNode<Map<String, Object>> init(Map<String, Object> map) {
+public class JsonSpecTreeConvertor {
+	public TreeNode<Map<String, Object>> convert(Map<String, Object> map) {
 		return treeMaker((LinkedTreeMap<String, Object>) map);
 	}
 
-	private static boolean isNodeTypePrimative(String t) {
+	/**
+	 * Count node
+	 * 
+	 * @param <T>
+	 * @param node
+	 */
+	public int countDataNode(TreeNode<Map<String, Object>> node) {
+		if (node == null)
+			return 0;
+
+		int cn = 0;
+
+		Map<String, Object> v = node.getValue();
+		String dataType = (String) v.get("_data-type");
+
+		if (isNodeTypePrimative(dataType)) {
+			System.out.println("visit " + v.get("_data-nm") + " dataType=" + dataType + ", add count");
+			cn++;
+		} else {
+			System.out.println("visit " + v.get("_data-nm") + " dataType=" + dataType);
+		}
+
+		List<TreeNode<Map<String, Object>>> children = node.getChildren();
+		for (TreeNode<Map<String, Object>> c : children) {
+			cn += countDataNode(c);
+		}
+
+		return cn;
+	}
+
+	private boolean isNodeTypePrimative(String t) {
 		return !"object".equals(t) && !"list".equals(t);
 	}
 
@@ -23,7 +53,7 @@ public class ConvertToMapTree {
 	 * @param e
 	 * @return
 	 */
-	public static TreeNode<Map<String, Object>> treeMaker(LinkedTreeMap<String, Object> e) {
+	public TreeNode<Map<String, Object>> treeMaker(LinkedTreeMap<String, Object> e) {
 		TreeNode<Map<String, Object>> rootNode = treeMaker(e, null, null);
 		traverseSetInfoType(rootNode, "root");
 		return rootNode;
@@ -37,7 +67,7 @@ public class ConvertToMapTree {
 	 * @param parent
 	 * @return
 	 */
-	public static TreeNode<Map<String, Object>> treeMaker(LinkedTreeMap<String, Object> e, String pk, TreeNode<Map<String, Object>> parent) {
+	public TreeNode<Map<String, Object>> treeMaker(LinkedTreeMap<String, Object> e, String pk, TreeNode<Map<String, Object>> parent) {
 		String dataType = (String) e.get("_data-type");
 		if (pk == null) {
 			pk = "root";
@@ -81,7 +111,7 @@ public class ConvertToMapTree {
 	 * @param node
 	 * @param _infoType
 	 */
-	public static <T> void traverseSetInfoType(TreeNode<Map<String, Object>> node, String _infoType) {
+	public void traverseSetInfoType(TreeNode<Map<String, Object>> node, String _infoType) {
 		if (node == null)
 			return;
 
@@ -105,4 +135,5 @@ public class ConvertToMapTree {
 			traverseSetInfoType(c, _infoType);
 		}
 	}
+
 }

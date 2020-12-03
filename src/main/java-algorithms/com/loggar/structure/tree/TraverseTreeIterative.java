@@ -3,7 +3,12 @@ package com.loggar.structure.tree;
 import java.util.List;
 import java.util.Stack;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 public class TraverseTreeIterative<T> {
+	private static final Logger logger = LoggerFactory.getLogger(TraverseTreeIterative.class);
+
 	public static <T> void traversePreOrder(TreeNode<T> node) {
 		if (node == null)
 			return;
@@ -17,7 +22,7 @@ public class TraverseTreeIterative<T> {
 		// We push right child in first for that left is processed first
 		while (!nodeStack.empty()) {
 			TreeNode<T> currentNode = nodeStack.pop();
-			System.out.println("[visit node] " + currentNode.getValue());
+			logger.debug("[visit node] {}", currentNode.getValue());
 			List<TreeNode<T>> children = currentNode.getChildren();
 			for (TreeNode<T> c : children) {
 				nodeStack.push(c);
