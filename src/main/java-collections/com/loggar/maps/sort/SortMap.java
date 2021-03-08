@@ -1,4 +1,4 @@
-package com.loggar.collections.sort;
+package com.loggar.maps.sort;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -65,4 +65,5 @@ public class SortMap {
 
 		Assert.assertTrue(Arrays.equals(sortedMap.values().toArray(), sortedValues));
 	}
+
 }

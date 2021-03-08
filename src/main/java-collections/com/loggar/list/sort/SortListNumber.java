@@ -1,4 +1,4 @@
-package com.loggar.collections.sort;
+package com.loggar.list.sort;
 
 import java.util.Arrays;
 import java.util.Collections;
@@ -11,7 +11,7 @@ import org.junit.jupiter.api.Test;
 
 import com.google.common.primitives.Ints;
 
-public class SortList {
+public class SortListNumber {
 	int[] toSort;
 	int[] sortedInts;
 

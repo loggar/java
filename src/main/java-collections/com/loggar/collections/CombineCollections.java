@@ -1,4 +1,4 @@
-package com.loggar.collections.join;
+package com.loggar.collections;
 
 import java.util.Arrays;
 import java.util.Collection;

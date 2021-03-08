@@ -1,4 +1,4 @@
-package com.loggar.collections.sort;
+package com.loggar.arrays;
 
 import java.util.Arrays;
 import java.util.Comparator;
@@ -8,7 +8,7 @@ import org.junit.Assert;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-public class SortCustomObject {
+public class SortArrayObject {
 	Employee[] employees;
 	Employee[] employeesSorted;
 	Employee[] employeesSortedByAge;

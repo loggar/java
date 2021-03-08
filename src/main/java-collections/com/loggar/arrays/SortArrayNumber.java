@@ -1,4 +1,4 @@
-package com.loggar.collections.sort;
+package com.loggar.arrays;
 
 import java.util.Arrays;
 
@@ -6,7 +6,7 @@ import org.junit.Assert;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-public class SortArray {
+public class SortArrayNumber {
 	int[] toSort;
 	int[] sortedInts;
 	int[] sortedRangeInts;

@@ -1,4 +1,4 @@
-package com.loggar.collections.join;
+package com.loggar.collections;
 
 import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertEquals;

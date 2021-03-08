@@ -1,4 +1,4 @@
-package com.loggar.collections.sort;
+package com.loggar.sets;
 
 import java.util.ArrayList;
 import java.util.Arrays;
