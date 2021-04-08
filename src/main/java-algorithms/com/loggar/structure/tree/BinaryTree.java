@@ -1,4 +1,4 @@
-package com.loggar.structure.treebinary;
+package com.loggar.structure.tree;
 
 import java.util.LinkedList;
 import java.util.Queue;
