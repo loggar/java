@@ -6,7 +6,7 @@ package com.loggar.statements;
  */
 public class AssertSample2 {
 	public static void main(String[] args) {
-		long l = 8241; // java primative type
+		long l = 8241; // java primitive type
 		int i = 8241;
 
 		assert (l == i) : "l != i";
