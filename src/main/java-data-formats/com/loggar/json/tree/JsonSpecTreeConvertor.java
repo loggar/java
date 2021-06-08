@@ -28,7 +28,7 @@ public class JsonSpecTreeConvertor {
 		Map<String, Object> v = node.getValue();
 		String dataType = (String) v.get("_data-type");
 
-		if (isNodeTypePrimative(dataType)) {
+		if (isNodeTypePrimitive(dataType)) {
 			System.out.println("visit " + v.get("_data-nm") + " dataType=" + dataType + ", add count");
 			cn++;
 		} else {
@@ -43,7 +43,7 @@ public class JsonSpecTreeConvertor {
 		return cn;
 	}
 
-	private boolean isNodeTypePrimative(String t) {
+	private boolean isNodeTypePrimitive(String t) {
 		return !"object".equals(t) && !"list".equals(t);
 	}
 
@@ -83,7 +83,7 @@ public class JsonSpecTreeConvertor {
 			props.put("_parent-nm", parent.getValue().get("_data-nm"));
 		}
 
-		if (isNodeTypePrimative(dataType)) {
+		if (isNodeTypePrimitive(dataType)) {
 			Set<String> keySet = e.keySet();
 			for (String key : keySet) {
 				if (!"properties".equals(key)) {
