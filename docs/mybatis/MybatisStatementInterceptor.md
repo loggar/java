@@ -21,12 +21,12 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- * sql log
+ * mybatis sql log
  *
  */
 @Intercepts({ @Signature(type = Executor.class, method = "query", args = { MappedStatement.class, Object.class, RowBounds.class, ResultHandler.class }), @Signature(type = Executor.class, method = "update", args = { MappedStatement.class, Object.class }) })
 public class MybatisStatementInterceptor implements Interceptor {
-	private static final Logger logger = LoggerFactory.getLogger(MethodHandles.lookup().lookupClass());
+	private static final Logger logger = LoggerFactory.getLogger(MybatisStatementInterceptor.class);
 
 	@Override
 	public Object intercept(Invocation invocation) {
@@ -44,7 +44,7 @@ public class MybatisStatementInterceptor implements Interceptor {
 				for (ParameterMapping param : boundSql.getParameterMappings()) {
 					String property = param.getProperty();
 					int index = sql.indexOf("?");
-					sql.replace(index, index + 1, "'" + params.get(property) + "'");
+					sql.replace(index, index + 1, params.get(property) == null ? "NULL" : "'" + params.get(property) + "'");
 				}
 			} else if (objParameter instanceof String) {
 				String str_param = (String) objParameter;
@@ -52,7 +52,7 @@ public class MybatisStatementInterceptor implements Interceptor {
 				for (ParameterMapping param : boundSql.getParameterMappings()) {
 					@SuppressWarnings("unused") String property = param.getProperty();
 					int index = sql.indexOf("?");
-					sql.replace(index, index + 1, "'" + str_param + "'");
+					sql.replace(index, index + 1, str_param == null ? "NULL" : "'" + str_param + "'");
 				}
 			} else if (objParameter instanceof Integer || objParameter instanceof Double || objParameter instanceof Long || objParameter instanceof Short || objParameter instanceof Float) {
 				Integer int_param = (Integer) objParameter;
@@ -77,7 +77,7 @@ public class MybatisStatementInterceptor implements Interceptor {
 							sql.replace(index, index + 1, field.get(objParameter).toString());
 						} else {
 							int index = sql.indexOf("?");
-							sql.replace(index, index + 1, "'" + field.get(objParameter) + "'");
+							sql.replace(index, index + 1, field.get(objParameter) == null ? "NULL" : "'" + field.get(objParameter) + "'");
 						}
 					} catch (NoSuchFieldException | SecurityException | IllegalArgumentException | IllegalAccessException e) {
 						logger.error("{}", e);
@@ -111,5 +111,4 @@ public class MybatisStatementInterceptor implements Interceptor {
 		logger.debug("properties={}", properties);
 	}
 }
-
 ```
