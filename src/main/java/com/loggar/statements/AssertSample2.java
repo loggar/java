@@ -5,18 +5,19 @@ package com.loggar.statements;
  *
  */
 public class AssertSample2 {
+
+	@SuppressWarnings("unlikely-arg-type")
 	public static void main(String[] args) {
 		long l = 8241; // java primitive type
 		int i = 8241;
 
 		assert (l == i) : "l != i";
 
-		Integer obj = Integer.valueOf(i);
-		assert Long.valueOf(l).equals(obj) : "L not equals I";
+		assert Long.valueOf(l).equals(Integer.valueOf(1)) : "L not equals I";
 
 		Object o1 = new Object();
 		Object o2 = new Object();
 
-		assert o1 == o2 : "o1 != o2";
+		assert o1 == o2 : "new Object() != new Object()";
 	}
 }
