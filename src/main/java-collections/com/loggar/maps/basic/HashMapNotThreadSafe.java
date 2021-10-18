@@ -1,4 +1,4 @@
-package com.loggar.maps.hashmap;
+package com.loggar.maps.basic;
 
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;

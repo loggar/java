@@ -1,4 +1,4 @@
-package com.loggar.maps.hashmap;
+package com.loggar.maps.basic;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -55,25 +55,29 @@ public class HashMapJava8 {
 		}
 	}
 
-	// And with merge(), we can modify the value for a given key if a mapping exists, or add a new value otherwise:
+	// with merge(), we can modify the value for a given key if a mapping exists, or add a new value otherwise:
 	public void merge() {
+		Product eBike2 = new Product("E-Bike", "A bike with a battery");
 		eBike2.getTags().add("sport");
-		productsByName.merge("E-Bike", eBike2, Product::addTagsOfOtherProdcut);
+		productsByName.merge("E-Bike", eBike2, (a, b) -> {
+			return a.addTagsOfOtherProduct(b);
+		});
 	}
 
 	public void merge_priorToJava8() {
+		Product eBike2 = new Product("E-Bike", "A bike with a battery");
 		if (productsByName.containsKey("E-Bike")) {
-			productsByName.get("E-Bike").addTagsOfOtherProdcut(eBike2);
+			productsByName.get("E-Bike").addTagsOfOtherProduct(eBike2);
 		} else {
 			productsByName.put("E-Bike", eBike2);
 		}
 	}
 
-	// And with merge(), we can modify the value for a given key if a mapping exists, or add a new value otherwise:
+	// with compute(), With the compute() method, we can compute the value for a given key:
 	public void compute() {
 		productsByName.compute("E-Bike", (k, v) -> {
 			if (v != null) {
-				return v.addTagsOfOtherProdcut(eBike2);
+				return v.addTagsOfOtherProduct(eBike2);
 			} else {
 				return eBike2;
 			}
@@ -82,7 +86,7 @@ public class HashMapJava8 {
 
 	public void compute_priorToJava8() {
 		if (productsByName.containsKey("E-Bike")) {
-			productsByName.get("E-Bike").addTagsOfOtherProdcut(eBike2);
+			productsByName.get("E-Bike").addTagsOfOtherProduct(eBike2);
 		} else {
 			productsByName.put("E-Bike", eBike2);
 		}

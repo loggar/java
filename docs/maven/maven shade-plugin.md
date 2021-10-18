@@ -1,19 +1,23 @@
+# maven-shade-plugin
+
+Create a single jar in its isolated dependencies
+
 ```
-          <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-shade-plugin</artifactId>
-            <executions>
-                <execution>
-                    <phase>package</phase>
-                    <goals>
-                        <goal>shade</goal>
-                    </goals>
-                </execution>
-            </executions>
-            <configuration>
-                <finalName>uber-${project.artifactId}-${project.version}</finalName>
-            </configuration>
-        </plugin>
+<plugin>
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-shade-plugin</artifactId>
+    <executions>
+        <execution>
+            <phase>package</phase>
+            <goals>
+                <goal>shade</goal>
+            </goals>
+        </execution>
+    </executions>
+    <configuration>
+        <finalName>uber-${project.artifactId}-${project.version}</finalName>
+    </configuration>
+</plugin>
 ```
 
 ```

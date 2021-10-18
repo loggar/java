@@ -11,8 +11,7 @@ interface B {
 }
 
 /*
- * some kind of implemented classes of interface used as temporalrily or instantely.
- * why we have to do always make a class that implements the interface?
+ * some kind of implemented classes of interfaces (has a single behavior) used as temporalrily or instantely.
  */
 public class LamdaDemoTest {
 	@Test

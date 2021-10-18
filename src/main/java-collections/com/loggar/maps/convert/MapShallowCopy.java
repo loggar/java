@@ -14,7 +14,8 @@ public class MapShallowCopy {
 		map.put(12, "George");
 		map.put(6, "Rocky");
 
-		@SuppressWarnings("unused") Map<Integer, String> copiedMap = Collections.synchronizedMap(map);
+		Map<Integer, String> copiedMap = Collections.synchronizedMap(map);
+		System.out.println(copiedMap);
 
 	}
 }

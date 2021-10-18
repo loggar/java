@@ -83,7 +83,7 @@ public class TreeMapHashMap {
 		hashmap.put(1, "One");
 		hashmap.put(2, "Two");
 
-		Executable executable = () -> hashmap.forEach((key, value) -> hashmap.remove(1));
+		Executable executable = () -> hashmap.forEach((key, value) -> hashmap.remove(key));
 
 		assertThrows(ConcurrentModificationException.class, executable);
 	}

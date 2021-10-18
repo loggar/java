@@ -1,4 +1,4 @@
-package com.loggar.maps.hashmap;
+package com.loggar.maps.basic;
 
 import java.lang.invoke.MethodHandles;
 import java.util.HashMap;

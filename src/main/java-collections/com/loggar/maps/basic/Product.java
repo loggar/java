@@ -1,4 +1,4 @@
-package com.loggar.maps.hashmap;
+package com.loggar.maps.basic;
 
 import java.util.List;
 import java.util.Objects;
@@ -57,7 +57,7 @@ public class Product {
 		this.tags = tags;
 	}
 
-	public Product addTagsOfOtherProdcut(Product product) {
+	public Product addTagsOfOtherProduct(Product product) {
 		this.tags.addAll(product.getTags());
 		return this;
 	}

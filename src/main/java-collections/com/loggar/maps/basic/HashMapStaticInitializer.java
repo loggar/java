@@ -1,4 +1,4 @@
-package com.loggar.maps.hashmap;
+package com.loggar.maps.basic;
 
 import java.util.AbstractMap;
 import java.util.Collections;
@@ -92,7 +92,7 @@ public class HashMapStaticInitializer {
 
 	public Map<String, String> createImmutableMapWithStreams() {
 		Map<String, String> map = Stream.of(new String[][] { { "Hello", "World" }, { "John", "Doe" }, }).collect(Collectors.collectingAndThen(Collectors.toMap(data -> data[0], data -> data[1]), Collections::<String, String>unmodifiableMap));
+		
 		return map;
-
 	}
 }
