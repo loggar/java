@@ -37,3 +37,10 @@ export JAVA_HOME
 # echo $JAVA_HOME
 /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.242.b08-0.el7_7.x86_64
 ```
+
+## MacOS
+
+```
+export JAVA_HOME=/opt/homebrew/opt/java
+export PATH=$PATH:$JAVA_HOME/bin
+```
